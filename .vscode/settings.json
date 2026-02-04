@@ -1,0 +1,20 @@
+{
+  "factorio.versions": [
+    {
+      "name": "2.0.73",
+      "factorioPath": "c:\\factorio\\bin\\x64\\factorio.exe"
+    },
+  ],
+  "Lua.workspace.checkThirdParty": "ApplyInMemory",
+  "Lua.diagnostics.globals": [
+    "PlanetsLib",
+    "data",
+    "minute",
+    "script",
+    "storage",
+    "game"
+  ],
+  "Lua.workspace.userThirdParty": [
+    "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\c46c36bc3ec1f412b47800372d501f7b\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+  ],
+}
