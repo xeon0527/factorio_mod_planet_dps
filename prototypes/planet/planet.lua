@@ -1,6 +1,6 @@
 --local linox_map_gen = require("prototypes.planet.map-gen")
 --local effects = require("__core__/lualib/surface-render-parameter-effects")
-local asteroid_util = require("__space-age__.prototypes.planet.asteroid-spawn-definitions")
+local asteroid_util = require("__space-age__/prototypes/planet/asteroid-spawn-definitions")
 local _nauvis = data.raw["planet"]["nauvis"]
 
 PlanetsLib:extend {
@@ -15,8 +15,8 @@ PlanetsLib:extend {
 
     orbit = {
       parent = { type = "space-location", name = "star" },
-			distance = 13,
-			orientation = 0.5,
+			distance = 18,
+			orientation = 0.4,
     },
 
     --distance = 5,          -- 태양으로부터의 거리. 행성의 크기와는 무관.
@@ -60,9 +60,9 @@ PlanetsLib:extend {
 data:extend {
   {
     type = "space-connection",
-    name = "dps-space-connection_nauvis-dps",
+    name = "dps-space-connection_fulgora-dps",
     subgroup = "planet-connections",
-    from = "nauvis",
+    from = "fulgora",
     to = "dps-planet_dps",
     order = "a",
     length = 10000,

@@ -1,7 +1,7 @@
 __G_PLANET__ = {
-  magnetic_field = 90,
-  solar_power = 100,
-  solar_power_in_space = 300,
-  pressure = 1000,
-  gravity = 10,
+  magnetic_field = 45,
+  solar_power = 90,
+  solar_power_in_space = 270,
+  pressure = 800,
+  gravity = 8,
 }

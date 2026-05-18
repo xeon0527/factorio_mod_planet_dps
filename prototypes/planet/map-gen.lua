@@ -1,43 +1,29 @@
 return {
-  aux_climate_control = true,
-  moisture_climate_control = true,
+  aux_climate_control = false,
+  moisture_climate_control = false,
+
   property_expression_names =
-  { -- Warning: anything set here overrides any selections made in the map setup screen so the options do nothing.
-    --cliff_elevation = "cliff_elevation_nauvis",
-    --cliffiness = "cliffiness_nauvis",
-    --elevation = "elevation_island"
+  {
+    moisture = "moisture_basic",
+    aux = "aux_basic",
+    cliffiness = "cliffiness_basic",
+    cliff_elevation = "cliff_elevation_from_elevation",
   },
   cliff_settings =
   {
     name = "cliff",
-    control = "nauvis_cliff",
-    cliff_smoothing = 0
+    cliff_smoothing = 0,
+    cliff_elevation_interval = 10,
+    cliff_elevation_0 = 0,
+    richness = 6,
   },
-  autoplace_controls =
-  {
-    ["iron-ore"] = {},
-    ["copper-ore"] = {},
-    ["stone"] = {},
-    ["coal"] = {},
-    --["uranium-ore"] = {},
-    ["crude-oil"] = {},
-    ["water"] = {},
-    --["trees"] = {},
-    --["enemy-base"] = {},
-    ["rocks"] = {},
-    ["starting_area_moisture"] = {},
-    ["nauvis_cliff"] = {}
-  },
+  autoplace_controls ={},
   autoplace_settings =
   {
     ["tile"] =
     {
       settings =
       {
-        --["grass-1"] = {},
-        --["grass-2"] = {},
-        --["grass-3"] = {},
-        --["grass-4"] = {},
         ["dry-dirt"] = {},
         ["dirt-1"] = {},
         ["dirt-2"] = {},
@@ -54,7 +40,7 @@ return {
         ["red-desert-2"] = {},
         ["red-desert-3"] = {},
         ["water"] = {},
-        ["deepwater"] = {}
+        ["deepwater"] = {},
       }
     },
     ["decorative"] =
@@ -62,11 +48,7 @@ return {
       settings =
       {
         ["brown-hairy-grass"] = {},
-        --["green-hairy-grass"] = {},
         ["brown-carpet-grass"] = {},
-        --["green-carpet-grass"] = {},
-        --["green-small-grass"] = {},
-        --["green-asterisk"] = {},
         ["brown-asterisk-mini"] = {},
         ["green-asterisk-mini"] = {},
         ["brown-asterisk"] = {},
@@ -77,40 +59,32 @@ return {
         ["red-desert-decal"] = {},
         ["sand-decal"] = {},
         ["sand-dune-decal"] = {},
-        ["green-pita"] = {},
         ["red-pita"] = {},
-        --["green-croton"] = {},
         ["red-croton"] = {},
-        --["green-pita-mini"] = {},
         ["brown-fluff"] = {},
         ["brown-fluff-dry"] = {},
-        --["green-desert-bush"] = {},
         ["red-desert-bush"] = {},
         ["white-desert-bush"] = {},
         ["garballo-mini-dry"] = {},
         ["garballo"] = {},
-        --["green-bush-mini"] = {},
         ["medium-rock"] = {},
         ["small-rock"] = {},
         ["tiny-rock"] = {},
         ["medium-sand-rock"] = {},
-        ["small-sand-rock"] = {}
+        ["small-sand-rock"] = {},
       }
     },
     ["entity"] =
     {
       settings =
       {
-        ["iron-ore"] = {},
-        ["copper-ore"] = {},
-        ["stone"] = {},
-        ["coal"] = {},
-        ["crude-oil"] = {},
+        --["crude-oil"] = {},
         --["uranium-ore"] = {},
-        --["fish"] = {},
+
         ["big-sand-rock"] = {},
         ["huge-rock"] = {},
         ["big-rock"] = {},
+        ["dps-entity-building_promethium-datacore"] = {}
       }
     }
   }

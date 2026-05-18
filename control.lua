@@ -2,12 +2,8 @@ require("global/_hdr")
 require("scripts/util/_hdr");
 
 require("scripts/drv/_hdr");
-
---
---require("scripts/util");
---require("scripts/drv/_drv");
 --require("scripts/svc/_svc");
---require("scripts/app/_app");
+require("scripts/app/_hdr");
 --
 --require("modules/compatibility/any-planet-start").control()
 --

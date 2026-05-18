@@ -1,5 +1,4 @@
 local util = require("util")
-local bootstrap = require("scripts/drv/bootstrap")
 
 __DRV_STORAGE_GAME_START__ = false
 __DRV_STORAGE_LIST__ = {}
@@ -25,9 +24,9 @@ local function __generate()
   __DRV_STORAGE_GAME_START__ = true
 end
 
-bootstrap.create_init_handler(__generate)
-bootstrap.create_configuration_changed_handler(__generate)
-bootstrap.create_load_handler(function()
+DRV_BOOTSTRAP_create_init_handler(__generate)
+DRV_BOOTSTRAP_create_configuration_changed_handler(__generate)
+DRV_BOOTSTRAP_create_load_handler(function()
   __DRV_STORAGE_GAME_START__ = true
 end)
 
@@ -44,21 +43,7 @@ __create("PLAYER", {})
 __create("FORCE", {})
 __create("GAME", {})
 
-
-local __MODULE__ = {}
-
-__MODULE__.get = function(key, default_value)
-  local success, result = pcall(function()
-    return storage.GAME[key]
-  end)
-
-  if not success or result == nil then
-    result = __MODULE__.set(key, default_value)
-  end
-  return result
-end
-
-__MODULE__.set = function(key, value)
+function DRV_STORAGE_set(key, value)
   local success = pcall(function()
     storage.GAME[key] = value
   end)
@@ -70,19 +55,19 @@ __MODULE__.set = function(key, value)
   return storage.GAME[key]
 end
 
-
-__MODULE__.get_player = function(player, key, default_value)
+function DRV_STORAGE_get(key, default_value)
   local success, result = pcall(function()
-    return storage.PLAYER[key][player.index]
+    return storage.GAME[key]
   end)
 
   if not success or result == nil then
-    result = __MODULE__.set_player(player, key, default_value)
+    result = DRV_STORAGE_set(key, default_value)
   end
   return result
 end
 
-__MODULE__.set_player = function(player, key, value)
+
+function DRV_STORAGE_set_player(player, key, value)
   local success = pcall(function()
     storage.PLAYER[key][player.index] = value
   end)
@@ -94,18 +79,19 @@ __MODULE__.set_player = function(player, key, value)
   return storage.PLAYER[key][player.index]
 end
 
-__MODULE__.get_force = function(force, key, default_value)
+function DRV_STORAGE_get_player(player, key, default_value)
   local success, result = pcall(function()
-    return storage.FORCE[key][force.index]
+    return storage.PLAYER[key][player.index]
   end)
 
   if not success or result == nil then
-    result = __MODULE__.set_force(force, key, default_value)
+    result = DRV_STORAGE_set_player(player, key, default_value)
   end
   return result
 end
 
-__MODULE__.set_force = function(force, key, value)
+
+function DRV_STORAGE_set_force(force, key, value)
   local success = pcall(function()
     storage.FORCE[key][force.index] = value
   end)
@@ -117,4 +103,88 @@ __MODULE__.set_force = function(force, key, value)
   return storage.FORCE[key][force.index]
 end
 
-return __MODULE__
+function DRV_STORAGE_get_force(force, key, default_value)
+  local success, result = pcall(function()
+    return storage.FORCE[key][force.index]
+  end)
+
+  if not success or result == nil then
+    result = DRV_STORAGE_set_force(force, key, default_value)
+  end
+  return result
+end
+
+
+--local __MODULE__ = {}
+--
+--__MODULE__.get = function(key, default_value)
+--  local success, result = pcall(function()
+--    return storage.GAME[key]
+--  end)
+--
+--  if not success or result == nil then
+--    result = __MODULE__.set(key, default_value)
+--  end
+--  return result
+--end
+--
+--__MODULE__.set = function(key, value)
+--  local success = pcall(function()
+--    storage.GAME[key] = value
+--  end)
+--
+--  if not success then
+--    __create("GAME."..key, {})
+--    storage.GAME[key]= value
+--  end
+--  return storage.GAME[key]
+--end
+--
+--
+--__MODULE__.get_player = function(player, key, default_value)
+--  local success, result = pcall(function()
+--    return storage.PLAYER[key][player.index]
+--  end)
+--
+--  if not success or result == nil then
+--    result = __MODULE__.set_player(player, key, default_value)
+--  end
+--  return result
+--end
+--
+--__MODULE__.set_player = function(player, key, value)
+--  local success = pcall(function()
+--    storage.PLAYER[key][player.index] = value
+--  end)
+--
+--  if not success then
+--    __create("PLAYER."..key, {})
+--    storage.PLAYER[key][player.index] = value
+--  end
+--  return storage.PLAYER[key][player.index]
+--end
+--
+--__MODULE__.get_force = function(force, key, default_value)
+--  local success, result = pcall(function()
+--    return storage.FORCE[key][force.index]
+--  end)
+--
+--  if not success or result == nil then
+--    result = __MODULE__.set_force(force, key, default_value)
+--  end
+--  return result
+--end
+--
+--__MODULE__.set_force = function(force, key, value)
+--  local success = pcall(function()
+--    storage.FORCE[key][force.index] = value
+--  end)
+--
+--  if not success then
+--    __create("FORCE."..key, {})
+--    storage.FORCE[key][force.index] = value
+--  end
+--  return storage.FORCE[key][force.index]
+--end
+--
+--return __MODULE__

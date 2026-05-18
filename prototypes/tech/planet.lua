@@ -1,7 +1,7 @@
 data:extend {
   {
     type = "technology",
-    name = "dps-technology_planet-discovery-dps",
+    name = "dps-tech_planet-discovery-dps",
     order = "dps",
     icons = PlanetsLib.technology_icon_constant_planet(__G_MOD__.."/graphics/planet/512.png", 512),
     essential = true,
