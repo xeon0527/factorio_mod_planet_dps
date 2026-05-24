@@ -18,6 +18,7 @@
     "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\c46c36bc3ec1f412b47800372d501f7b\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
   ],
   "Lua.diagnostics.disable": [
-    "undefined-field"
+    "undefined-field",
+    "different-requires"
   ],
 }

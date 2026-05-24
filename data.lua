@@ -1,5 +1,4 @@
 require("global/_hdr")
 
-local __PATH__ = "prototypes/"
-
-require(__PATH__.."_hdr")
+require("prototypes/_hdr")
+require("tips-and-tricks/_hdr")

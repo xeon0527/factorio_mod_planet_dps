@@ -26,9 +26,11 @@ data:extend {
       --"breaths-air",
     },
     map_color = { 1, 0, 0 },
-    hidden = true,
-    hidden_in_factoriopedia = true,
+    --hidden = true,
+    --hidden_in_factoriopedia = true,
     draw_inventory_content = true,
+    order = "zzz",
+    subgroup = "enemies",
 
     corpse = "lab-remnants",
     dying_explosion = "lab-explosion",

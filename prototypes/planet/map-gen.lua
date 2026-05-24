@@ -12,7 +12,7 @@ return {
   cliff_settings =
   {
     name = "cliff",
-    cliff_smoothing = 0,
+    cliff_smoothing = 1,
     cliff_elevation_interval = 10,
     cliff_elevation_0 = 0,
     richness = 6,

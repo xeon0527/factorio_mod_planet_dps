@@ -50,8 +50,8 @@ PlanetsLib:extend {
     procession_graphic_catalogue = _nauvis.procession_graphic_catalogue,
     persistent_ambient_sounds = _nauvis.persistent_ambient_sounds,
     surface_render_parameters = _nauvis.surface_render_parameters,
-    asteroid_spawn_influence = _nauvis.asteroid_spawn_influence,
-    asteroid_spawn_definitions = _nauvis.asteroid_spawn_definitions,
+    asteroid_spawn_influence = 1,
+    asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_fulgora, 0.9),
   },
 }
 
@@ -65,7 +65,7 @@ data:extend {
     order = "a",
     length = 10000,
 
-    asteroid_spawn_influence = 10,
-    asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus)
+    asteroid_spawn_influence = 1,
+    asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_fulgora)
   },
 }
