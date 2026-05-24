@@ -1,13 +1,15 @@
 require("global/_hdr")
-local hit_effects = require("__base__.prototypes.entity.hit-effects")
-local enemy_autoplace = require ("__base__.prototypes.entity.enemy-autoplace-utils")
 
 data:extend {
   {
     type = "container",
-    name = "dps-entity-building_promethium-datacore-container",
-    icon = "__base__/graphics/icons/lab.png",
-    --icon_size = 64,
+    name = "dps-entity-building_promethium-subcore-container",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/lab.png",
+        tint = { 1.0, 0.5, 0.5 },
+      }
+    },
     flags = {
       "placeable-player",
       "not-rotatable",
@@ -26,6 +28,7 @@ data:extend {
 
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     inventory_size = 100,
+    inventory_type = "with_filters_and_bar",
 
     draw_copper_wires = false,
     draw_circuit_wires = false,

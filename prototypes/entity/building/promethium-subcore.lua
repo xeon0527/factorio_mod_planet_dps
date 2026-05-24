@@ -1,13 +1,16 @@
 require("global/_hdr")
 local hit_effects = require("__base__.prototypes.entity.hit-effects")
-local enemy_autoplace = require ("__base__.prototypes.entity.enemy-autoplace-utils")
 
 data:extend {
   {
-    type = "container",
-    name = "dps-entity-building_promethium-datacore",
-    icon = "__base__/graphics/icons/lab.png",
-    --icon_size = 64,
+    type = "proxy-container",
+    name = "dps-entity-building_promethium-subcore",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/lab.png",
+        tint = { 1.0, 0.5, 0.5 },
+      }
+    },
     flags = {
       "placeable-enemy",
       "not-rotatable",
@@ -32,21 +35,20 @@ data:extend {
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
-    --collision_mask = {layers={item=true, object=true, player=true, water_tile=true, elevated_rail=true, is_object=true, is_lower_object=true, trigger_target=true,}},
 
     autoplace = {
-      probability_expression = "voronoi_spot_noise{x = x,\z
+      probability_expression = "voronoi_spot_noise {x = x,\z
                                                     y = y,\z
                                                     seed0 = map_seed,\z
-                                                    seed1 = 1234,\z
-                                                    grid_size = 200,\z
+                                                    seed1 = 257,\z
+                                                    grid_size = 175,\z
                                                     distance_type = 'euclidean',\z
-                                                    jitter = 0.5\z
-                                                  } < (1/199)",
+                                                    jitter = 0.7\z
+                                                  } < (1/174)",
       force = "enemy",
     },
     
-    max_health = 1000000,
+    max_health = 100000000,
     resistances = {
       {
         type = "fire",
@@ -66,7 +68,12 @@ data:extend {
       {
         type = "explosion",
         decrease = 0,
-        percent = 0
+        percent = 0,
+      },
+      {
+        type = "poison",
+        decrease = 0,
+        percent = 100
       },
       {
         type = "acid",

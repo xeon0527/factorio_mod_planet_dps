@@ -81,10 +81,10 @@ return {
         --["crude-oil"] = {},
         --["uranium-ore"] = {},
 
-        ["big-sand-rock"] = {},
-        ["huge-rock"] = {},
-        ["big-rock"] = {},
-        ["dps-entity-building_promethium-datacore"] = {}
+        ["dps-deco_big-sand-rock"] = {},
+        ["dps-deco_huge-rock"] = {},
+        ["dps-deco_big-rock"] = {},
+        ["dps-entity-building_promethium-subcore"] = {}
       }
     }
   }

@@ -1,0 +1,12 @@
+--local surface = game.get_surface("dps-planet_dps")
+--if surface then
+--  for _, entity in pairs(surface.find_entities_filtered{name = "dps-entity-building_promethium-subcore-container"}) do
+--    local inv = entity.get_inventory(defines.inventory.chest)
+--    if inv then
+--      for i = 1, 10 do
+--        inv.set_filter(i, {name = "dps-item_subcore-scrap"})
+--        inv.set_filter(i + 10, {name = "heavy-oil-barrel"})
+--      end
+--    end
+--  end
+--end

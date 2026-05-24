@@ -35,8 +35,6 @@ data:extend {
     draw_copper_wires = false,
     draw_circuit_wires = false,
 
-    --autoplace = enemy_autoplace.enemy_spawner_autoplace("enemy_autoplace_base(0, 6)"),
-
     drawing_box_vertical_extension = 0.7,
     pictures = {
       layers = {

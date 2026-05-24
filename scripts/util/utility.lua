@@ -19,6 +19,16 @@ function UTIL_string_split(str, sep)
   return t
 end
 
+function UTIL_table_remove(list, object)
+  for i = 1, #list do
+    if list[i] == object then
+      table.remove(list, i)
+      return true
+    end
+  end
+  return false
+end
+
 function UTIL_insert_item(entity, items)
   for _, item in pairs(items) do
     local num_item = entity.insert(item);
