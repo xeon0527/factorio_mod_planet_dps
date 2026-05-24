@@ -46,25 +46,3 @@ end
 function DRV_BOOTSTRAP_create_tick_handler(tick, handler)
   script.on_nth_tick(tick, handler)
 end
-
---local __MODULE__ = {}
---
---__MODULE__.create_init_handler = function(handler)
---  table.insert(__DRV_BOOTSTRAP_HANDLERS__.on_init, handler)
---end
---
---__MODULE__.create_configuration_changed_handler = function(handler)
---  table.insert(__DRV_BOOTSTRAP_HANDLERS__.on_configuration_changed, handler)
---end
---
---__MODULE__.create_load_handler = function(handler)
---  table.insert(__DRV_BOOTSTRAP_HANDLERS__.on_load, handler)
---end
---
---__MODULE__.create_tick_handler = function(handler, tick)
---  script.on_nth_tick(tick, handler)
---
---  --table.insert(__DRV_BOOTSTRAP_HANDLERS__.on_tick, handler)
---end
---
---return __MODULE__
