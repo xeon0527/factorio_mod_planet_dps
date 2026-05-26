@@ -1,5 +1,3 @@
---local linox_map_gen = require("prototypes.planet.map-gen")
---local effects = require("__core__/lualib/surface-render-parameter-effects")
 local asteroid_util = require("__space-age__/prototypes/planet/asteroid-spawn-definitions")
 local _nauvis = data.raw["planet"]["nauvis"]
 
@@ -7,8 +5,8 @@ PlanetsLib:extend {
   {
     type = "planet",
     name = "dps-planet_dps",
-    icon = __G_MOD__.."/graphics/planet/512.png",
-    icon_size = 512,
+    icon = __G_MOD__.."/graphics/planet/64.png",
+    icon_size = 64,
     starmap_icon = __G_MOD__.."/graphics/planet/512.png",
     starmap_icon_size = 512,
     gravity_pull = 8,
@@ -41,10 +39,10 @@ PlanetsLib:extend {
     surface_properties =
     {
       ["day-night-cycle"] = 7 * minute,
-      ["magnetic-field"] = __G_PLANET__.magnetic_field,
-      ["solar-power"] = __G_PLANET__.solar_power,
-      pressure = __G_PLANET__.pressure,
-      gravity = __G_PLANET__.gravity
+      ["magnetic-field"]  = __G_PLANET__.magnetic_field,
+      ["solar-power"]     = __G_PLANET__.solar_power,
+      pressure            = __G_PLANET__.pressure,
+      gravity             = __G_PLANET__.gravity
     },
 
     procession_graphic_catalogue = _nauvis.procession_graphic_catalogue,
