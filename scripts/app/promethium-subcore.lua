@@ -57,7 +57,7 @@ DRV_EVENT_register_handler(defines.events.on_chunk_generated, function(event)
   end
 end)
 
-DRV_BOOTSTRAP_create_tick_handler(60, function()
+DRV_TIMER_install_1s_timer(function()
   for _, entity in pairs(DRV_STORAGE_get("promethium-subcore", {})) do
     if entity.valid and entity.max_health > entity.health then
       local container = entity.surface.find_entity("dps-entity-building_promethium-subcore-container", entity.position)

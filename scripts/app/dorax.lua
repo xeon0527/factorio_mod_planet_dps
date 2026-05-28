@@ -26,7 +26,7 @@ DRV_EVENT_register_destroy_entity_handler(function(event)
   end
 end)
 
-DRV_BOOTSTRAP_create_tick_handler(60, function()
+DRV_TIMER_install_1s_timer(function()
   local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
   if dorax_placement.landed and dorax_placement.entity and dorax_placement.entity.valid then
     local e = dorax_placement.entity
