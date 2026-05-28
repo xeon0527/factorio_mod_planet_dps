@@ -1,22 +1,19 @@
-__DRV_TIMER_OBJECTS__ = {
-  tick_timer = {},
-  single_timer = {},
-}
-
 DRV_BOOTSTRAP_create_tick_handler(1, function()
-  for _, tim in pairs(__DRV_TIMER_OBJECTS__.tick_timer) do
+  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", { tick_timer = {}, single_timer = {} })
+
+  for _, tim in pairs(tim_obj.tick_timer) do
     tim.tick = tim.tick - 1
     tim.handler(tim.tick)
     if tim.tick <= 0 then
-      UTIL_table_remove(__DRV_TIMER_OBJECTS__.tick_timer, tim)
+      UTIL_table_remove(tim_obj.tick_timer, tim)
     end
   end
 
-  for _, tim in pairs(__DRV_TIMER_OBJECTS__.single_timer) do
+  for _, tim in pairs(tim_obj.single_timer) do
     tim.tick = tim.tick - 1
     if tim.tick <= 0 then
       tim.handler()
-      UTIL_table_remove(__DRV_TIMER_OBJECTS__.single_timer, tim)
+      UTIL_table_remove(tim_obj.single_timer, tim)
     end
   end
 end)
@@ -27,7 +24,8 @@ function DRV_TIMER_create_tick_timer(max_tick, handler)
     _max_tick = 1
   end
 
-  table.insert(__DRV_TIMER_OBJECTS__.tick_timer, {
+  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", { tick_timer = {}, single_timer = {} })
+  table.insert(tim_obj.tick_timer, {
     tick = _max_tick,
     handler = handler,
   })
@@ -39,7 +37,8 @@ function DRV_TIMER_create_single_timer(tick, handler)
     _max_tick = 1
   end
 
-  table.insert(__DRV_TIMER_OBJECTS__.single_timer, {
+  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", { tick_timer = {}, single_timer = {} })
+  table.insert(tim_obj.single_timer, {
     tick = _max_tick,
     handler = handler,
   })
