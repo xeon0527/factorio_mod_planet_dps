@@ -2,7 +2,7 @@ __DRV_BOOTSTRAP_HANDLERS__ = {
   on_init = {},
   on_configuration_changed = {},
   on_load = {},
-  --on_tick = {},
+  on_tick = {},
 }
 
 script.on_init(function()
@@ -25,11 +25,15 @@ script.on_load(function()
   end
 end)
 
---script.on_nth_tick(1, function()
---  for _, hdrs in pairs(__DRV_BOOTSTRAP_HANDLERS__.on_tick) do
---    hdrs()
---  end
---end)
+script.on_nth_tick(1, function()
+  for _, hdrs in pairs(__DRV_BOOTSTRAP_HANDLERS__.on_tick) do
+    hdrs.tick = hdrs.tick - 1
+    if hdrs.tick <= 0 then
+      hdrs.handler()
+      hdrs.tick = hdrs.max_tick
+    end
+  end
+end)
 
 function DRV_BOOTSTRAP_create_init_handler(handler)
   table.insert(__DRV_BOOTSTRAP_HANDLERS__.on_init, handler)
@@ -44,5 +48,14 @@ function DRV_BOOTSTRAP_create_load_handler(handler)
 end
 
 function DRV_BOOTSTRAP_create_tick_handler(tick, handler)
-  script.on_nth_tick(tick, handler)
+  local _tick = tick
+  if _tick <= 0 then
+    _tick = 1
+  end
+
+  table.insert(__DRV_BOOTSTRAP_HANDLERS__.on_tick, {
+    max_tick = _tick,
+    tick = 1,
+    handler = handler,
+  })
 end

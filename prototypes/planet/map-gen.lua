@@ -67,11 +67,6 @@ return {
         ["white-desert-bush"] = {},
         ["garballo-mini-dry"] = {},
         ["garballo"] = {},
-        ["medium-rock"] = {},
-        ["small-rock"] = {},
-        ["tiny-rock"] = {},
-        ["medium-sand-rock"] = {},
-        ["small-sand-rock"] = {},
       }
     },
     ["entity"] =

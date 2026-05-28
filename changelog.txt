@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.5
+Date: 28. 5. 2026
+  Major Features:
+    - Added the D.O.R.A.X encounter event and entity. D.O.R.A.X currently has no functionality yet.
+    - The planet research requirements have been changed.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.4
 Date: 26. 5. 2026
   Major Features:

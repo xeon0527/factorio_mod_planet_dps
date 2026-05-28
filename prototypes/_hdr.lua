@@ -7,3 +7,4 @@ require(__PATH__.."recipe/_hdr")
 require(__PATH__.."tech/_hdr")
 
 require(__PATH__.."item-groups")
+require(__PATH__.."sound")
