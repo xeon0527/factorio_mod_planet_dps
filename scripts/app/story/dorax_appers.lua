@@ -10,12 +10,9 @@ DRV_EVENT_register_built_entity_handler(function(event)
       })
 
       DRV_TIMER_create_single_timer(1800, function()
-        local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
-
         game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-1"}}
         game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-2"}}
-        --game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-3"}, " : [gps="..dorax_placement.position.x..","..dorax_placement.position.y..",".."dps-planet_dps".."]"}
-        game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-4"}}
+        game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-3"}}
         game.play_sound{ path = "dps-sound_siren" }
 
         DRV_TIMER_create_tick_timer(3600, function(tick)
@@ -35,7 +32,10 @@ DRV_EVENT_register_built_entity_handler(function(event)
           elseif tick == 0 then
             dorax_placement.landed = true
             local sf = game.get_surface("dps-planet_dps")
-            if sf == nil then return end
+            if sf == nil then
+              DRV_STORAGE_set("DORAX_PLACEMENT", {})
+              return
+            end
 
             sf.create_entity {
               name = "atomic-rocket",
@@ -46,6 +46,7 @@ DRV_EVENT_register_built_entity_handler(function(event)
             dorax_placement.entity = sf.create_entity {
               name = "dps-entity-special_dorax",
               position = dorax_placement.position,
+              raise_built = true,
             }
             dorax_placement.landed = true
             DRV_STORAGE_set("DORAX_PLACEMENT", dorax_placement)

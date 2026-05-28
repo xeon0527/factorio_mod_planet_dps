@@ -40,7 +40,7 @@ data:extend {
       {
         type = "physical",
         decrease = 0,
-        percent = 0
+        percent = 99.99
       },
       {
         type = "impact",
@@ -49,8 +49,8 @@ data:extend {
       },
       {
         type = "explosion",
-        decrease = 0,
-        percent = 0,
+        decrease = 1500,
+        percent = 99,
       },
       {
         type = "poison",
@@ -108,5 +108,33 @@ data:extend {
         },
       }
     }
+  },
+  {
+    type = "container",
+    name = "dps-entity-special_dorax-container",
+    icon = __G_MOD__.."/graphics/planet/64.png",
+    icon_size = 64,
+    flags = {
+      "placeable-player",
+      "not-rotatable",
+      "not-repairable",
+      "not-blueprintable",
+      "hide-alt-info",
+      "not-flammable",
+      "no-automated-item-insertion",
+      "not-upgradable",
+      "hide-alt-info",
+      "not-in-made-in",
+      "not-in-kill-statistics",
+    },
+    hidden = true,
+    hidden_in_factoriopedia = true,
+
+    collision_box = {{-4, -4}, {4, 4}},
+    inventory_size = 100,
+    inventory_type = "with_filters_and_bar",
+
+    draw_copper_wires = false,
+    draw_circuit_wires = false,
   }
 }
