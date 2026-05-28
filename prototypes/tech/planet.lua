@@ -13,7 +13,7 @@ data:extend {
         use_icon_overlay_constant = true
       }
     },
-    prerequisites = {"metallurgic-science-pack", "electromagnetic-science-pack", "physical-projectile-damage-6"},
+    prerequisites = { "electromagnetic-science-pack", "physical-projectile-damage-6"},
     unit =
     {
       count = 1000,
@@ -25,7 +25,6 @@ data:extend {
         {"production-science-pack", 1},
         {"utility-science-pack", 1},
         {"space-science-pack", 1},
-        {"metallurgic-science-pack", 1},
         {"electromagnetic-science-pack", 1}
       },
       time = 60

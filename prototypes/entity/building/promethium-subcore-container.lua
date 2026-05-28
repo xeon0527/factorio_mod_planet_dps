@@ -26,11 +26,16 @@ data:extend {
     hidden = true,
     hidden_in_factoriopedia = true,
 
+    selection_box = nil,
     collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
+    hit_visualization_box = nil,
+    shooting_cursor_size = 0,
+
     inventory_size = 100,
     inventory_type = "with_filters_and_bar",
 
     draw_copper_wires = false,
     draw_circuit_wires = false,
+    selectable_in_game = false,
   }
 }

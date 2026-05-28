@@ -64,10 +64,10 @@ DRV_BOOTSTRAP_create_tick_handler(60, function()
       if container then
         local damage = entity.max_health - entity.health
 
-        _item_delivery(container, "dps-item_subcore-scrap", damage, 20.0, 5000.0)
+        _item_delivery(container, "dps-item_subcore-scrap", damage, 10.0, 5000.0)
 
         if damage >= 10000.0 then
-          _item_delivery(container, "heavy-oil-barrel", damage - 10000.0, 250.0, 10000.0)
+          _item_delivery(container, "coal", damage - 10000.0, 20.0, 10000.0)
         end
       end
       entity.health = entity.max_health

@@ -9,13 +9,13 @@ DRV_EVENT_register_built_entity_handler(function(event)
         landed    = false,
       })
 
-      DRV_TIMER_create_single_timer(1800, function()
+      DRV_TIMER_create_single_timer(180, function()
         game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-1"}}
         game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-2"}}
         game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-3"}}
         game.play_sound{ path = "dps-sound_siren" }
 
-        DRV_TIMER_create_tick_timer(3600, function(tick)
+        DRV_TIMER_create_tick_timer(360, function(tick)
           local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
           if tick == 3300 then
             game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t3300-1"}}
@@ -37,6 +37,22 @@ DRV_EVENT_register_built_entity_handler(function(event)
               return
             end
 
+
+            local entities = sf.find_entities_filtered { area = {
+              { dorax_placement.position.x - 4, dorax_placement.position.y - 4 },
+              { dorax_placement.position.x + 4, dorax_placement.position.y + 4 }
+            }}
+
+            for k, v in pairs(entities) do
+              if v.valid then
+                if v.type == "character" then
+                  v.damage(1000000000, "enemy")
+                else
+                  v.destroy { raise_destroy = true }
+                end
+              end
+            end
+
             sf.create_entity {
               name = "atomic-rocket",
               position = dorax_placement.position,
@@ -50,6 +66,19 @@ DRV_EVENT_register_built_entity_handler(function(event)
             }
             dorax_placement.landed = true
             DRV_STORAGE_set("DORAX_PLACEMENT", dorax_placement)
+
+            DRV_TIMER_create_tick_timer(1200, function(t)
+              if t == 900 then
+                game.print("[gps="..dorax_placement.position.x..","..dorax_placement.position.y..",".."dps-planet_dps".."]")
+                game.print{"system-message.dorax-appers-2-1"}
+              elseif t == 600 then
+                game.print{"system-message.dorax-appers-2-2"}
+              elseif t == 300 then
+                game.print{"system-message.dorax-appers-2-3"}
+              elseif t == 0 then
+                game.print{"system-message.dorax-appers-2-4"}
+              end
+            end)
           end
         end)
       end)

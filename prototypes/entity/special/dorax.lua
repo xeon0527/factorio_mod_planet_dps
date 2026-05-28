@@ -35,12 +35,12 @@ data:extend {
       {
         type = "fire",
         decrease = 0,
-        percent = 100
+        percent = 100,
       },
       {
         type = "physical",
-        decrease = 0,
-        percent = 99.99
+        decrease = 10000,
+        percent = 99,
       },
       {
         type = "impact",
@@ -49,7 +49,7 @@ data:extend {
       },
       {
         type = "explosion",
-        decrease = 1500,
+        decrease = 1000,
         percent = 99,
       },
       {
@@ -130,11 +130,16 @@ data:extend {
     hidden = true,
     hidden_in_factoriopedia = true,
 
+    --selection_box = nil,
     collision_box = {{-4, -4}, {4, 4}},
+    --hit_visualization_box = nil,
+    --shooting_cursor_size = 0,
+
     inventory_size = 100,
     inventory_type = "with_filters_and_bar",
 
     draw_copper_wires = false,
     draw_circuit_wires = false,
+    selectable_in_game = false,
   }
 }
