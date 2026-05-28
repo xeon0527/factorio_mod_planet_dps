@@ -9,13 +9,13 @@ DRV_EVENT_register_built_entity_handler(function(event)
         landed    = false,
       })
 
-      DRV_TIMER_create_single_timer(180, function()
+      DRV_TIMER_create_single_timer(1800, function()
         game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-1"}}
         game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-2"}}
         game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-3"}}
         game.play_sound{ path = "dps-sound_siren" }
 
-        DRV_TIMER_create_tick_timer(360, function(tick)
+        DRV_TIMER_create_tick_timer(3600, function(tick)
           local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
           if tick == 3300 then
             game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t3300-1"}}
@@ -67,13 +67,13 @@ DRV_EVENT_register_built_entity_handler(function(event)
             dorax_placement.landed = true
             DRV_STORAGE_set("DORAX_PLACEMENT", dorax_placement)
 
-            DRV_TIMER_create_tick_timer(1200, function(t)
-              if t == 900 then
+            DRV_TIMER_create_tick_timer(1600, function(t)
+              if t == 1200 then
                 game.print("[gps="..dorax_placement.position.x..","..dorax_placement.position.y..",".."dps-planet_dps".."]")
                 game.print{"system-message.dorax-appers-2-1"}
-              elseif t == 600 then
+              elseif t == 800 then
                 game.print{"system-message.dorax-appers-2-2"}
-              elseif t == 300 then
+              elseif t == 400 then
                 game.print{"system-message.dorax-appers-2-3"}
               elseif t == 0 then
                 game.print{"system-message.dorax-appers-2-4"}
