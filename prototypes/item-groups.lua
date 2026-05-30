@@ -1,8 +1,27 @@
 data:extend {
   {
+    type = "item-group",
+    name = "dps-item-group_dps",
+    icon = __G_MOD__.."/graphics/planet/64.png",
+    icon_size = 64,
+    order = "zzz"
+  },
+  {
     type = "item-subgroup",
-    name = "dps-processes",
-    group = "intermediate-products",
-    order = "q"
+    name = "dps-item-subgroup_scrap",
+    group = "dps-item-group_dps",
+    order = "a"
+  },
+  {
+    type = "item-subgroup",
+    name = "dps-item-subgroup_ammo",
+    group = "dps-item-group_dps",
+    order = "b"
+  },
+  {
+    type = "item-subgroup",
+    name = "dps-item-subgroup_science",
+    group = "dps-item-group_dps",
+    order = "c"
   },
 }

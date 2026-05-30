@@ -15,9 +15,10 @@ data:extend {
         floating = true,
       }
     },
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     auto_recycle = false,
+    subgroup = "dps-item-subgroup_ammo",
     ingredients = {
       { type = "item", name = "iron-plate", amount = 1 },
       { type = "item", name = "concrete", amount = 1 },
@@ -40,9 +41,10 @@ data:extend {
         floating = true,
       }
     },
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     auto_recycle = false,
+    subgroup = "dps-item-subgroup_ammo",
     ingredients = {
       { type = "item", name = "copper-plate", amount = 4 },
     },

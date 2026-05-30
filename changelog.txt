@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.12
+Date: 30. 5. 2026
+  Major Features:
+    - Added the DPS Science Pack along with its associated research tree.
+    - Changed the rewards for Promethium Subcores. Heavy Oil Barrels now drop when DPS exceeds 5,000, and Coal drops when DPS exceeds 10,000.
+    - Planet DPS-related items have been moved to a separate item group.
+
+  Minor Features:
+    - You can now obtain at least 1 Subcore Scrap when attacking a Promethium Subcore, regardless of the total damage dealt.
+---------------------------------------------------------------------------------------------------
 Version: 0.0.11
 Date: 29. 5. 2026
   Bugfixes:
