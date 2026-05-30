@@ -3,7 +3,7 @@ require("global/_hdr")
 data:extend {
   {
     type = "container",
-    name = "dps-entity-building_promethium-subcore-container",
+    name = "dps-building_promethium-subcore-container",
     icons = {
       {
         icon = "__base__/graphics/icons/lab.png",

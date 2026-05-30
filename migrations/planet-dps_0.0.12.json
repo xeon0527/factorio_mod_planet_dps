@@ -1,0 +1,9 @@
+{
+  "entity":[
+    ["dps-entity-building_promethium-subcore", "dps-building_promethium-subcore"],
+    ["dps-entity-building_promethium-subcore-container", "dps-building_promethium-subcore-container"]
+  ],
+  "technology": [
+    ["dps-tech_basic-dps-upgrade", "dps-tech_basic-dps-engineering"]
+  ]
+}

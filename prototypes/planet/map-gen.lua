@@ -53,7 +53,7 @@ local map_gen = {
         ["dps-deco_big-sand-rock"] = {},
         ["dps-deco_huge-rock"] = {},
         ["dps-deco_big-rock"] = {},
-        ["dps-entity-building_promethium-subcore"] = {}
+        ["dps-building_promethium-subcore"] = {}
       }
     }
   }

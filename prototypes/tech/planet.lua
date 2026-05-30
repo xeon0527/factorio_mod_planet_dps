@@ -134,7 +134,7 @@ data:extend {
 
   {
     type = "technology",
-    name = "dps-tech_basic-dps-upgrade",
+    name = "dps-tech_basic-dps-engineering",
     order = "dps",
     icons = {
       {
@@ -146,21 +146,21 @@ data:extend {
         icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
         icon_size = 128,
         scale = 0.5,
-        shift = {-47.5, 40},
+        shift = {-40, 40},
         floating = true
       },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
         icon_size = 128,
         scale = 0.5,
-        shift = {7.5, 50},
+        shift = {10, 50},
         floating = true
       },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
         icon_size = 128,
         scale = 0.5,
-        shift = {57.5, 40},
+        shift = {55, 40},
         floating = true
       },
     },
@@ -182,8 +182,56 @@ data:extend {
       },
       time = 60
     },
-    max_level = 100,
+    max_level = 50,
     upgrade = true,
-    ignore_tech_cost_multiplier = true,
-  }
+  },
+
+  {
+    type = "technology",
+    name = "dps-tech_discovery-of-dorax",
+    order = "dps",
+    icons = {
+      {
+        icon = "__base__/graphics/technology/atomic-bomb.png",
+        icon_size = 256,
+        tint = { 1.0, 0.0, 0,0 },
+      },
+    },
+    prerequisites = { "dps-tech_planet-discovery-dps" },
+    research_trigger = {
+      type = "scripted",
+      trigger_description = {"technology-description.dps-tech_discovery-of-dorax-trigger"}
+    },
+  },
+
+  {
+    type = "technology",
+    name = "dps-tech_dps-supercomputer",
+    order = "dps",
+    icon = "__space-exploration-graphics__/graphics/technology/supercomputer-2.png",
+    icon_size = 128,
+    prerequisites = { "dps-tech_basic-dps-engineering", "dps-tech_discovery-of-dorax" },
+    unit =
+    {
+      count = 5000,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"military-science-pack", 1},
+        {"electromagnetic-science-pack", 1},
+        {"dps-item_dps-science-pack", 1},
+      },
+      time = 60
+    },
+    effects =
+      {
+        { type = "unlock-recipe", recipe = "dps-building_dps-supercomputer" },
+      },
+  },
+  
 }

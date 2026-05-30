@@ -17,6 +17,7 @@ DRV_EVENT_register_built_entity_handler(function(event)
 
         DRV_TIMER_create_tick_timer(3600, function(tick)
           local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
+
           if tick == 3300 then
             game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t3300-1"}}
             game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t3300-2"}, " : [gps="..dorax_placement.position.x..","..dorax_placement.position.y..",".."dps-planet_dps".."]"}

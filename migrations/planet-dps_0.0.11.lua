@@ -1,6 +1,6 @@
 local sf = game.get_surface("dps-planet_dps")
 if sf then
-  for _, v in pairs(sf.find_entities_filtered{ name = "dps-entity-building_promethium-subcore-container" }) do
+  for _, v in pairs(sf.find_entities_filtered{ name = "dps-building_promethium-subcore-container" }) do
     local inv = v.get_inventory(defines.inventory.chest)
     if inv == nil then return end
 

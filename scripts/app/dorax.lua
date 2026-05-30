@@ -9,6 +9,8 @@ DRV_EVENT_register_built_entity_handler(function(event)
 
     event.entity.proxy_target_entity = c
     event.entity.proxy_target_inventory = defines.inventory.chest
+
+    game.forces["player"].script_trigger_research("dps-tech_discovery-of-dorax")
   end
 end)
 

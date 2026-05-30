@@ -4,7 +4,7 @@ local hit_effects = require("__base__.prototypes.entity.hit-effects")
 data:extend {
   {
     type = "proxy-container",
-    name = "dps-entity-building_promethium-subcore",
+    name = "dps-building_promethium-subcore",
     icons = {
       {
         icon = "__base__/graphics/icons/lab.png",

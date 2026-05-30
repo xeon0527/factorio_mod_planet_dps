@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.13
+Date: 30. 5. 2026
+  Major Features:
+    - Added the DPS Supercomputer and its associated research.
+
+  Minor Features:
+    - Changed the Basic DPS Upgrade research to a maximum level of 50.
+
+  Bugfixes:
+    - Fixed missing text in the Item Group.
+    - Fixed an issue where terrain could be destroyed by the nuclear explosion effect when D.O.R.A.X appeared.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.12
 Date: 30. 5. 2026
   Major Features:

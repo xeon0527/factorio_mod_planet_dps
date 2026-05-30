@@ -15,7 +15,7 @@ local function _entity_created(entity)
   local entities = DRV_STORAGE_get("promethium-subcore", {})
 
   table.insert(entities, entity)
-  local c = UTIL_ensure_entity(entity.surface, { name = "dps-entity-building_promethium-subcore-container", position = entity.position, hidden = true})
+  local c = UTIL_ensure_entity(entity.surface, { name = "dps-building_promethium-subcore-container", position = entity.position, hidden = true})
   if not c then return end
 
   entity.proxy_target_entity = c
@@ -34,7 +34,7 @@ local function _entity_created(entity)
 end
 
 DRV_EVENT_register_built_entity_handler(function(event)
-  if event.entity_name == "dps-entity-building_promethium-subcore" and
+  if event.entity_name == "dps-building_promethium-subcore" and
       not event.is_ghost and
       event.entity.surface.name == "dps-planet_dps" then
     _entity_created(event.entity)
@@ -42,12 +42,12 @@ DRV_EVENT_register_built_entity_handler(function(event)
 end)
 
 DRV_EVENT_register_destroy_entity_handler(function(event)
-  if event.entity.name == "dps-entity-building_promethium-subcore" and event.entity.surface.name == "dps-planet_dps" then
+  if event.entity.name == "dps-building_promethium-subcore" and event.entity.surface.name == "dps-planet_dps" then
     local entities = DRV_STORAGE_get("promethium-subcore", event.entity.position)
 
     UTIL_table_remove(entities, event.entity)
 
-    local container = event.entity.surface.find_entity("dps-entity-building_promethium-subcore-container", event.entity.position)
+    local container = event.entity.surface.find_entity("dps-building_promethium-subcore-container", event.entity.position)
     if container then
       container.destroy()
     end
@@ -58,7 +58,7 @@ end)
 
 DRV_EVENT_register_handler(defines.events.on_chunk_generated, function(event)
   if event.surface.name == "dps-planet_dps" then
-    for _, entity in pairs(event.surface.find_entities_filtered{area = event.area, name = "dps-entity-building_promethium-subcore"}) do
+    for _, entity in pairs(event.surface.find_entities_filtered{area = event.area, name = "dps-building_promethium-subcore"}) do
       _entity_created(entity)
     end
   end
@@ -70,7 +70,7 @@ DRV_TIMER_install_1s_timer(function()
 
   for _, entity in pairs(DRV_STORAGE_get("promethium-subcore", {})) do
     if entity.valid and entity.max_health > entity.health then
-      local container = entity.surface.find_entity("dps-entity-building_promethium-subcore-container", entity.position)
+      local container = entity.surface.find_entity("dps-building_promethium-subcore-container", entity.position)
       if container then
         local damage = entity.max_health - entity.health
         if damage > 0 then
