@@ -1,5 +1,6 @@
 __DRV_TIMER_OBJECTS__ = {
   on_1s = {},
+  actions = {},
 }
 
 script.on_nth_tick(60, function()
@@ -13,7 +14,7 @@ script.on_nth_tick(1, function()
 
   for _, tim in pairs(tim_obj.tick_timer) do
     tim.tick = tim.tick - 1
-    tim.handler(tim.tick)
+    __DRV_TIMER_OBJECTS__.actions[tim.action_name](tim.tick)
     if tim.tick <= 0 then
       UTIL_table_remove(tim_obj.tick_timer, tim)
     end
@@ -22,7 +23,7 @@ script.on_nth_tick(1, function()
   for _, tim in pairs(tim_obj.single_timer) do
     tim.tick = tim.tick - 1
     if tim.tick <= 0 then
-      tim.handler()
+      __DRV_TIMER_OBJECTS__.actions[tim.action_name]()
       UTIL_table_remove(tim_obj.single_timer, tim)
     end
   end
@@ -36,7 +37,11 @@ script.on_nth_tick(1, function()
   --end
 end)
 
-function DRV_TIMER_create_tick_timer(max_tick, handler)
+function DRV_TIMER_register_action(name, action)
+  __DRV_TIMER_OBJECTS__.actions[name] = action
+end
+
+function DRV_TIMER_create_tick_timer(max_tick, action_name)
   local _max_tick = max_tick
   if _max_tick <= 0 then
     _max_tick = 1
@@ -45,11 +50,11 @@ function DRV_TIMER_create_tick_timer(max_tick, handler)
   local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", { tick_timer = {}, single_timer = {} })
   table.insert(tim_obj.tick_timer, {
     tick = _max_tick,
-    handler = handler,
+    action_name = action_name,
   })
 end
 
-function DRV_TIMER_create_single_timer(tick, handler)
+function DRV_TIMER_create_single_timer(tick, action_name)
   local _max_tick = tick
   if _max_tick <= 0 then
     _max_tick = 1
@@ -58,7 +63,7 @@ function DRV_TIMER_create_single_timer(tick, handler)
   local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", { tick_timer = {}, single_timer = {} })
   table.insert(tim_obj.single_timer, {
     tick = _max_tick,
-    handler = handler,
+    action_name = action_name,
   })
 end
 

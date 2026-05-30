@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.15
+Date: 31. 5. 2026
+  Bugfixes:
+    - Fixed an issue where attempting to save the game while a timer was running would cause an error.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.14
 Date: 31. 5. 2026
   Bugfixes:
