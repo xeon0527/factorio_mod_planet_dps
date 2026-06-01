@@ -20,7 +20,7 @@ data:extend {
       { size = 64, filename = "__space-age__/graphics/icons/scrap-4.png", scale = 0.5, mipmap_count = 4, tint = tint_color },
       { size = 64, filename = "__space-age__/graphics/icons/scrap-5.png", scale = 0.5, mipmap_count = 4, tint = tint_color }
     },
-    subgroup = "dps-item-subgroup_scrap",
+    subgroup = "dps-item-subgroup_item",
     inventory_move_sound = item_sounds.resource_inventory_move,
     pick_sound = item_sounds.resource_inventory_pickup,
     drop_sound = item_sounds.resource_inventory_move,

@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.16
+Date: 2. 6. 2026
+  Major Features:
+    - Added the "D.O.R.A.X Fragment" item.
+    - Added the "Supersonic Grenade Launcher" turret and its associated research.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.15
 Date: 31. 5. 2026
   Bugfixes:

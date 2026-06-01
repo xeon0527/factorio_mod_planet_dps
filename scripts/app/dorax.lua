@@ -1,3 +1,16 @@
+local function _item_delivery(container, item_name, damage, damage_per_item, inflection_point, min_amount)
+  local dmg_out = damage * (inflection_point / (damage + inflection_point))
+  local item_cnt = math.floor(dmg_out / damage_per_item)
+
+  if min_amount and item_cnt <= 0 then
+    item_cnt = min_amount
+  end
+
+  if item_cnt > 0 then
+    container.insert{name = item_name, count = item_cnt}
+  end
+end
+
 DRV_EVENT_register_built_entity_handler(function(event)
   if event.entity_name == "dps-entity-special_dorax" and
       not event.is_ghost and
@@ -9,6 +22,12 @@ DRV_EVENT_register_built_entity_handler(function(event)
 
     event.entity.proxy_target_entity = c
     event.entity.proxy_target_inventory = defines.inventory.chest
+
+    local inv = c.get_inventory(defines.inventory.chest)
+    inv.set_bar(21)
+    for i = 1, 20 do
+      inv.set_filter(i, {name = "dps-item_dorax-fragment"})
+    end
 
     game.forces["player"].script_trigger_research("dps-tech_discovery-of-dorax")
   end
@@ -37,7 +56,7 @@ DRV_TIMER_install_1s_timer(function()
     if container then
       local damage = e.max_health - e.health
 
-      --_item_delivery(container, "dps-item_subcore-scrap", damage, 20.0, 5000.0)
+      _item_delivery(container, "dps-item_dorax-fragment", damage, 10.0, 2500.0)
 --
       --if damage >= 10000.0 then
       --  _item_delivery(container, "heavy-oil-barrel", damage - 10000.0, 250.0, 10000.0)

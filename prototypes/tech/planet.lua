@@ -115,6 +115,7 @@ data:extend {
     type = "technology",
     name = "dps-tech_dps-science-pack",
     order = "dps",
+    essential = true,
     icon = __G_MOD__.."/graphics/icon/dps-science-pack_256.png",
     icon_size = 256,
     effects =
@@ -233,5 +234,45 @@ data:extend {
         { type = "unlock-recipe", recipe = "dps-building_dps-supercomputer" },
       },
   },
-  
+  {
+    type = "technology",
+    name = "dps-tech_supersonic-grenade-launcher",
+    order = "dps",
+    icons = {
+      {
+        icon = "__base__/graphics/technology/gun-turret.png",
+        icon_size = 256,
+      },
+      {
+        icon = "__space-age__/graphics/technology/railgun-damage.png",
+        icon_size = 256,
+        scale = 0.4,
+        shift = {0, -25},
+        floating = true,
+      },
+    },
+    prerequisites = { "dps-tech_basic-dps-engineering", "dps-tech_discovery-of-dorax" },
+    unit =
+    {
+      count = 2500,
+      ingredients =
+      {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        {"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"military-science-pack", 1},
+        {"electromagnetic-science-pack", 1},
+        {"dps-item_dps-science-pack", 1},
+      },
+      time = 60
+    },
+    effects =
+    {
+      { type = "unlock-recipe", recipe = "dps-turret_supersonic-grenade-launcher" },
+      { type = "unlock-recipe", recipe = "dps-ammo_supersonic-grenade" },
+    },
+  },
 }

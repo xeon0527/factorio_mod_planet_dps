@@ -5,3 +5,5 @@ require(__PATH__.."building/promethium-subcore")
 require(__PATH__.."building/promethium-subcore-container")
 
 require(__PATH__.."special/dorax")
+
+require(__PATH__.."turret/supersonic-grenade-launcher")

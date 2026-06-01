@@ -1,5 +1,21 @@
 require("global/_hdr")
 
+
+for _, v in pairs(data.raw["technology"]) do
+  if v.effects then
+    for _, vv in pairs(v.effects) do
+      if vv.type == "ammo-damage" and (vv.ammo_category == "bullet" or vv.ammo_category == "rocket") then
+        table.insert(v.effects, {
+          type = "ammo-damage",
+          ammo_category = "supersonic-grenade",
+          modifier = vv.modifier,
+        })
+      end
+    end
+  end
+end
+
+
 local ammo_damage_table = {}
 
 for _, v in pairs(data.raw["ammo-category"]) do

@@ -8,7 +8,7 @@ data:extend {
   },
   {
     type = "item-subgroup",
-    name = "dps-item-subgroup_scrap",
+    name = "dps-item-subgroup_item",
     group = "dps-item-group_dps",
     order = "a"
   },
@@ -23,5 +23,11 @@ data:extend {
     name = "dps-item-subgroup_science",
     group = "dps-item-group_dps",
     order = "c"
+  },
+  {
+    type = "item-subgroup",
+    name = "dps-item-subgroup_turret",
+    group = "dps-item-group_dps",
+    order = "d"
   },
 }

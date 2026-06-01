@@ -49,7 +49,7 @@ data:extend {
       },
       {
         type = "explosion",
-        decrease = 1000,
+        decrease = 700,
         percent = 99,
       },
       {

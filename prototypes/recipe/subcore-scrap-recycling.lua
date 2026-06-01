@@ -18,7 +18,7 @@ data:extend {
       }
     },
     category = "recycling-or-hand-crafting",
-    subgroup = "dps-item-subgroup_scrap",
+    subgroup = "dps-item-subgroup_item",
     enabled = false,
     auto_recycle = false,
     energy_required = 0.2,
