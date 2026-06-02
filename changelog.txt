@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.17
+Date: 2. 6. 2026
+  Bugfixes:
+    - Fixed awkward animation behavior of the Supersonic Grenade Launcher.
+    - Fixed incorrect stats for D.O.R.A.X.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.16
 Date: 2. 6. 2026
   Major Features:

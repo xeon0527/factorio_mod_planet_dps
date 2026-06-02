@@ -4,6 +4,58 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 
 local ftt = data.raw["fluid-turret"]["flamethrower-turret"]
 
+local function _turret_extension(opts)
+  local m_line_length = 5
+  local m_frame_count = 15
+  return {
+    layers = {
+      -- diffuse
+      {
+        filename = "__base__/graphics/entity/flamethrower-turret/flamethrower-turret-gun-extension.png",
+        priority = "medium",
+        frame_count = opts and opts.frame_count or m_frame_count,
+        line_length = opts and opts.line_length or m_line_length,
+        run_mode = opts and opts.run_mode or "forward",
+        width = 152,
+        height = 128,
+        direction_count = 4,
+        shift = util.by_pixel(0, -26),
+        scale = 0.5,
+        counterclockwise = true,
+      },
+      -- mask
+      {
+        filename = "__base__/graphics/entity/flamethrower-turret/flamethrower-turret-gun-extension-mask.png",
+        flags = { "mask" },
+        frame_count = opts and opts.frame_count or m_frame_count,
+        line_length = opts and opts.line_length or m_line_length,
+        run_mode = opts and opts.run_mode or "forward",
+        width = 144,
+        height = 120,
+        direction_count = 4,
+        shift = util.by_pixel(0, -26),
+        apply_runtime_tint = true,
+        scale = 0.5,
+        counterclockwise = true,
+      },
+      -- shadow
+      {
+        filename = "__base__/graphics/entity/flamethrower-turret/flamethrower-turret-gun-extension-shadow.png",
+        frame_count = opts and opts.frame_count or m_frame_count,
+        line_length = opts and opts.line_length or m_line_length,
+        run_mode = opts and opts.run_mode or "forward",
+        width = 180,
+        height = 114,
+        direction_count = 4,
+        shift = util.by_pixel(33, -1),
+        draw_as_shadow = true,
+        scale = 0.5,
+        counterclockwise = true,
+      }
+    }
+  }
+end
+
 local turret = {
   type = "ammo-turret",
   name = "dps-turret_supersonic-grenade-launcher",
@@ -29,11 +81,11 @@ local turret = {
   energy_source =
   {
     type = "electric",
-    buffer_capacity = "1.5MJ",
-    input_flow_limit = "1.5MW",
+    buffer_capacity = "1.0MJ",
+    input_flow_limit = "1.0MW",
     usage_priority = "primary-input"
   },
-  energy_per_shot = "1MJ",
+  energy_per_shot = "0.95MJ",
 
   drawing_box_vertical_extension = 0.2,
   damaged_trigger_effect = hit_effects.entity(),
@@ -55,12 +107,24 @@ local turret = {
   {
     {inventory_index = defines.inventory.turret_ammo, shift = {0, -0.25}}
   },
-  folded_animation        = ftt.folded_animation,
-  preparing_animation     = ftt.preparing_animation,
+
+  -- 접혀 있음
+  folded_animation        = _turret_extension{ frame_count = 3, line_length = 1 },
+  
+  -- 공격 준비
+  preparing_animation     = _turret_extension{},
+
+  -- 공격 준비 됨
   prepared_animation      = ftt.prepared_animation,
+
+  -- 공격
   attacking_animation     = ftt.attacking_animation,
+
+  -- 공격 종료
   ending_attack_animation = ftt.ending_attack_animation,
-  folding_animation       = ftt.folding_animation,
+
+  -- 접히는 중
+  folding_animation       = _turret_extension { run_mode = "backward" },
 
   gun_animation_render_layer = "object",
   gun_animation_secondary_draw_order = 1,
@@ -133,6 +197,7 @@ data:extend { turret,
     pick_sound = item_sounds.flamethrower_inventory_move,
     drop_sound = item_sounds.turret_inventory_move,
     place_result = "dps-turret_supersonic-grenade-launcher",
+    default_import_location = "dps-planet_dps",
     stack_size = 20,
     weight = 50*kg
   },
