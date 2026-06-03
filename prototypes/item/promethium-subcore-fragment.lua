@@ -7,7 +7,7 @@ data:extend {
     icon = __G_MOD__.."/graphics/icon/promethium-subcore-fragment.png",
     icon_size = 64,
 
-    subgroup = "dps-item-subgroup_science",
+    subgroup = "dps-item-subgroup_item",
 
     inventory_move_sound  = item_sounds.resource_inventory_move,
     pick_sound            = item_sounds.resource_inventory_pickup,

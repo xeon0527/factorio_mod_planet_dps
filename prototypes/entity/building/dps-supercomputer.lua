@@ -46,16 +46,8 @@ data:extend {
     researching_speed = 1,
 
     inputs = {
-
+      "dps-item_dorax-fragment",
     },
-    --{
-    --  "linox-item_lava-data-card",
-    --  "linox-item_rare-earth-data-card",
-    --  "linox-item_samarium-data-card",
-    --  "linox-item_dysprosium-data-card",
-    --  "linox-item_neodymium-data-card",
-    --  "linox-item_erbium-data-card",
-    --},
     module_slots = 4,
     icons_positioning =
     {

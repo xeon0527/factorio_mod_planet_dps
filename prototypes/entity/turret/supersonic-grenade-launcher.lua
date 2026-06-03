@@ -81,11 +81,11 @@ local turret = {
   energy_source =
   {
     type = "electric",
-    buffer_capacity = "1.0MJ",
-    input_flow_limit = "1.0MW",
+    buffer_capacity = "10MJ",
+    input_flow_limit = "10MW",
     usage_priority = "primary-input"
   },
-  energy_per_shot = "0.95MJ",
+  energy_per_shot = "1MJ",
 
   drawing_box_vertical_extension = 0.2,
   damaged_trigger_effect = hit_effects.entity(),
@@ -95,8 +95,8 @@ local turret = {
   folding_sound = sounds.gun_turret_deactivate,
   folding_speed = 0.08,
   inventory_size = 1,
-  automated_ammo_count = 10,
-  attacking_speed = 0.5,
+  automated_ammo_count = 25,
+  attacking_speed = 0.25,
   alert_when_attacking = true,
   circuit_connector = circuit_connector_definitions["gun-turret"],
   circuit_wire_max_distance = default_circuit_wire_max_distance,
@@ -163,11 +163,11 @@ local turret = {
     type = "projectile",
     ammo_category = "supersonic-grenade",
     --health_penalty = 1,
-    cooldown = 120,
+    cooldown = 300,
     projectile_creation_distance = 0.0,
     projectile_center = {0, 0}, -- same as gun_turret_attack shift
     range = 30,
-    min_range = 10,
+    min_range = 8,
     sound = {
       filename = __G_MOD__.."/sound/supersonic-grenade-launcher/attack.ogg",
       aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
