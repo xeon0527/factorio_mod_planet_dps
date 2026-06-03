@@ -11,6 +11,15 @@ local function _item_delivery(container, item_name, damage, damage_per_item, inf
   end
 end
 
+--_item_delivery(container, "dps-item_subcore-scrap", damage, 10.0, 5000.0, 1)
+--if damage >= 5000.0 then
+--  _item_delivery(container, "heavy-oil-barrel", damage - 5000.0, 250.0, 10000.0)
+--end
+--
+--if damage >= 10000.0 then
+--  _item_delivery(container, "coal", damage - 10000.0, 25.0, 10000.0)
+--end
+
 local function _entity_created(entity)
   local entities = DRV_STORAGE_get("promethium-subcore", {})
 
@@ -83,7 +92,7 @@ DRV_TIMER_install_1s_timer(function()
         _item_delivery(container, "dps-item_subcore-scrap", damage, 10.0, 5000.0, 1)
 
         if damage >= 5000.0 then
-          _item_delivery(container, "heavy-oil-barrel", damage - 5000.0, 250.0, 10000.0)
+          _item_delivery(container, "heavy-oil-barrel", damage - 5000.0, 200.0, 10000.0)
         end
 
         if damage >= 10000.0 then

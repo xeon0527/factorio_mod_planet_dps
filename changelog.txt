@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.19
+Date: 3. 6. 2026
+  Major Features:
+    - Added more detailed information about Promethium Subcores to Tips and Tricks.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.18
 Date: 3. 6. 2026
   Major Features:
