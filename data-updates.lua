@@ -23,7 +23,7 @@ for _, v in pairs(data.raw["ammo-category"]) do
     table.insert(ammo_damage_table, {
       type = "ammo-damage",
       ammo_category = v.name,
-      modifier = 0.01,
+      modifier = 0.05,
     })
   end
 end

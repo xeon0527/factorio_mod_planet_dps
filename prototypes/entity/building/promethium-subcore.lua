@@ -57,11 +57,11 @@ data:extend {
         decrease = 0,
         percent = 100
       },
-      {
-        type = "physical",
-        decrease = 0,
-        percent = 0
-      },
+      --{
+      --  type = "physical",
+      --  decrease = 0,
+      --  percent = 0
+      --},
       {
         type = "impact",
         decrease = 0,

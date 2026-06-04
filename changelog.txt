@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.20
+Date: 5. 6. 2026
+  Minor Features:
+    - Changed the maximum level of the Basic DPS Upgrade research to 10. The research bonus has also been adjusted to 5% per level.
+
+  Compatibility:
+    - Added compatibility with the K2SO mod.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.19
 Date: 3. 6. 2026
   Major Features:

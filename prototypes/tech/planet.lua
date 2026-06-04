@@ -169,7 +169,7 @@ data:extend {
     prerequisites = { "dps-tech_dps-science-pack" },
     unit =
     {
-      count_formula = "L*500",
+      count_formula = "1000",
       ingredients =
       {
         {"automation-science-pack", 1},
@@ -183,7 +183,7 @@ data:extend {
       },
       time = 60
     },
-    max_level = 50,
+    max_level = 10,
     upgrade = true,
   },
 
