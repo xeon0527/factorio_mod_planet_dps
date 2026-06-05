@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.0.22
+Date: 5. 6. 2026
+  Bugfixes:
+    - [K2SO] Fixed an issue where the mod did not properly support the Realistic Weapons option.
+
+  Changes:
+    - Expanded the Promethium Subcore Tips and Tricks entry with additional information.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.0.21
+Date: 5. 6. 2026
+  Bugfixes:
+    - [K2SO] Fixed an issue where the DPS Science Pack recipe incorrectly required Firearm Magazine.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.0.20
 Date: 5. 6. 2026
   Minor Features:
