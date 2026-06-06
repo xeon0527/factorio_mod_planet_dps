@@ -50,7 +50,7 @@ data:extend {
       force = "enemy",
     },
     
-    max_health = 100000000,
+    max_health = 100000,
     resistances = {
       {
         type = "fire",

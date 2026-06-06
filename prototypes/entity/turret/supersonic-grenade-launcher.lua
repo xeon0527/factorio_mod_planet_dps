@@ -71,7 +71,7 @@ local turret = {
     }
   },
   flags = {"placeable-player", "player-creation"},
-  minable = {mining_time = 0.5, result = "gun-turret"},
+  minable = {mining_time = 0.5, result = "dps-turret_supersonic-grenade-launcher"},
   fast_replaceable_group = "ammo-turret",
   max_health = 500,
   corpse = "gun-turret-remnants",

@@ -33,44 +33,14 @@ data:extend {
     max_health = 100000000,
     resistances = {
       {
-        type = "fire",
-        decrease = 0,
-        percent = 100,
-      },
-      {
         type = "physical",
         decrease = 10000,
         percent = 99,
       },
       {
-        type = "impact",
-        decrease = 0,
-        percent = 0
-      },
-      {
         type = "explosion",
         decrease = 1000,
         percent = 99,
-      },
-      {
-        type = "poison",
-        decrease = 0,
-        percent = 100
-      },
-      {
-        type = "acid",
-        decrease = 0,
-        percent = 100
-      },
-      {
-        type = "laser",
-        decrease = 0,
-        percent = 100
-      },
-      {
-        type = "electric",
-        decrease = 0,
-        percent = 100
       },
     },
     healing_per_tick = 0,

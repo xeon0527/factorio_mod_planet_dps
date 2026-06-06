@@ -29,3 +29,30 @@ for _, v in pairs(data.raw["ammo-category"]) do
 end
 
 data.raw["technology"]["dps-tech_basic-dps-engineering"].effects = ammo_damage_table
+
+
+
+local dorax_resistances_old = data.raw["proxy-container"]["dps-entity-special_dorax"].resistances or {}
+local dorax_resistances = {}
+
+for _, v in pairs(data.raw["damage-type"]) do
+  for _, v2 in pairs(dorax_resistances_old) do
+    if v.name == v2.name then
+      goto continue
+    end
+  end
+
+  table.insert(dorax_resistances, {
+    type = v.name,
+    decrease = 0,
+    percent = 100,
+  })
+
+  ::continue::
+end
+
+for _, v in pairs(dorax_resistances_old) do
+  table.insert(dorax_resistances, v)
+end
+
+data.raw["proxy-container"]["dps-entity-special_dorax"].resistances = dorax_resistances

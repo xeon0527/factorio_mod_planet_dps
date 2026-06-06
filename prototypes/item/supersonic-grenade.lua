@@ -28,7 +28,7 @@ data:extend {
     pick_sound = item_sounds.ammo_large_inventory_pickup,
     drop_sound = item_sounds.ammo_large_inventory_move,
     stack_size = 100,
-    weight = 20*kg
+    weight = 10*kg
   },
   {
     type = "recipe",
@@ -37,7 +37,7 @@ data:extend {
     energy_required = 1,
     ingredients = {
       {type = "item", name = "explosives", amount = 1},
-      {type = "item", name = "steel-plate", amount = 2},
+      {type = "item", name = "iron-plate", amount = 1},
       {type = "item", name = "copper-cable", amount = 2},
     },
     results = {{type="item", name="dps-ammo_supersonic-grenade", amount=1}}
