@@ -1,3 +1,5 @@
+local status = require("scripts/svc/status")
+
 local function _item_delivery(container, item_name, damage, damage_per_item, inflection_point, min_amount)
   local dmg_out = damage * (inflection_point / (damage + inflection_point))
   local item_cnt = math.floor(dmg_out / damage_per_item)
@@ -55,6 +57,8 @@ DRV_TIMER_install_1s_timer(function()
     local container = e.surface.find_entity("dps-entity-special_dorax-container", e.position)
     if container then
       local damage = e.max_health - e.health
+
+      --status.set_current_dps(damage)
 
       _item_delivery(container, "dps-item_dorax-fragment", damage, 10.0, 2500.0)
 --

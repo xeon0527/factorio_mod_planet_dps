@@ -28,7 +28,7 @@ data:extend {
   {
     type = "recipe",
     name = "dps-item_dps-science-pack",
-    category = "electronics-or-assembling",
+    categories = {"advanced-crafting", "electromagnetics"},
     surface_conditions =
     {
       {

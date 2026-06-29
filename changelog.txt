@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.1.2
+Date: 29. 6. 2026
+  Bugfixes:
+    - Fixed an issue where an unnecessary GUI was displayed.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.1.1
+Date: 29. 6. 2026
+  Compatibility:
+    - Updated for compatibility with Factorio 2.1. Compatibility with Factorio 2.1 has not yet been fully verified. Game crashes or other critical bugs may still occur. Please play with caution, and if you encounter any issues, we would greatly appreciate a bug report.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 6. 6. 2026
   Major Features:

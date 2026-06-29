@@ -1,5 +1,6 @@
 local __PATH__ = "scripts/app/"
 
+require(__PATH__.."gui/_hdr")
 require(__PATH__.."story/_hdr")
 
 require(__PATH__.."dorax")

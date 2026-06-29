@@ -81,11 +81,11 @@ local turret = {
   energy_source =
   {
     type = "electric",
-    buffer_capacity = "10MJ",
-    input_flow_limit = "10MW",
+    buffer_capacity = "1MJ",
+    input_flow_limit = "1MW",
     usage_priority = "primary-input"
   },
-  energy_per_shot = "1MJ",
+  energy_per_shot = "500kJ",
 
   drawing_box_vertical_extension = 0.2,
   damaged_trigger_effect = hit_effects.entity(),
