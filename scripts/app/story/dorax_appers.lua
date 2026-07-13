@@ -70,7 +70,7 @@ DRV_TIMER_register_action("story_dorax_approach", function(tick)
     }
 
     dorax_placement.entity = sf.create_entity {
-      name = "dps-entity-special_dorax",
+      name = "dps-special_dorax",
       position = dorax_placement.position,
       raise_built = true,
     }

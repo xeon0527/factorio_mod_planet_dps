@@ -1,8 +1,8 @@
 {
   "factorio.versions": [
     {
-      "name": "2.0.76",
-      "factorioPath": "c:\\factorio\\bin\\x64\\factorio.exe"
+      "name": "factorio_dps",
+      "factorioPath": "c:\\factorio_dps\\bin\\x64\\factorio.exe"
     },
   ],
   "Lua.workspace.checkThirdParty": "ApplyInMemory",
@@ -14,13 +14,15 @@
     "storage",
     "game",
     "circuit_connector_definitions",
-    "default_circuit_wire_max_distance"
-  ],
-  "Lua.workspace.userThirdParty": [
-    "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\c46c36bc3ec1f412b47800372d501f7b\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+    "default_circuit_wire_max_distance",
+    "assembling_machine_circuit_wire_max_distance",
+    "pipecoverspictures",
   ],
   "Lua.diagnostics.disable": [
     "undefined-field",
     "different-requires"
+  ],
+  "Lua.workspace.userThirdParty": [
+    "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\002dbe2f313e1b13afcf653814324f82\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
   ],
 }

@@ -1,5 +1,5 @@
-local __PATH__ = "prototypes/planet/"
+local _path = "prototypes/planet/"
 
-require(__PATH__.."decorative")
-require(__PATH__.."map-gen")
-require(__PATH__.."planet")
+require(_path.."decorative")
+require(_path.."map-gen")
+require(_path.."planet")

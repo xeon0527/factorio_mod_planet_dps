@@ -3,7 +3,7 @@ data:extend {
     type = "technology",
     name = "dps-tech_planet-discovery-dps",
     order = "dps",
-    icons = PlanetsLib.technology_icon_constant_planet(__G_MOD__.."/graphics/planet/512.png", 512),
+    icons = PlanetsLib.technology_icon_constant_planet(__PATH__.."/graphics/planet/512.png", 512),
     essential = true,
     effects =
     {
@@ -32,161 +32,117 @@ data:extend {
   },
   {
     type = "technology",
-    name = "dps-tech_subcore-scrap-recycling",
+    name = "dps-tech_dps-scrap-recycling",
     order = "dps",
     icons = {
       {
-        icon = "__base__/graphics/technology/research-speed.png",
+        icon = "__recycler__/graphics/technology/recycling.png",
         icon_size = 256,
-        tint = { 1.0, 0.5, 0.5 },
+        tint = { 1.0, 1.0, 0.5 },
       },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-        icon_size = 128,
-        scale = 0.5,
-        shift = {50, 50},
-        floating = true
-      }
     },
     effects =
     {
       {
         type = "unlock-recipe",
-        recipe = "dps-recipe_subcore-scrap-recycling",
+        recipe = "dps-recipe_dps-scrap-recycling",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "recycler"
       },
     },
     prerequisites = { "dps-tech_planet-discovery-dps"},
     research_trigger = {
-      type = "scripted",
-      trigger_description = {"technology-description.dps-tech_subcore-scrap-recycling-trigger"}
+      type = "mine-entity",
+      entities = {
+        "dps-resource_dps-scrap"
+      }
     },
   },
   {
     type = "technology",
-    name = "dps-tech_cheap-magazine",
+    name = "dps-tech_dps-credit-translator",
     order = "dps",
     icons = {
       {
-        icon = "__base__/graphics/technology/physical-projectile-damage-1.png",
+        icon = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-icon-big.png",
+        icon_size = 640,
+        tint = { 1.0, 1.0, 0.0 },
+      },
+    },
+    effects =
+    {
+      { type = "unlock-recipe", recipe = "dps-building_dps-credit-translator", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-translator_mineral", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-translator_carbon", },
+    },
+    prerequisites = { "dps-tech_planet-discovery-dps"},
+    research_trigger = {
+      type = "scripted",
+      trigger_description = {"technology-description.dps-tech_dps-credit-translator-trigger"}
+    },
+  },
+  {
+    type = "technology",
+    name = "dps-tech_dps-credit-exchange",
+    order = "dps",
+    icons = {
+      {
+        icon = "__space-age__/graphics/technology/lithium-processing.png",
         icon_size = 256,
+        tint = { 1.0, 1.0, 0.0 },
       },
       {
-        icon = "__base__/graphics/icons/concrete.png",
-        icon_size = 64,
-        scale = 0.75,
-        shift = {-40, 40},
-        floating = true
-      },
-      {
-        icon = "__base__/graphics/icons/plastic-bar.png",
-        icon_size = 64,
-        scale = 0.75,
-        shift = {5, 50},
-        floating = true
-      },
-      {
-        icon = "__base__/graphics/icons/copper-plate.png",
-        icon_size = 64,
-        scale = 0.75,
-        shift = {40, 40},
-        floating = true
+        icon = "__core__/graphics/icons/technology/constants/constant-capacity.png",
+        icon_size = 128,
+        shift = {16, 0},
+        floating = true,
       }
     },
     effects =
     {
-      {
-        type = "unlock-recipe",
-        recipe = "dps-recipe_concrete-magazine",
-      },
-      {
-        type = "unlock-recipe",
-        recipe = "dps-recipe_copper-magazine",
-      },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-n2k", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-k2m", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-m2g", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-g2t", },
+
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-k2n", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-m2k", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-g2m", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-t2g", },
     },
-    prerequisites = { "dps-tech_subcore-scrap-recycling"},
+    prerequisites = { "dps-tech_dps-credit-translator"},
     research_trigger = {
       type = "scripted",
-      trigger_description = {"technology-description.dps-tech_cheap-magazine-trigger"}
+      trigger_description = {"technology-description.dps-tech_dps-credit-exchange-trigger"}
     },
   },
 
-
   {
     type = "technology",
-    name = "dps-tech_dps-science-pack",
+    name = "dps-tech_dps-data-pack",
     order = "dps",
     essential = true,
-    icon = __G_MOD__.."/graphics/icon/dps-science-pack_256.png",
-    icon_size = 256,
+    icon = "__space-exploration-graphics__/graphics/technology/catalogue/material-catalogue-1.png",
+    icon_size = 128,
     effects =
     {
       {
         type = "unlock-recipe",
-        recipe = "dps-item_dps-science-pack",
+        recipe = "dps-item_dps-data-pack",
+      },
+      {
+        type = "unlock-recipe",
+        recipe = "dps-building_dps-supercomputer",
       },
     },
-    prerequisites = { "dps-tech_subcore-scrap-recycling"},
+    prerequisites = { "dps-tech_dps-credit-exchange", "dps-tech_dps-scrap-recycling"},
     research_trigger = {
-      type = "craft-item",
-      item = "dps-item_promethium-subcore-fragment",
-      count = 100,
+      type = "scripted",
+      trigger_description = {"technology-description.dps-tech_dps-data-pack-trigger"}
     },
   },
-
-  {
-    type = "technology",
-    name = "dps-tech_basic-dps-engineering",
-    order = "dps",
-    icons = {
-      {
-        icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
-        icon_size = 256,
-        tint = { 1.0, 0.5, 0.5 },
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-        icon_size = 128,
-        scale = 0.5,
-        shift = {-40, 40},
-        floating = true
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-        icon_size = 128,
-        scale = 0.5,
-        shift = {10, 50},
-        floating = true
-      },
-      {
-        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
-        icon_size = 128,
-        scale = 0.5,
-        shift = {55, 40},
-        floating = true
-      },
-    },
-    
-    prerequisites = { "dps-tech_dps-science-pack" },
-    unit =
-    {
-      count_formula = "1000",
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
-        {"space-science-pack", 1},
-        {"military-science-pack", 1},
-        {"dps-item_dps-science-pack", 1},
-      },
-      time = 60
-    },
-    max_level = 10,
-    upgrade = true,
-  },
-
   {
     type = "technology",
     name = "dps-tech_discovery-of-dorax",
@@ -202,77 +158,6 @@ data:extend {
     research_trigger = {
       type = "scripted",
       trigger_description = {"technology-description.dps-tech_discovery-of-dorax-trigger"}
-    },
-  },
-
-  {
-    type = "technology",
-    name = "dps-tech_dps-supercomputer",
-    order = "dps",
-    icon = "__space-exploration-graphics__/graphics/technology/supercomputer-2.png",
-    icon_size = 128,
-    prerequisites = { "dps-tech_basic-dps-engineering", "dps-tech_discovery-of-dorax" },
-    unit =
-    {
-      count = 5000,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
-        {"space-science-pack", 1},
-        {"military-science-pack", 1},
-        {"electromagnetic-science-pack", 1},
-        {"dps-item_dps-science-pack", 1},
-      },
-      time = 60
-    },
-    effects =
-      {
-        { type = "unlock-recipe", recipe = "dps-building_dps-supercomputer" },
-      },
-  },
-  {
-    type = "technology",
-    name = "dps-tech_supersonic-grenade-launcher",
-    order = "dps",
-    icons = {
-      {
-        icon = "__base__/graphics/technology/gun-turret.png",
-        icon_size = 256,
-      },
-      {
-        icon = "__space-age__/graphics/technology/railgun-damage.png",
-        icon_size = 256,
-        scale = 0.4,
-        shift = {0, -25},
-        floating = true,
-      },
-    },
-    prerequisites = { "dps-tech_basic-dps-engineering", "dps-tech_discovery-of-dorax" },
-    unit =
-    {
-      count = 2500,
-      ingredients =
-      {
-        {"automation-science-pack", 1},
-        {"logistic-science-pack", 1},
-        {"chemical-science-pack", 1},
-        {"production-science-pack", 1},
-        {"utility-science-pack", 1},
-        {"space-science-pack", 1},
-        {"military-science-pack", 1},
-        {"electromagnetic-science-pack", 1},
-        {"dps-item_dps-science-pack", 1},
-      },
-      time = 60
-    },
-    effects =
-    {
-      { type = "unlock-recipe", recipe = "dps-turret_supersonic-grenade-launcher" },
-      { type = "unlock-recipe", recipe = "dps-ammo_supersonic-grenade" },
     },
   },
 }

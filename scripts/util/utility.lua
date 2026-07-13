@@ -62,7 +62,7 @@ function UTIL_ensure_entity(surface, create_entity_param)
       entity = surface.create_entity(create_entity_param)
       if create_entity_param.hidden then
         entity.destructible = false
-        entity.minable = false
+        entity.minable_flag = false
       end
     end
   end

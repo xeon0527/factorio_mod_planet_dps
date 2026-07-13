@@ -5,9 +5,9 @@ PlanetsLib:extend {
   {
     type = "planet",
     name = "dps-planet_dps",
-    icon = __G_MOD__.."/graphics/planet/64.png",
+    icon = __PATH__.."/graphics/planet/64.png",
     icon_size = 64,
-    starmap_icon = __G_MOD__.."/graphics/planet/512.png",
+    starmap_icon = __PATH__.."/graphics/planet/512.png",
     starmap_icon_size = 512,
     gravity_pull = 8,
 
@@ -23,7 +23,7 @@ PlanetsLib:extend {
     subgroup = "planets",
     map_gen_settings = require("prototypes/planet/map-gen"),
     pollutant_type = nil,
-    solar_power_in_space = __G_PLANET__.solar_power_in_space,
+    solar_power_in_space = __PLANET__.solar_power_in_space,
 
     platform_procession_set =
     {
@@ -39,10 +39,10 @@ PlanetsLib:extend {
     surface_properties =
     {
       ["day-night-cycle"] = 7 * minute,
-      ["magnetic-field"]  = __G_PLANET__.magnetic_field,
-      ["solar-power"]     = __G_PLANET__.solar_power,
-      pressure            = __G_PLANET__.pressure,
-      gravity             = __G_PLANET__.gravity
+      ["magnetic-field"]  = __PLANET__.magnetic_field,
+      ["solar-power"]     = __PLANET__.solar_power,
+      pressure            = __PLANET__.pressure,
+      gravity             = __PLANET__.gravity
     },
 
     procession_graphic_catalogue = _nauvis.procession_graphic_catalogue,

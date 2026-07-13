@@ -15,9 +15,11 @@ local map_gen = {
     cliff_smoothing = 1,
     cliff_elevation_interval = 10,
     cliff_elevation_0 = 0,
-    richness = 6,
+    richness = 5,
   },
-  autoplace_controls ={},
+  autoplace_controls = {
+    ["dps-autoplace_dps-scrap"] = {},
+  },
   autoplace_settings =
   {
     ["tile"] =
@@ -49,48 +51,48 @@ local map_gen = {
       {
         --["crude-oil"] = {},
         --["uranium-ore"] = {},
-
+        ["dps-resource_dps-scrap"] = {},
         ["dps-deco_big-sand-rock"] = {},
         ["dps-deco_huge-rock"] = {},
         ["dps-deco_big-rock"] = {},
-        ["dps-building_promethium-subcore"] = {}
+        ["dps-building_dps-subcore"] = {}
       }
     }
   }
 }
 
 
-if not mods["alien-biomes"] then
-  map_gen.autoplace_settings["decorative"] = {
-    settings =
-    {
-      ["brown-hairy-grass"] = {},
-      ["brown-carpet-grass"] = {},
-      ["brown-asterisk-mini"] = {},
-      ["green-asterisk-mini"] = {},
-      ["brown-asterisk"] = {},
-      ["red-asterisk"] = {},
-      ["dark-mud-decal"] = {},
-      ["light-mud-decal"] = {},
-      ["cracked-mud-decal"] = {},
-      ["red-desert-decal"] = {},
-      ["sand-decal"] = {},
-      ["sand-dune-decal"] = {},
-      ["red-pita"] = {},
-      ["red-croton"] = {},
-      ["brown-fluff"] = {},
-      ["brown-fluff-dry"] = {},
-      ["red-desert-bush"] = {},
-      ["white-desert-bush"] = {},
-      ["garballo-mini-dry"] = {},
-      ["garballo"] = {},
-      ["medium-rock"] = {},
-      ["small-rock"] = {},
-      ["tiny-rock"] = {},
-      ["medium-sand-rock"] = {},
-      ["small-sand-rock"] = {},
-    }
-  }
-end
+--if not mods["alien-biomes"] then
+--  map_gen.autoplace_settings["decorative"] = {
+--    settings =
+--    {
+--      ["brown-hairy-grass"] = {},
+--      ["brown-carpet-grass"] = {},
+--      ["brown-asterisk-mini"] = {},
+--      ["green-asterisk-mini"] = {},
+--      ["brown-asterisk"] = {},
+--      ["red-asterisk"] = {},
+--      ["dark-mud-decal"] = {},
+--      ["light-mud-decal"] = {},
+--      ["cracked-mud-decal"] = {},
+--      ["red-desert-decal"] = {},
+--      ["sand-decal"] = {},
+--      ["sand-dune-decal"] = {},
+--      ["red-pita"] = {},
+--      ["red-croton"] = {},
+--      ["brown-fluff"] = {},
+--      ["brown-fluff-dry"] = {},
+--      ["red-desert-bush"] = {},
+--      ["white-desert-bush"] = {},
+--      ["garballo-mini-dry"] = {},
+--      ["garballo"] = {},
+--      ["medium-rock"] = {},
+--      ["small-rock"] = {},
+--      ["tiny-rock"] = {},
+--      ["medium-sand-rock"] = {},
+--      ["small-sand-rock"] = {},
+--    }
+--  }
+--end
 
 return map_gen

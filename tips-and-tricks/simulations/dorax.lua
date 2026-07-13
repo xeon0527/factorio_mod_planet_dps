@@ -10,8 +10,8 @@ local surface = game.surfaces[1]
 surface.create_global_electric_network()
 
 surface.create_entity{name = "electric-energy-interface", force = "player", position = {-20,-20}}
-surface.create_entity{name = "dps-entity-special_dorax", force = "enemy", position = {0,0}}
-UTIL_ensure_entity(surface, { name = "dps-entity-special_dorax-container", position = {0,0}, hidden = true})
+surface.create_entity{name = "dps-special_dorax", force = "enemy", position = {0,0}}
+UTIL_ensure_entity(surface, { name = "dps-special_dorax-container", position = {0,0}, hidden = true})
 
 
 local belt_pos = {

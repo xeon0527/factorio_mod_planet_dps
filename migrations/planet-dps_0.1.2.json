@@ -1,0 +1,8 @@
+{
+  "entity":[
+    ["dps-building_promethium-subcore", "dps-building_dps-subcore"],
+    ["dps-building_promethium-subcore-container", "dps-building_dps-subcore-container"],
+    ["dps-entity-special_dorax", "dps-special_dorax"],
+    ["dps-entity-special_dorax-container", "dps-special_dorax-container"]
+  ]
+}

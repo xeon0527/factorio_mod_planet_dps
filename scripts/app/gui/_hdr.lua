@@ -1,3 +1,3 @@
-local __PATH__ = "scripts/app/gui/"
+local _path = "scripts/app/gui/"
 
---require(__PATH__.."status-indicator")
+--require(_path.."status-indicator")

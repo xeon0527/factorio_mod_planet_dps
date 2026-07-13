@@ -1,7 +1,7 @@
-local __PATH__ = "scripts/app/"
+local _path = "scripts/app/"
 
-require(__PATH__.."gui/_hdr")
-require(__PATH__.."story/_hdr")
+require(_path.."gui/_hdr")
+require(_path.."story/_hdr")
 
-require(__PATH__.."dorax")
-require(__PATH__.."promethium-subcore")
+require(_path.."dorax")
+require(_path.."dps-subcore")

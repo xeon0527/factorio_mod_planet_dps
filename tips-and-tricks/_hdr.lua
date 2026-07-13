@@ -1,3 +1,3 @@
-local __PATH__ = "tips-and-tricks/"
+local _path = "tips-and-tricks/"
 
-require(__PATH__.."tips-and-tricks")
+require(_path.."tips-and-tricks")

@@ -1,4 +1,5 @@
-local __PATH__ = "prototypes/recipe/"
+local _path = "prototypes/recipe/"
 
-require(__PATH__.."ammo")
-require(__PATH__.."subcore-scrap-recycling")
+require(_path.."ammo")
+require(_path.."dps-credit-exchange")
+require(_path.."dps-credit-translator")

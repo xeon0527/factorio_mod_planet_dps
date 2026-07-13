@@ -20,8 +20,8 @@ data:extend {
     auto_recycle = false,
     subgroup = "dps-item-subgroup_ammo",
     ingredients = {
-      { type = "item", name = "iron-plate", amount = 1 },
-      { type = "item", name = "concrete", amount = 1 },
+      { type = "item", name = "iron-plate", amount = 2 },
+      { type = "item", name = "concrete", amount = 2 },
     },
     results = {{type="item", name="firearm-magazine", amount=1}}
   },

@@ -4,8 +4,8 @@ local hit_effects = require("__base__.prototypes.entity.hit-effects")
 data:extend {
   {
     type = "proxy-container",
-    name = "dps-entity-special_dorax",
-    icon = __G_MOD__.."/graphics/planet/64.png",
+    name = "dps-special_dorax",
+    icon = __PATH__.."/graphics/planet/64.png",
     icon_size = 64,
     flags = {
       "placeable-enemy",
@@ -31,18 +31,18 @@ data:extend {
     damaged_trigger_effect = hit_effects.entity(),
 
     max_health = 100000000,
-    resistances = {
-      {
-        type = "physical",
-        decrease = 10000,
-        percent = 99,
-      },
-      {
-        type = "explosion",
-        decrease = 1000,
-        percent = 99,
-      },
-    },
+    --resistances = {
+    --  {
+    --    type = "physical",
+    --    decrease = 10000,
+    --    percent = 99,
+    --  },
+    --  {
+    --    type = "explosion",
+    --    decrease = 1000,
+    --    percent = 99,
+    --  },
+    --},
     healing_per_tick = 0,
     inventory_size = 100,
 
@@ -55,13 +55,13 @@ data:extend {
     picture = {
       layers = {
         {
-          filename = __G_MOD__.."/graphics/entity/dorax/item-extractor-hr-animation-1.png",
+          filename = __PATH__.."/graphics/entity/dorax/item-extractor-hr-animation-1.png",
           width = 530,
           height = 530,
           scale = 0.5,
         },
         {
-          filename = __G_MOD__.."/graphics/entity/dorax/item-extractor-hr-emission-1.png",
+          filename = __PATH__.."/graphics/entity/dorax/item-extractor-hr-emission-1.png",
           width = 530,
           height = 530,
           scale = 0.5,
@@ -70,7 +70,7 @@ data:extend {
           tint = { 1.0, 0.0, 0.0 },
         },
         {
-          filename = __G_MOD__.."/graphics/entity/dorax/item-extractor-hr-shadow.png",
+          filename = __PATH__.."/graphics/entity/dorax/item-extractor-hr-shadow.png",
           width = 1000,
           height = 666,
           scale = 0.5,
@@ -81,8 +81,8 @@ data:extend {
   },
   {
     type = "container",
-    name = "dps-entity-special_dorax-container",
-    icon = __G_MOD__.."/graphics/planet/64.png",
+    name = "dps-special_dorax-container",
+    icon = __PATH__.."/graphics/planet/64.png",
     icon_size = 64,
     flags = {
       "placeable-player",

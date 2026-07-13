@@ -166,10 +166,10 @@ local turret = {
     cooldown = 300,
     projectile_creation_distance = 0.0,
     projectile_center = {0, 0}, -- same as gun_turret_attack shift
-    range = 30,
+    range = 36,
     min_range = 8,
     sound = {
-      filename = __G_MOD__.."/sound/supersonic-grenade-launcher/attack.ogg",
+      filename = __PATH__.."/sound/supersonic-grenade-launcher/attack.ogg",
       aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
     }
   },
@@ -211,7 +211,6 @@ data:extend { turret,
       {type = "item", name = "steel-plate", amount = 25},
       {type = "item", name = "processing-unit", amount = 15},
       {type = "item", name = "low-density-structure", amount = 5},
-      {type = "item", name = "dps-item_promethium-subcore-fragment", amount = 5}
     },
     results = {{type="item", name="dps-turret_supersonic-grenade-launcher", amount=1}}
   },

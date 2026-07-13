@@ -1,7 +1,7 @@
 -- Driver Layer Scripts
-local __PATH__ = "scripts/drv/"
+local _path = "scripts/drv/"
 
-require(__PATH__.."bootstrap")
-require(__PATH__.."event")
-require(__PATH__.."storage")
-require(__PATH__.."timer")
+require(_path.."bootstrap")
+require(_path.."event")
+require(_path.."storage")
+require(_path.."timer")

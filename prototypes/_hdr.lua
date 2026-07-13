@@ -1,12 +1,14 @@
-local __PATH__ = "prototypes/"
+local _path = "prototypes/"
 
-require(__PATH__.."entity/_hdr")
-require(__PATH__.."item/_hdr")
-require(__PATH__.."planet/_hdr")
-require(__PATH__.."recipe/_hdr")
-require(__PATH__.."tech/_hdr")
+require(_path.."entity/_hdr")
+require(_path.."item/_hdr")
+require(_path.."planet/_hdr")
+require(_path.."recipe/_hdr")
+require(_path.."resource/_hdr")
+require(_path.."tech/_hdr")
 
-require(__PATH__.."ammo-category")
-require(__PATH__.."item-groups")
-require(__PATH__.."projectile")
-require(__PATH__.."sound")
+require(_path.."ammo-category")
+require(_path.."item-groups")
+require(_path.."projectile")
+require(_path.."recipe-category")
+require(_path.."sound")

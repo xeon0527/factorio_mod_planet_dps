@@ -1,9 +1,9 @@
-local __PATH__ = "prototypes/entity/"
+local _path = "prototypes/entity/"
 
-require(__PATH__.."building/dps-supercomputer")
-require(__PATH__.."building/promethium-subcore")
-require(__PATH__.."building/promethium-subcore-container")
+require(_path.."building/dps-credit-translator")
+require(_path.."building/dps-supercomputer")
+require(_path.."building/dps-subcore")
 
-require(__PATH__.."special/dorax")
+require(_path.."special/dorax")
 
-require(__PATH__.."turret/supersonic-grenade-launcher")
+require(_path.."turret/supersonic-grenade-launcher")

@@ -46,7 +46,7 @@ data:extend {
     researching_speed = 1,
 
     inputs = {
-      "dps-item_dorax-fragment",
+      "dps-item_dps-data-pack",
     },
     module_slots = 4,
     icons_positioning =
@@ -152,24 +152,24 @@ data:extend {
       {type = "item", name = "electronic-circuit", amount = 25},
       {type = "item", name = "advanced-circuit", amount = 25},
       {type = "item", name = "processing-unit", amount = 25},
-      {type = "item", name = "dps-item_promethium-subcore-fragment", amount = 5},
+      {type = "item", name = "dps-item_dps-data-pack", amount = 5},
     },
     surface_conditions =
     {
       {
         property = "pressure",
-        min = __G_PLANET__.pressure,
-        max = __G_PLANET__.pressure
+        min = __PLANET__.pressure,
+        max = __PLANET__.pressure
       },
       {
         property = "magnetic-field",
-        min = __G_PLANET__.magnetic_field,
-        max = __G_PLANET__.magnetic_field
+        min = __PLANET__.magnetic_field,
+        max = __PLANET__.magnetic_field
       },
       {
         property = "gravity",
-        min = __G_PLANET__.gravity,
-        max = __G_PLANET__.gravity
+        min = __PLANET__.gravity,
+        max = __PLANET__.gravity
       },
     },
     results = {{type="item", name="dps-building_dps-supercomputer", amount=1}},

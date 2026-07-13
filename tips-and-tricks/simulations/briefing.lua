@@ -39,4 +39,4 @@ surface.create_entity{name = "cliff", position = {11 ,-4}, cliff_orientation = "
 surface.create_entity{name = "dps-deco_big-sand-rock", position = {-1 ,5}}
 surface.create_entity{name = "dps-deco_huge-rock", position = {3 ,4}}
 surface.create_entity{name = "dps-deco_big-rock", position = {0 ,2}}
-surface.create_entity{name = "dps-building_promethium-subcore", position = {7 ,2}}
+surface.create_entity{name = "dps-building_dps-subcore", position = {7 ,2}}

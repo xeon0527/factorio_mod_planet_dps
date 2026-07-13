@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.0
+Date: 14. 7. 2026
+  Major Features:
+    - Renamed the Promethium Subcore to the DPS Subcore.
+    - The DPS Subcore now generates DPS Credits.
+    - DPS Scrap now generates as surface ore deposits. DPS Credits now serve as the primary resource currency for progression on the DPS planet. However, you will need a great deal of them.
+    - The recycling results for DPS Scrap have been adjusted to be more favorable.
+    - Added the DPS Credit Translator. This building can instantly convert DPS Credit into useful resources.
+    - Made minor adjustments to the overall technology tree.
+    - Removed the DPS Science Pack and added the DPS Data Pack.
+    - D.O.R.A.X no longer serves any function. Content for D.O.R.A.X will be added in a future update.
+
+  Minor Features:
+    - The range of the Supersonic Grenade Launcher has been increased to 36.
+    - Removed compatibility with K2 Spaced Out.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.1.2
 Date: 29. 6. 2026
   Bugfixes:

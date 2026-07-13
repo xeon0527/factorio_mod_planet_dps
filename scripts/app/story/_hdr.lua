@@ -1,3 +1,3 @@
-local __PATH__ = "scripts/app/story/"
+local _path = "scripts/app/story/"
 
-require(__PATH__.."dorax_appers")
+require(_path.."dorax_appers")

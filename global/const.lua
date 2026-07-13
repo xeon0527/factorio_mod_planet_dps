@@ -1,1 +1,1 @@
-__G_MOD__ = "__planet-dps__"
+__PATH__ = "__planet-dps__"

@@ -1,4 +1,4 @@
-local __PATH__ = "prototypes/tech/"
+local _path = "prototypes/tech/"
 
-require(__PATH__.."planet")
-require(__PATH__.."supercomputer")
+require(_path.."planet")
+require(_path.."dps-data-pack")

@@ -1,4 +1,4 @@
-local __PATH__ = "global/"
+local _path = "global/"
 
-require(__PATH__.."planet")
-require(__PATH__.."const")
+require(_path.."planet")
+require(_path.."const")

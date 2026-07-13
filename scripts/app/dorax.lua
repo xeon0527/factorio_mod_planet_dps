@@ -14,11 +14,11 @@ local function _item_delivery(container, item_name, damage, damage_per_item, inf
 end
 
 DRV_EVENT_register_built_entity_handler(function(event)
-  if event.entity_name == "dps-entity-special_dorax" and
+  if event.entity_name == "dps-special_dorax" and
       not event.is_ghost and
       event.entity.surface.name == "dps-planet_dps" then
 
-    local c = UTIL_ensure_entity(event.entity.surface, { name = "dps-entity-special_dorax-container",
+    local c = UTIL_ensure_entity(event.entity.surface, { name = "dps-special_dorax-container",
                 position = event.entity.position, hidden = true})
     if not c then return end
 
@@ -36,8 +36,8 @@ DRV_EVENT_register_built_entity_handler(function(event)
 end)
 
 DRV_EVENT_register_destroy_entity_handler(function(event)
-  if event.entity.name == "dps-entity-special_dorax" and event.entity.surface.name == "dps-planet_dps" then
-    local container = event.entity.surface.find_entity("dps-entity-special_dorax-container", event.entity.position)
+  if event.entity.name == "dps-special_dorax" and event.entity.surface.name == "dps-planet_dps" then
+    local container = event.entity.surface.find_entity("dps-special_dorax-container", event.entity.position)
     if container then
       container.destroy()
     end
@@ -54,13 +54,13 @@ DRV_TIMER_install_1s_timer(function()
   if dorax_placement.landed and dorax_placement.entity and dorax_placement.entity.valid then
     local e = dorax_placement.entity
 
-    local container = e.surface.find_entity("dps-entity-special_dorax-container", e.position)
+    local container = e.surface.find_entity("dps-special_dorax-container", e.position)
     if container then
       local damage = e.max_health - e.health
 
       --status.set_current_dps(damage)
 
-      _item_delivery(container, "dps-item_dorax-fragment", damage, 10.0, 2500.0)
+      --_item_delivery(container, "dps-item_dorax-fragment", damage, 10.0, 2500.0)
 --
       --if damage >= 10000.0 then
       --  _item_delivery(container, "heavy-oil-barrel", damage - 10000.0, 250.0, 10000.0)

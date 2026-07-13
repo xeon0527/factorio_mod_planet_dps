@@ -23,7 +23,7 @@ for _, v in pairs(data.raw["ammo-category"]) do
     table.insert(ammo_damage_table, {
       type = "ammo-damage",
       ammo_category = v.name,
-      modifier = 0.05,
+      modifier = 0.2,
     })
   end
 end
@@ -32,7 +32,7 @@ data.raw["technology"]["dps-tech_basic-dps-engineering"].effects = ammo_damage_t
 
 
 
-local dorax_resistances_old = data.raw["proxy-container"]["dps-entity-special_dorax"].resistances or {}
+local dorax_resistances_old = data.raw["proxy-container"]["dps-special_dorax"].resistances or {}
 local dorax_resistances = {}
 
 for _, v in pairs(data.raw["damage-type"]) do
@@ -55,4 +55,4 @@ for _, v in pairs(dorax_resistances_old) do
   table.insert(dorax_resistances, v)
 end
 
-data.raw["proxy-container"]["dps-entity-special_dorax"].resistances = dorax_resistances
+data.raw["proxy-container"]["dps-special_dorax"].resistances = dorax_resistances
