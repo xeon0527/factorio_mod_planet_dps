@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.2
+Date: 15. 7. 2026
+  Balancing:
+    - Reduced the overall research costs across the tech tree.
+    - Reduced the crafting time of DPS Credit exchange recipes to 1 second.
+
+  Compatibility:
+    - Reworked the K2SO compatibility code. The mod is now officially compatible with K2SO.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.1
 Date: 15. 7. 2026
   Balancing:

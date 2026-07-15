@@ -20,7 +20,7 @@ local _recipe = {
     }
   },
   enabled = false,
-  energy_required = 0.1,
+  energy_required = 1.0,
   auto_recycle = false,
   subgroup = "dps-item-subgroup_recipe",
 }
