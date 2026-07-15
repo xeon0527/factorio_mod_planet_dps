@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.2.1
+Date: 15. 7. 2026
+  Balancing:
+    - Greatly reduced the density of cliffs during world generation. This provides significantly more open space for building.
+    - Doubled the overall resource yield from DPS Scrap recycling recipes.
+    - Slightly increased the size of DPS Scrap surface deposits.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.2.0
 Date: 14. 7. 2026
   Major Features:

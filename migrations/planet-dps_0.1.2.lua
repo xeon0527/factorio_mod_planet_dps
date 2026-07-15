@@ -5,7 +5,7 @@ if sf then
     if inv == nil then return end
 
     inv.clear()
-    inv.set_bar(100)
+    inv.set_bar(nil)
     for i = 1, 20 do
       inv.set_filter(i,       {name = "dps-item_dps-credit-n"})
       inv.set_filter(i + 20,  {name = "dps-item_dps-credit-k"})

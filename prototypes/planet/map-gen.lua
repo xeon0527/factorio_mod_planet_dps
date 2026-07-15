@@ -13,9 +13,9 @@ local map_gen = {
   {
     name = "cliff",
     cliff_smoothing = 1,
-    cliff_elevation_interval = 10,
+    cliff_elevation_interval = 20,
     cliff_elevation_0 = 0,
-    richness = 5,
+    richness = 3,
   },
   autoplace_controls = {
     ["dps-autoplace_dps-scrap"] = {},

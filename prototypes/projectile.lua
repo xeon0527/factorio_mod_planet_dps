@@ -49,6 +49,10 @@ data:extend {
               }
             }
           },
+          --{
+          --  type = "damage",
+          --  damage = {amount = 1 , type = "dps-damage-type_dps"}
+          --},
           {
             type = "destroy-decoratives",
             from_render_layer = "decorative",

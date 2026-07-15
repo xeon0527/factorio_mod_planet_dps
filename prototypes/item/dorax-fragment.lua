@@ -10,7 +10,7 @@ data:extend {
     inventory_move_sound = item_sounds.resource_inventory_move,
     pick_sound = item_sounds.resource_inventory_pickup,
     drop_sound = item_sounds.resource_inventory_move,
-    stack_size = 200,
+    stack_size = 1000,
     default_import_location = "dps-planet_dps",
     weight = 1*kg,
 

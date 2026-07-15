@@ -31,18 +31,13 @@ data:extend {
     damaged_trigger_effect = hit_effects.entity(),
 
     max_health = 100000000,
-    --resistances = {
-    --  {
-    --    type = "physical",
-    --    decrease = 10000,
-    --    percent = 99,
-    --  },
-    --  {
-    --    type = "explosion",
-    --    decrease = 1000,
-    --    percent = 99,
-    --  },
-    --},
+    resistances = {
+      {
+        type = "dps-damage-type_dps",
+        decrease = 0,
+        percent = 0,
+      },
+    },
     healing_per_tick = 0,
     inventory_size = 100,
 

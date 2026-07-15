@@ -8,6 +8,7 @@ require(_path.."resource/_hdr")
 require(_path.."tech/_hdr")
 
 require(_path.."ammo-category")
+require(_path.."damage-type")
 require(_path.."item-groups")
 require(_path.."projectile")
 require(_path.."recipe-category")
