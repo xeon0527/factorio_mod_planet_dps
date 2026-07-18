@@ -55,7 +55,13 @@ data:extend {
   {
     type = "ammo-turret",
     name = "dps-turret_apfsds-cannon",
-    icon = "__space-age__/graphics/icons/rocket-turret.png",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/artillery-turret.png",
+        icon_size = 64,
+        tint = {1.0, 1.0, 0.33}
+      },
+    },
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 3, result = "dps-turret_apfsds-cannon"},
     max_health = 500,
@@ -204,10 +210,10 @@ data:extend {
     surface_conditions = __PLANET_CONDITIONS__,
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit-k", amount = 50},
-      {type = "item", name = "concrete", amount = 1000},
-      {type = "item", name = "steel-plate", amount = 500},
-      {type = "item", name = "processing-unit", amount = 125},
+      {type = "item", name = "dps-item_dps-credit-k", amount = 25},
+      {type = "item", name = "concrete", amount = 500},
+      {type = "item", name = "steel-plate", amount = 250},
+      {type = "item", name = "processing-unit", amount = 75},
     },
     results = {{type="item", name="dps-turret_apfsds-cannon", amount=1}},
 

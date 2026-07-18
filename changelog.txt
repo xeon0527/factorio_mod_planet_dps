@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.3
+Date: 19. 7. 2026
+  Balancing:
+    - Reduced the crafting cost of the APFSDS Cannon and APFSDS Shell.
+
+  Bugfixes:
+    - Fixed an issue that could cause a crash under certain conditions.
+    - Fixed an issue where APFSDS Shell recipes were available from the start instead of unlocking through research.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.2
+Date: 18. 7. 2026
+  Major Features:
+    - Added APFSDS Shell Productivity and APFSDS Shell Firing Speed research.
+    - APFSDS Shell Enhancement Efficiency research has been replaced with APFSDS Shell Enhancement Chance research, and the overall enhancement chances have been rebalanced. You can now increase the enhancement chance all the way up to 100%.
+
+  Bugfixes:
+    - Fixed an issue where the stack size of APFSDS Shells was excessively large.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.1
 Date: 18. 7. 2026
   Major Features:

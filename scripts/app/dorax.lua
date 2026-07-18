@@ -79,7 +79,7 @@ DRV_TIMER_install_1s_timer(function()
           surface = e.surface,
           target = { type = "entity", entity = e },
           color = { 1.0, 0.66, 0.66,},
-          scale = 2.0,
+          scale = 3.0,
           time_to_live = 60,
           forces = nil,
           players = nil,
@@ -87,7 +87,9 @@ DRV_TIMER_install_1s_timer(function()
           vertical_alignment = "middle",
         }
 
-        container.insert { name = "dps-item_dorax-fragment", count = damage }
+        if damage >= 1 then
+          container.insert { name = "dps-item_dorax-fragment", count = damage }
+        end
       end
     end
     e.health = e.max_health

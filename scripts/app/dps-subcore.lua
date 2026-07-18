@@ -98,7 +98,9 @@ DRV_TIMER_install_1s_timer(function()
             damage = damage % 1000
           end
           
-          container.insert { name = "dps-item_dps-credit-n", count = damage }
+          if damage >= 1 then
+            container.insert { name = "dps-item_dps-credit-n", count = damage }
+          end
         end
       end
       entity.health = entity.max_health

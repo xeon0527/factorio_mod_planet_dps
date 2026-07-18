@@ -40,8 +40,8 @@ local function _create_ammo(level, damage, tint)
       inventory_move_sound = item_sounds.ammo_large_inventory_move,
       pick_sound = item_sounds.ammo_large_inventory_pickup,
       drop_sound = item_sounds.ammo_large_inventory_move,
-      --stack_size = 5,
-      stack_size = 1000,
+      stack_size = 10,
+      --stack_size = 1000,
       weight = 1000*tons
     },
   
@@ -101,9 +101,9 @@ data:extend {
     energy_required = 10,
     surface_conditions = __PLANET_CONDITIONS__,
     ingredients = {
-      {type = "item", name = "dps-item_dps-credit-n", amount = 100},
-      {type = "item", name = "steel-plate", amount = 50},
-      {type = "item", name = "copper-cable", amount = 50},
+      {type = "item", name = "dps-item_dps-credit-n", amount = 50},
+      {type = "item", name = "steel-plate", amount = 25},
+      {type = "item", name = "copper-cable", amount = 25},
     },
     results = {{type="item", name="dps-ammo_apfsds-shell-1", amount=1}},
 
@@ -115,7 +115,7 @@ data:extend {
   {
     type = "recipe",
     name = "dps-ammo_apfsds-shell-2",
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     surface_conditions = __PLANET_CONDITIONS__,
     categories = { "dps-recipe-category_dps-equipment-enhancer" },
@@ -123,7 +123,8 @@ data:extend {
       {type = "item", name = "dps-item_dps-credit-n", amount = 5},
       {type = "item", name = "dps-ammo_apfsds-shell-1", amount = 1},
     },
-    results = {{type="item", name="dps-ammo_apfsds-shell-2", amount = 1, independent_probability = 0.3}},
+    results = {{type="item", name="dps-ammo_apfsds-shell-2", amount = 1, independent_probability = 0.4}},
+    maximum_productivity = 99999,
 
     auto_recycle = false,
     allow_quality = false,
@@ -133,7 +134,7 @@ data:extend {
   {
     type = "recipe",
     name = "dps-ammo_apfsds-shell-3",
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     surface_conditions = __PLANET_CONDITIONS__,
     categories = { "dps-recipe-category_dps-equipment-enhancer" },
@@ -141,7 +142,7 @@ data:extend {
       {type = "item", name = "dps-item_dps-credit-n", amount = 10},
       {type = "item", name = "dps-ammo_apfsds-shell-2", amount = 1},
     },
-    results = {{type="item", name="dps-ammo_apfsds-shell-3", amount = 1, independent_probability = 0.3}},
+    results = {{type="item", name="dps-ammo_apfsds-shell-3", amount = 1, independent_probability = 0.4}},
 
     auto_recycle = false,
     allow_quality = false,
@@ -151,7 +152,7 @@ data:extend {
   {
     type = "recipe",
     name = "dps-ammo_apfsds-shell-4",
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     surface_conditions = __PLANET_CONDITIONS__,
     categories = { "dps-recipe-category_dps-equipment-enhancer" },
@@ -159,7 +160,7 @@ data:extend {
       {type = "item", name = "dps-item_dps-credit-n", amount = 15},
       {type = "item", name = "dps-ammo_apfsds-shell-3", amount = 1},
     },
-    results = {{type="item", name="dps-ammo_apfsds-shell-4", amount = 1, independent_probability = 0.3}},
+    results = {{type="item", name="dps-ammo_apfsds-shell-4", amount = 1, independent_probability = 0.4}},
 
     auto_recycle = false,
     allow_quality = false,
@@ -169,7 +170,7 @@ data:extend {
   {
     type = "recipe",
     name = "dps-ammo_apfsds-shell-5",
-    enabled = true,
+    enabled = false,
     energy_required = 1,
     surface_conditions = __PLANET_CONDITIONS__,
     categories = { "dps-recipe-category_dps-equipment-enhancer" },
@@ -177,7 +178,7 @@ data:extend {
       {type = "item", name = "dps-item_dps-credit-n", amount = 20},
       {type = "item", name = "dps-ammo_apfsds-shell-4", amount = 1},
     },
-    results = {{type="item", name="dps-ammo_apfsds-shell-5", amount = 1, independent_probability = 0.3}},
+    results = {{type="item", name="dps-ammo_apfsds-shell-5", amount = 1, independent_probability = 0.4}},
 
     auto_recycle = false,
     allow_quality = false,

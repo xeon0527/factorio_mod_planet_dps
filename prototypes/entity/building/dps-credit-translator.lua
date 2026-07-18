@@ -42,7 +42,6 @@ data:extend {
     allowed_effects = {"consumption", "speed", "pollution"},
     impact_category = "metal-large",
 
-    --fast_replaceable_group = "assembling-machine",
     crafting_speed = 1,
     crafting_categories = {"dps-recipe-category_dps-credit-translator"},
     module_slots = 4,

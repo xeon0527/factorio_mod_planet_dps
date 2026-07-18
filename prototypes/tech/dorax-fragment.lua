@@ -105,7 +105,47 @@ data:extend {
 
   {
     type = "technology",
-    name = "dps-tech_apfsds-shell-enhancement-efficiency",
+    name = "dps-tech_apfsds-shell-enhancement-chance",
+    order = "dps",
+    icons = {
+      {
+        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon_size = 256,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-movement-speed.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {50, 50},
+        floating = true
+      }
+    },
+    prerequisites = { "dps-tech_dps-equipment-enhancer" },
+    unit =
+    {
+      count_formula = "100 * (L ^ 1.1)",
+      ingredients =
+      {
+        {"dps-item_dps-data-pack", 1},
+        {"dps-item_dorax-fragment", 1},
+      },
+      time = 1
+    },
+    max_level = 60,
+    upgrade = true,
+
+    effects =
+    {
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-2", change = 0.025, },
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-3", change = 0.025, },
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-4", change = 0.025, },
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-5", change = 0.025, },
+    },
+  },
+
+  {
+    type = "technology",
+    name = "dps-tech_apfsds-shell-productivity",
     order = "dps",
     icons = {
       {
@@ -123,7 +163,44 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.5)",
+      count_formula = "500 * (L ^ 1.1)",
+      ingredients =
+      {
+        {"dps-item_dps-data-pack", 1},
+        {"dps-item_dorax-fragment", 1},
+      },
+      time = 1
+    },
+    max_level = 30,
+    upgrade = true,
+
+    effects =
+    {
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-1", change = 0.1, },
+    },
+  },
+
+  {
+    type = "technology",
+    name = "dps-tech_apfsds-shell-gun-speed",
+    order = "dps",
+    icons = {
+      {
+        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon_size = 256,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-speed.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {50, 50},
+        floating = true
+      }
+    },
+    prerequisites = { "dps-tech_dps-equipment-enhancer" },
+    unit =
+    {
+      count_formula = "100 * (L ^ 1.1)",
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
@@ -136,10 +213,7 @@ data:extend {
 
     effects =
     {
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-2", change = 0.1, },
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-3", change = 0.1, },
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-4", change = 0.1, },
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-5", change = 0.1, },
+      { type = "gun-speed", ammo_category = "apfsds-shell", modifier = 0.1, },
     },
   },
 }
