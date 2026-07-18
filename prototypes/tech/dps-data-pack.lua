@@ -197,7 +197,7 @@ data:extend {
     prerequisites = { "dps-tech_supersonic-grenade-launcher", "dps-tech_discovery-of-dorax"},
     unit =
     {
-      count = 5000,
+      count = 2500,
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},

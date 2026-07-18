@@ -39,7 +39,7 @@ data:extend {
       fade_out_ticks = 20
     },
 
-    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    allowed_effects = {"consumption", "speed", "pollution"},
     impact_category = "metal-large",
 
     --fast_replaceable_group = "assembling-machine",

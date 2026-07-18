@@ -47,6 +47,7 @@ data:extend {
 
     inputs = {
       "dps-item_dps-data-pack",
+      "dps-item_dorax-fragment",
     },
     module_slots = 4,
     icons_positioning =

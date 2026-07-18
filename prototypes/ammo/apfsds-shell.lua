@@ -40,7 +40,8 @@ local function _create_ammo(level, damage, tint)
       inventory_move_sound = item_sounds.ammo_large_inventory_move,
       pick_sound = item_sounds.ammo_large_inventory_pickup,
       drop_sound = item_sounds.ammo_large_inventory_move,
-      stack_size = 5,
+      --stack_size = 5,
+      stack_size = 1000,
       weight = 1000*tons
     },
   
@@ -89,6 +90,9 @@ _create_ammo(3, 3, {1,1,0})
 _create_ammo(4, 4, {0,1,0})
 _create_ammo(5, 5, {0.25,0.25,1})
 
+
+--dps-recipe-category_dps-equipment-enhancer
+
 data:extend {
   {
     type = "recipe",
@@ -102,6 +106,78 @@ data:extend {
       {type = "item", name = "copper-cable", amount = 50},
     },
     results = {{type="item", name="dps-ammo_apfsds-shell-1", amount=1}},
+
+    auto_recycle = false,
+    allow_quality = false,
+    can_set_quality = false,
+  },
+
+  {
+    type = "recipe",
+    name = "dps-ammo_apfsds-shell-2",
+    enabled = true,
+    energy_required = 1,
+    surface_conditions = __PLANET_CONDITIONS__,
+    categories = { "dps-recipe-category_dps-equipment-enhancer" },
+    ingredients = {
+      {type = "item", name = "dps-item_dps-credit-n", amount = 5},
+      {type = "item", name = "dps-ammo_apfsds-shell-1", amount = 1},
+    },
+    results = {{type="item", name="dps-ammo_apfsds-shell-2", amount = 1, independent_probability = 0.3}},
+
+    auto_recycle = false,
+    allow_quality = false,
+    can_set_quality = false,
+  },
+
+  {
+    type = "recipe",
+    name = "dps-ammo_apfsds-shell-3",
+    enabled = true,
+    energy_required = 1,
+    surface_conditions = __PLANET_CONDITIONS__,
+    categories = { "dps-recipe-category_dps-equipment-enhancer" },
+    ingredients = {
+      {type = "item", name = "dps-item_dps-credit-n", amount = 10},
+      {type = "item", name = "dps-ammo_apfsds-shell-2", amount = 1},
+    },
+    results = {{type="item", name="dps-ammo_apfsds-shell-3", amount = 1, independent_probability = 0.3}},
+
+    auto_recycle = false,
+    allow_quality = false,
+    can_set_quality = false,
+  },
+
+  {
+    type = "recipe",
+    name = "dps-ammo_apfsds-shell-4",
+    enabled = true,
+    energy_required = 1,
+    surface_conditions = __PLANET_CONDITIONS__,
+    categories = { "dps-recipe-category_dps-equipment-enhancer" },
+    ingredients = {
+      {type = "item", name = "dps-item_dps-credit-n", amount = 15},
+      {type = "item", name = "dps-ammo_apfsds-shell-3", amount = 1},
+    },
+    results = {{type="item", name="dps-ammo_apfsds-shell-4", amount = 1, independent_probability = 0.3}},
+
+    auto_recycle = false,
+    allow_quality = false,
+    can_set_quality = false,
+  },
+
+  {
+    type = "recipe",
+    name = "dps-ammo_apfsds-shell-5",
+    enabled = true,
+    energy_required = 1,
+    surface_conditions = __PLANET_CONDITIONS__,
+    categories = { "dps-recipe-category_dps-equipment-enhancer" },
+    ingredients = {
+      {type = "item", name = "dps-item_dps-credit-n", amount = 20},
+      {type = "item", name = "dps-ammo_apfsds-shell-4", amount = 1},
+    },
+    results = {{type="item", name="dps-ammo_apfsds-shell-5", amount = 1, independent_probability = 0.3}},
 
     auto_recycle = false,
     allow_quality = false,

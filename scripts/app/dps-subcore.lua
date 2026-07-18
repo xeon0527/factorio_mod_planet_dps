@@ -61,7 +61,7 @@ DRV_TIMER_install_1s_timer(function()
       local container = entity.surface.find_entity("dps-building_dps-subcore-container", entity.position)
       if container then
         local damage = entity.max_health - entity.health
-        if damage > 0 then
+        if damage >= 1 then
           dps_credit_translator_research_trigger = true
           if damage >= 1000 then
             dps_credit_exchange_research_trigger = true
@@ -69,24 +69,35 @@ DRV_TIMER_install_1s_timer(function()
               dps_data_pack_trigger = true
             end
           end
-        end
 
-        if damage >= 1000000000 then
-          container.insert { name = "dps-item_dps-credit-g", count = damage / 1000000000 }
-          damage = damage % 1000000000
-        end
+          rendering.draw_text {
+            text = damage,
+            surface = entity.surface,
+            target = { type = "entity", entity = entity },
+            color = { 1.0, 0.66, 0.66,},
+            scale = 2.0,
+            time_to_live = 60,
+            forces = nil,
+            players = nil,
+            alignment = "center",
+            vertical_alignment = "middle",
+          }
 
-        if damage >= 1000000 then
-          container.insert { name = "dps-item_dps-credit-m", count = damage / 1000000 }
-          damage = damage % 1000000
-        end
+          if damage >= 1000000000 then
+            container.insert { name = "dps-item_dps-credit-g", count = damage / 1000000000 }
+            damage = damage % 1000000000
+          end
 
-        if damage >= 1000 then
-          container.insert { name = "dps-item_dps-credit-k", count = damage / 1000 }
-          damage = damage % 1000
-        end
+          if damage >= 1000000 then
+            container.insert { name = "dps-item_dps-credit-m", count = damage / 1000000 }
+            damage = damage % 1000000
+          end
 
-        if damage >= 1 then
+          if damage >= 1000 then
+            container.insert { name = "dps-item_dps-credit-k", count = damage / 1000 }
+            damage = damage % 1000
+          end
+          
           container.insert { name = "dps-item_dps-credit-n", count = damage }
         end
       end
