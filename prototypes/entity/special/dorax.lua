@@ -30,7 +30,7 @@ data:extend {
     selection_box = {{-4, -4}, {4, 4}},
     damaged_trigger_effect = hit_effects.entity(),
 
-    max_health = 100000000,
+    max_health = 1000000,
     resistances = {
       {
         type = "dps-damage-type_dps",

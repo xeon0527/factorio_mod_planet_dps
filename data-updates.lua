@@ -19,7 +19,7 @@ end
 local ammo_damage_table = {}
 
 for _, v in pairs(data.raw["ammo-category"]) do
-  if not v.hidden then
+  if not v.hidden and v.name ~= "apfsds-shell" then
     table.insert(ammo_damage_table, {
       type = "ammo-damage",
       ammo_category = v.name,

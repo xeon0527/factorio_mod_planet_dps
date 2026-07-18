@@ -6,4 +6,5 @@ require(_path.."building/dps-subcore")
 
 require(_path.."special/dorax")
 
+require(_path.."turret/apfsds-cannon")
 require(_path.."turret/supersonic-grenade-launcher")

@@ -48,7 +48,7 @@ data:extend {
       force = "enemy",
     },
     
-    max_health = 100000000,
+    max_health = 1000000,
     resistances = {
       {
         type = "fire",
@@ -89,6 +89,11 @@ data:extend {
         type = "electric",
         decrease = 0,
         percent = 100
+      },
+      {
+        type = "dps-damage-type_dps",
+        decrease = 0,
+        percent = 0,
       },
     },
     healing_per_tick = 0,

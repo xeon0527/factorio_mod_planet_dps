@@ -71,22 +71,22 @@ DRV_TIMER_install_1s_timer(function()
           end
         end
 
-        if damage > 1000000000 then
+        if damage >= 1000000000 then
           container.insert { name = "dps-item_dps-credit-g", count = damage / 1000000000 }
           damage = damage % 1000000000
         end
 
-        if damage > 1000000 then
+        if damage >= 1000000 then
           container.insert { name = "dps-item_dps-credit-m", count = damage / 1000000 }
           damage = damage % 1000000
         end
 
-        if damage > 1000 then
+        if damage >= 1000 then
           container.insert { name = "dps-item_dps-credit-k", count = damage / 1000 }
           damage = damage % 1000
         end
 
-        if damage > 0 then
+        if damage >= 1 then
           container.insert { name = "dps-item_dps-credit-n", count = damage }
         end
       end

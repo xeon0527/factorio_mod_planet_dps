@@ -69,45 +69,43 @@ data:extend {
       }
     },
   },
-  --{
-  --  type = "tips-and-tricks-item",
-  --  name = "dps-tat_dorax",
-  --  tag = "[virtual-signal=signal-red]",
-  --  category = "dps-tat_category",
-  --  order = "dps-c",
-  --  indent = 1,
-  --  simulation = {
-  --    init_update_count = 600,
-  --    planet = "dps-planet_dps",
-  --    checkboard = true,
-  --    init_file = __SIM_PATH.."dorax.lua",
-  --    update = [[
-  --      local surface = game.surfaces[1]
-  --      local c = surface.find_entity("dps-special_dorax-container", {0,0})
-  --      if c then c.insert{name = "dps-item_dorax-fragment", count = 100} end
-  --    ]]
-  --  },
-  --  trigger =
-  --  {
-  --    type = "research",
-  --    technology = "dps-tech_discovery-of-dorax"
-  --  },
-  --  skip_trigger =
-  --  {
-  --    type = "sequence",
-  --    triggers =
-  --    {
-  --      {
-  --        type = "research",
-  --        technology = "dps-tech_discovery-of-dorax"
-  --      },
-  --      {
-  --        type = "time-elapsed",
-  --        ticks = 5 * minute
-  --      }
-  --    }
-  --  },
-  --},
+
+
+  
+  {
+    type = "tips-and-tricks-item",
+    name = "dps-tat_dorax",
+    tag = "[virtual-signal=signal-red]",
+    category = "dps-tat_category",
+    order = "dps-c",
+    indent = 1,
+    simulation = {
+      init_update_count = 600,
+      planet = "dps-planet_dps",
+      checkboard = true,
+      init_file = __SIM_PATH.."dorax.lua",
+    },
+    trigger =
+    {
+      type = "research",
+      technology = "dps-tech_discovery-of-dorax"
+    },
+    skip_trigger =
+    {
+      type = "sequence",
+      triggers =
+      {
+        {
+          type = "research",
+          technology = "dps-tech_discovery-of-dorax"
+        },
+        {
+          type = "time-elapsed",
+          ticks = 5 * minute
+        }
+      }
+    },
+  },
   --{
   --  type = "tips-and-tricks-item",
   --  name = "dps-tat_dorax-item-graph",

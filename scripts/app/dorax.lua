@@ -1,17 +1,17 @@
 local status = require("scripts/svc/status")
 
-local function _item_delivery(container, item_name, damage, damage_per_item, inflection_point, min_amount)
-  local dmg_out = damage * (inflection_point / (damage + inflection_point))
-  local item_cnt = math.floor(dmg_out / damage_per_item)
-
-  if min_amount and item_cnt <= 0 then
-    item_cnt = min_amount
-  end
-
-  if item_cnt > 0 then
-    container.insert{name = item_name, count = item_cnt}
-  end
-end
+--local function _item_delivery(container, item_name, damage, damage_per_item, inflection_point, min_amount)
+--  local dmg_out = damage * (inflection_point / (damage + inflection_point))
+--  local item_cnt = math.floor(dmg_out / damage_per_item)
+--
+--  if min_amount and item_cnt <= 0 then
+--    item_cnt = min_amount
+--  end
+--
+--  if item_cnt > 0 then
+--    container.insert{name = item_name, count = item_cnt}
+--  end
+--end
 
 DRV_EVENT_register_built_entity_handler(function(event)
   if event.entity_name == "dps-special_dorax" and
@@ -58,13 +58,24 @@ DRV_TIMER_install_1s_timer(function()
     if container then
       local damage = e.max_health - e.health
 
-      --status.set_current_dps(damage)
-
-      --_item_delivery(container, "dps-item_dorax-fragment", damage, 10.0, 2500.0)
---
-      --if damage >= 10000.0 then
-      --  _item_delivery(container, "heavy-oil-barrel", damage - 10000.0, 250.0, 10000.0)
+      --if damage >= 1000000000 then
+      --  container.insert { name = "dps-item_dps-credit-g", count = damage / 1000000000 }
+      --  damage = damage % 1000000000
       --end
+--
+      --if damage >= 1000000 then
+      --  container.insert { name = "dps-item_dps-credit-m", count = damage / 1000000 }
+      --  damage = damage % 1000000
+      --end
+--
+      --if damage >= 1000 then
+      --  container.insert { name = "dps-item_dps-credit-k", count = damage / 1000 }
+      --  damage = damage % 1000
+      --end
+--
+      if damage >= 1 then
+        container.insert { name = "dps-item_dorax-fragment", count = damage }
+      end
     end
     e.health = e.max_health
   end

@@ -22,7 +22,8 @@
     "undefined-field",
     "different-requires",
     "missing-fields",
-    "assign-type-mismatch"
+    "assign-type-mismatch",
+    "param-type-mismatch"
   ],
   "Lua.workspace.userThirdParty": [
     "c:\\Users\\axzs3\\AppData\\Roaming\\Code\\User\\workspaceStorage\\002dbe2f313e1b13afcf653814324f82\\justarandomgeek.factoriomod-debug\\sumneko-3rd"

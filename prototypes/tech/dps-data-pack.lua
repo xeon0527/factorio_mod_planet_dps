@@ -180,4 +180,34 @@ data:extend {
       }
     },
   },
+
+
+
+  {
+    type = "technology",
+    name = "dps-tech_apfsds-cannon",
+    order = "dps",
+    icons = {
+      {
+        icon = "__base__/graphics/technology/artillery.png",
+        icon_size = 256,
+        tint = { 1.0, 1.0, 0.0 }
+      },
+    },
+    prerequisites = { "dps-tech_supersonic-grenade-launcher", "dps-tech_discovery-of-dorax"},
+    unit =
+    {
+      count = 5000,
+      ingredients =
+      {
+        {"dps-item_dps-data-pack", 1},
+      },
+      time = 5,
+    },
+    effects =
+    {
+      { type = "unlock-recipe", recipe = "dps-turret_apfsds-cannon" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell-1" },
+    },
+  },
 }
