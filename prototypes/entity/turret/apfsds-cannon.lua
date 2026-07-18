@@ -55,7 +55,13 @@ data:extend {
   {
     type = "ammo-turret",
     name = "dps-turret_apfsds-cannon",
-    icon = "__space-age__/graphics/icons/rocket-turret.png",
+    icons = {
+      {
+        icon = "__base__/graphics/icons/artillery-turret.png",
+        icon_size = 64,
+        tint = {1.0, 1.0, 0.33}
+      },
+    },
     flags = {"placeable-player", "player-creation"},
     minable = {mining_time = 3, result = "dps-turret_apfsds-cannon"},
     max_health = 500,
