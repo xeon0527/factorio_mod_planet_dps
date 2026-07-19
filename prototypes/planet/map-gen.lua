@@ -18,7 +18,8 @@ local map_gen = {
     richness = 3,
   },
   autoplace_controls = {
-    ["dps-autoplace_dps-scrap"] = {},
+    ["dps-autoplace-control_dps-scrap"] = {},
+    ["dps_autoplace_control_rocks"] = {},
   },
   autoplace_settings =
   {

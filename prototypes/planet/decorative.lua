@@ -19,7 +19,7 @@ big_sand_rock.minable.results =
 }
 big_sand_rock.autoplace =
 {
-  control = "rocks",
+  control = "dps_autoplace_control_rocks",
   order = "a[doodad]-a[rock]-b[big]",
   probability_expression = "multiplier * control * (region_box + rock_density - penalty)",
   local_expressions =
@@ -29,7 +29,7 @@ big_sand_rock.autoplace =
     region_box = "min(aux_range, moisture_range)",
     aux_range = "range_select_base(aux, 0.3, 1, 0.3, -10, 0)",
     moisture_range = "range_select_base(moisture, 0, 0.3, 0.2, -10, 0)",
-    control = "control:rocks:size"
+    control = "control:dps_autoplace_control_rocks:size"
   }
 }
 
@@ -56,7 +56,7 @@ huge_rock.minable.results = {
 }
 huge_rock.autoplace =
 {
-  control = "rocks",
+  control = "dps_autoplace_control_rocks",
   order = "a[doodad]-a[rock]-a[huge]",
   probability_expression = "multiplier * control * (region_box + rock_density - penalty)",
   local_expressions =
@@ -64,7 +64,7 @@ huge_rock.autoplace =
     multiplier = 0.07,
     penalty = 1.7,
     region_box = "range_select_base(moisture, 0.35, 1, 0.2, -10, 0)",
-    control = "control:rocks:size"
+    control = "control:dps_autoplace_control_rocks:size"
   }
 }
 
@@ -92,7 +92,7 @@ big_rock.minable.results = {
 }
 big_rock.autoplace =
 {
-  control = "rocks",
+  control = "dps_autoplace_control_rocks",
   order = "a[doodad]-a[rock]-b[big]",
   probability_expression = "multiplier * control * (region_box + rock_density - penalty)",
   local_expressions =
@@ -100,7 +100,7 @@ big_rock.autoplace =
     multiplier = 0.17,
     penalty = 1.6,
     region_box = "range_select_base(moisture, 0.35, 1, 0.2, -10, 0)",
-    control = "control:rocks:size"
+    control = "control:dps_autoplace_control_rocks:size"
   }
 }
 

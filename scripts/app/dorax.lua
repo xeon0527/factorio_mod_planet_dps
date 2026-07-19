@@ -1,18 +1,5 @@
 local status = require("scripts/svc/status")
 
---local function _item_delivery(container, item_name, damage, damage_per_item, inflection_point, min_amount)
---  local dmg_out = damage * (inflection_point / (damage + inflection_point))
---  local item_cnt = math.floor(dmg_out / damage_per_item)
---
---  if min_amount and item_cnt <= 0 then
---    item_cnt = min_amount
---  end
---
---  if item_cnt > 0 then
---    container.insert{name = item_name, count = item_cnt}
---  end
---end
-
 DRV_EVENT_register_built_entity_handler(function(event)
   if event.entity_name == "dps-special_dorax" and
       not event.is_ghost and
@@ -26,9 +13,10 @@ DRV_EVENT_register_built_entity_handler(function(event)
     event.entity.proxy_target_inventory = defines.inventory.chest
 
     local inv = c.get_inventory(defines.inventory.chest)
-    inv.set_bar(21)
+    inv.set_bar(41)
     for i = 1, 20 do
       inv.set_filter(i, {name = "dps-item_dorax-fragment"})
+      inv.set_filter(i + 20,  {name = "dps-item_dorax-component"})
     end
 
     game.forces["player"].script_trigger_research("dps-tech_discovery-of-dorax")
@@ -50,6 +38,8 @@ DRV_EVENT_register_destroy_entity_handler(function(event)
 end)
 
 DRV_TIMER_install_1s_timer(function()
+  local advanced_dps_engineering_trigger = false
+
   local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
   if dorax_placement.landed and dorax_placement.entity and dorax_placement.entity.valid then
     local e = dorax_placement.entity
@@ -57,23 +47,11 @@ DRV_TIMER_install_1s_timer(function()
     local container = e.surface.find_entity("dps-special_dorax-container", e.position)
     if container then
       local damage = e.max_health - e.health
-
-      --if damage >= 1000000000 then
-      --  container.insert { name = "dps-item_dps-credit-g", count = damage / 1000000000 }
-      --  damage = damage % 1000000000
-      --end
---
-      --if damage >= 1000000 then
-      --  container.insert { name = "dps-item_dps-credit-m", count = damage / 1000000 }
-      --  damage = damage % 1000000
-      --end
---
-      --if damage >= 1000 then
-      --  container.insert { name = "dps-item_dps-credit-k", count = damage / 1000 }
-      --  damage = damage % 1000
-      --end
---
       if damage >= 1 then
+        if damage >= 1000 then
+          advanced_dps_engineering_trigger = true
+        end
+
         rendering.draw_text {
           text = damage,
           surface = e.surface,
@@ -87,11 +65,30 @@ DRV_TIMER_install_1s_timer(function()
           vertical_alignment = "middle",
         }
 
+        --if damage >= 1000000000 then
+      --  container.insert { name = "dps-item_dps-credit-g", count = damage / 1000000000 }
+      --  damage = damage % 1000000000
+      --end
+--
+      --if damage >= 1000000 then
+      --  container.insert { name = "dps-item_dps-credit-m", count = damage / 1000000 }
+      --  damage = damage % 1000000
+      --end
+
+        if damage >= 1000 then
+          container.insert { name = "dps-item_dorax-component", count = damage / 1000 }
+          damage = damage % 1000
+        end
+
         if damage >= 1 then
           container.insert { name = "dps-item_dorax-fragment", count = damage }
         end
       end
     end
     e.health = e.max_health
+  end
+
+  if advanced_dps_engineering_trigger then
+    game.forces["player"].script_trigger_research("dps-tech_advanced-dps-engineering")
   end
 end)

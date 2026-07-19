@@ -124,8 +124,8 @@ data:extend {
       {type = "item", name = "dps-ammo_apfsds-shell-1", amount = 1},
     },
     results = {{type="item", name="dps-ammo_apfsds-shell-2", amount = 1, independent_probability = 0.4}},
-    maximum_productivity = 99999,
 
+    maximum_productivity = 1.5,
     auto_recycle = false,
     allow_quality = false,
     can_set_quality = false,
@@ -144,6 +144,7 @@ data:extend {
     },
     results = {{type="item", name="dps-ammo_apfsds-shell-3", amount = 1, independent_probability = 0.4}},
 
+    maximum_productivity = 1.5,
     auto_recycle = false,
     allow_quality = false,
     can_set_quality = false,
@@ -162,6 +163,7 @@ data:extend {
     },
     results = {{type="item", name="dps-ammo_apfsds-shell-4", amount = 1, independent_probability = 0.4}},
 
+    maximum_productivity = 1.5,
     auto_recycle = false,
     allow_quality = false,
     can_set_quality = false,
@@ -180,6 +182,7 @@ data:extend {
     },
     results = {{type="item", name="dps-ammo_apfsds-shell-5", amount = 1, independent_probability = 0.4}},
 
+    maximum_productivity = 1.5,
     auto_recycle = false,
     allow_quality = false,
     can_set_quality = false,

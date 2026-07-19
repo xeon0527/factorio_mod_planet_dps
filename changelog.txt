@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.4
+Date: 19. 7. 2026
+  Major Features:
+    - Added D.O.R.A.X Component. These items can now be obtained once your DPS exceeds 1,000.
+    - Added the APFSDS Shell Damage upgrade research.
+    - Added the Advanced DPS Engineering research.
+
+  Balancing:
+    - Adjusted the maximum levels of several research technologies.
+
+  Bugfixes:
+    - Fixed an issue where rocks intended to appear only on the DPS planet could also generate on Nauvis.
+    - Fixed an issue where the Supersonic Grenade was receiving three times the intended bonus from Basic DPS Engineering.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.3
 Date: 19. 7. 2026
   Balancing:

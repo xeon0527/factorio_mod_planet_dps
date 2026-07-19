@@ -16,8 +16,6 @@ local function _create_dps_engineering(tech_name, modifier)
   data.raw["technology"][tech_name].effects = ammo_damage_table
 end
 
-_create_dps_engineering("dps-tech_basic-dps-engineering", 0.2)
-
 
 
 for _, v in pairs(data.raw["technology"]) do
@@ -34,6 +32,8 @@ for _, v in pairs(data.raw["technology"]) do
   end
 end
 
+_create_dps_engineering("dps-tech_basic-dps-engineering", 0.2)
+_create_dps_engineering("dps-tech_advanced-dps-engineering", 2.4)
 
 
 local dorax_resistances_old = data.raw["proxy-container"]["dps-special_dorax"].resistances or {}
