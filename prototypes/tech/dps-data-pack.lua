@@ -35,7 +35,7 @@ data:extend {
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
-      count_formula = "1000",
+      count_formula = "500",
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
@@ -80,7 +80,7 @@ data:extend {
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
-      count = 1250,
+      count = 500,
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
@@ -120,7 +120,7 @@ data:extend {
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
-      count = 2500,
+      count = 1000,
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
@@ -161,7 +161,7 @@ data:extend {
     prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
-      count_formula = "2^((L-1) * 0.5)*1000",
+      count_formula = "2^((L-1) * 0.5)*250",
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
@@ -197,7 +197,7 @@ data:extend {
     prerequisites = { "dps-tech_supersonic-grenade-launcher", "dps-tech_discovery-of-dorax"},
     unit =
     {
-      count = 2500,
+      count = 1000,
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},

@@ -17,7 +17,7 @@ data:extend {
 
     stack_size = 200,
     default_import_location = "dps-planet_dps",
-    weight = 1*kg,
+    weight = 1000*tons,
 
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",

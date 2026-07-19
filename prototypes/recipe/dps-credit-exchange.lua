@@ -22,6 +22,8 @@ local _recipe = {
   enabled = false,
   energy_required = 1.0,
   auto_recycle = false,
+  allow_quality = false,
+  can_set_quality = false,
   subgroup = "dps-item-subgroup_recipe",
 }
 

@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.5
+Date: 20. 7. 2026
+  Balancing:
+    - The DPS Credit Translator recipes now operate in batches of 5 DPS Credits.
+    - Reduced the research costs of several technologies.
+
+  Bugfixes:
+    - Fixed an issue where DPS Data Packs could be loaded into rockets.
+    - Fixed an issue where DPS Credit Exchange recipes incorrectly allowed the use of Quality Modules.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.4
 Date: 19. 7. 2026
   Major Features:

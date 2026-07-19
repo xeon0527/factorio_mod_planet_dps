@@ -29,12 +29,12 @@ data:extend {
     categories = {"dps-recipe-category_dps-credit-translator"},
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit-n", amount = 1},
+      {type = "item", name = "dps-item_dps-credit-n", amount = 5},
     },
     results = {
-      { type="item", name="iron-ore",   amount = 1, shared_probability = { min = 0.00, max = 0.333333 }, show_details_in_recipe_tooltip = false },
-      { type="item", name="copper-ore", amount = 1, shared_probability = { min = 0.333333, max = 0.666666 }, show_details_in_recipe_tooltip = false },
-      { type="item", name="stone",      amount = 1, shared_probability = { min = 0.666666, max = 1 }, show_details_in_recipe_tooltip = false },
+      { type="item", name="iron-ore",   amount = 5, shared_probability = { min = 0.00, max = 0.333333 }, show_details_in_recipe_tooltip = false },
+      { type="item", name="copper-ore", amount = 5, shared_probability = { min = 0.333333, max = 0.666666 }, show_details_in_recipe_tooltip = false },
+      { type="item", name="stone",      amount = 5, shared_probability = { min = 0.666666, max = 1 }, show_details_in_recipe_tooltip = false },
     }
   },
   {
@@ -67,12 +67,12 @@ data:extend {
     categories = {"dps-recipe-category_dps-credit-translator"},
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit-n", amount = 1},
+      {type = "item", name = "dps-item_dps-credit-n", amount = 5},
     },
     results = {
-      { type="item", name="coal",       amount = 1, shared_probability = { min = 0.00, max = 0.333333 }, show_details_in_recipe_tooltip = false },
-      { type="item", name="wood",       amount = 1, shared_probability = { min = 0.333333, max = 0.666666 }, show_details_in_recipe_tooltip = false },
-      { type="fluid", name="crude-oil", amount = 10, shared_probability = { min = 0.666666, max = 1 }, show_details_in_recipe_tooltip = false },
+      { type="item", name="coal",       amount = 5, shared_probability = { min = 0.00, max = 0.333333 }, show_details_in_recipe_tooltip = false },
+      { type="item", name="wood",       amount = 5, shared_probability = { min = 0.333333, max = 0.666666 }, show_details_in_recipe_tooltip = false },
+      { type="fluid", name="crude-oil", amount = 50, shared_probability = { min = 0.666666, max = 1 }, show_details_in_recipe_tooltip = false },
     }
   },
 }
