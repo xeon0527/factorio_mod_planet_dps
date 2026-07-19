@@ -97,6 +97,7 @@ data:extend {
 
     --selection_box = nil,
     collision_box = {{-4, -4}, {4, 4}},
+    collision_mask = {layers = {}},
     --hit_visualization_box = nil,
     --shooting_cursor_size = 0,
 

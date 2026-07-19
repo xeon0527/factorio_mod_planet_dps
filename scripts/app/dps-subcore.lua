@@ -71,7 +71,7 @@ DRV_TIMER_install_1s_timer(function()
           end
 
           rendering.draw_text {
-            text = damage,
+            text = math.floor(damage),
             surface = entity.surface,
             target = { type = "entity", entity = entity },
             color = { 1.0, 0.66, 0.66,},

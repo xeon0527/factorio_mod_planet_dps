@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.6
+Date: 20. 7. 2026
+  Changes:
+    - Changed the DPS Subcore and D.O.R.A.X damage display to no longer show decimal values.
+
+  Bugfixes:
+    - Fixed an issue where certain weapons, such as the Shotgun, could not properly damage the DPS Subcore and D.O.R.A.X.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.5
 Date: 20. 7. 2026
   Balancing:
