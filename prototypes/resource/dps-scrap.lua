@@ -20,10 +20,10 @@ _resource.stages.sheet.tint = _tint_color
 _resource.autoplace = resource_autoplace.resource_autoplace_settings {
   name = "dps-autoplace-control_dps-scrap",
   --order = "c", -- Other resources are "b"; oil won't get placed if something else is already there.
-  base_density = 2.0,
+  base_density = 1.0,
   has_starting_area_placement = true,
-  regular_rq_factor_multiplier = 1.2,
-  starting_rq_factor_multiplier = 5.0,
+  regular_rq_factor_multiplier = 1,
+  starting_rq_factor_multiplier = 2.0,
   candidate_spot_count = 22,
 
 }

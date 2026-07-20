@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.7
+Date: 20. 7. 2026
+  Changes:
+    - Adjusted the ordering of the science pack items.
+    - Updated the icon for the DPS Data Pack
+    - Updated the icons for DPS Credits and related items.
+
+  Balancing:
+    - Added Basic DPS Engineering as a prerequisite for the APFSDS Cannon research.
+    - Further reduced the amount of DPS Scrap generated in resource fields.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.6
 Date: 20. 7. 2026
   Changes:

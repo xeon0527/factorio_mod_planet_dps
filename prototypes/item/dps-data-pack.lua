@@ -5,10 +5,19 @@ data:extend {
   {
     type = "tool",
     name = "dps-item_dps-data-pack",
-    icon = "__space-exploration-graphics__/graphics/icons/catalogue/material-catalogue-1.png",
-    icon_size = 64,
+    icons = {
+      {
+        icon = "__space-exploration-graphics__/graphics/icons/catalogue/material-catalogue-2.png",
+        --icon_size = 64,
+      },
+      {
+        icon = "__space-exploration-graphics__/graphics/icons/catalogue/mask-catalogue-2.png",
+        --icon_size = 64,
+        tint = {1, 0, 0}
+      }
+    },
     --subgroup = "science-pack",
-    --order = "zzz",
+    order = "a",
     subgroup = "dps-item-subgroup_science",
 
     inventory_move_sound = item_sounds.science_inventory_move,

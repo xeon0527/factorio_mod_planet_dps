@@ -124,8 +124,18 @@ data:extend {
     name = "dps-tech_dps-data-pack",
     order = "dps",
     essential = true,
-    icon = "__space-exploration-graphics__/graphics/technology/catalogue/material-catalogue-1.png",
-    icon_size = 128,
+    icons = {
+      {
+        icon = "__space-exploration-graphics__/graphics/technology/catalogue/material-catalogue-2.png",
+        icon_size = 128,
+      },
+      {
+        icon = "__space-exploration-graphics__/graphics/technology/catalogue/mask-catalogue-2.png",
+        icon_size = 128,
+        tint = {1, 0, 0}
+      }
+    },
+
     effects =
     {
       {

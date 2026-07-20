@@ -187,6 +187,7 @@ data:extend {
     type = "technology",
     name = "dps-tech_apfsds-cannon",
     order = "dps",
+    essential = true,
     icons = {
       {
         icon = "__base__/graphics/technology/artillery.png",
@@ -194,7 +195,7 @@ data:extend {
         tint = { 1.0, 1.0, 0.0 }
       },
     },
-    prerequisites = { "dps-tech_supersonic-grenade-launcher", "dps-tech_discovery-of-dorax"},
+    prerequisites = { "dps-tech_supersonic-grenade-launcher", "dps-tech_discovery-of-dorax", "dps-tech_basic-dps-engineering"},
     unit =
     {
       count = 1000,
