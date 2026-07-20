@@ -20,20 +20,26 @@ data:extend {
   },
   {
     type = "item-subgroup",
-    name = "dps-item-subgroup_recipe",
+    name = "dps-item-subgroup_credit",
     group = "dps-item-group_dps",
     order = "c"
   },
   {
     type = "item-subgroup",
-    name = "dps-item-subgroup_science",
+    name = "dps-item-subgroup_recipe",
     group = "dps-item-group_dps",
     order = "d"
   },
   {
     type = "item-subgroup",
-    name = "dps-item-subgroup_turret",
+    name = "dps-item-subgroup_science",
     group = "dps-item-group_dps",
     order = "e"
+  },
+  {
+    type = "item-subgroup",
+    name = "dps-item-subgroup_turret",
+    group = "dps-item-group_dps",
+    order = "f"
   },
 }

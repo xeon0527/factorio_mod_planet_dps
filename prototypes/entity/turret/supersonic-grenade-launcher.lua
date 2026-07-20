@@ -192,7 +192,7 @@ data:extend { turret,
       }
     },
     subgroup = "dps-item-subgroup_turret",
-    --order = "b[turret]-c[flamethrower-turret]",
+    order = "a",
     inventory_move_sound = item_sounds.turret_inventory_move,
     pick_sound = item_sounds.flamethrower_inventory_move,
     drop_sound = item_sounds.turret_inventory_move,
@@ -209,7 +209,7 @@ data:extend { turret,
     ingredients =
     {
       {type = "item", name = "steel-plate", amount = 25},
-      {type = "item", name = "processing-unit", amount = 15},
+      {type = "item", name = "advanced-circuit", amount = 15},
       {type = "item", name = "low-density-structure", amount = 5},
     },
     results = {{type="item", name="dps-turret_supersonic-grenade-launcher", amount=1}}

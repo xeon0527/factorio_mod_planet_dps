@@ -24,10 +24,10 @@ local _recipe = {
   auto_recycle = false,
   allow_quality = false,
   can_set_quality = false,
-  subgroup = "dps-item-subgroup_recipe",
+  subgroup = "dps-item-subgroup_credit",
 }
 
-local function _generate_recipe(a, b)
+local function _generate_recipe(a, b, order)
   local a_name = "dps-item_dps-credit-"..string.lower(a)
   local b_name = "dps-item_dps-credit-"..string.lower(b)
 
@@ -50,10 +50,13 @@ local function _generate_recipe(a, b)
   b2a.ingredients = {{ type = "item", name = b_name, amount = 1 }}
   b2a.results = {{ type = "item", name = a_name, amount = 1000 }}
 
+  a2b.order = tostring(order)
+  b2a.order = tostring(order + 4)
+
   data:extend { a2b, b2a, }
 end
 
-_generate_recipe("N", "K")
-_generate_recipe("K", "M")
-_generate_recipe("M", "G")
-_generate_recipe("G", "T")
+_generate_recipe("N", "K", 1)
+_generate_recipe("K", "M", 2)
+_generate_recipe("M", "G", 3)
+_generate_recipe("G", "T", 4)

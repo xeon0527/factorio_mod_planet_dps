@@ -190,13 +190,13 @@ data:extend {
       },
     },
     subgroup = "dps-item-subgroup_turret",
-    --order = "b[turret]-c[flamethrower-turret]",
+    order = "b",
     inventory_move_sound = item_sounds.artillery_large_inventory_move,
     pick_sound = item_sounds.artillery_large_inventory_pickup,
     drop_sound = item_sounds.artillery_large_inventory_move,
     place_result = "dps-turret_apfsds-cannon",
     default_import_location = "dps-planet_dps",
-    stack_size = 1,
+    stack_size = 5,
     weight = 1000*tons
   },
 
@@ -206,14 +206,14 @@ data:extend {
     type = "recipe",
     name = "dps-turret_apfsds-cannon",
     enabled = false,
-    energy_required = 120,
+    energy_required = 15,
     surface_conditions = __PLANET_CONDITIONS__,
     ingredients =
     {
       {type = "item", name = "dps-item_dps-credit-k", amount = 25},
-      {type = "item", name = "concrete", amount = 500},
+      {type = "item", name = "concrete", amount = 250},
       {type = "item", name = "steel-plate", amount = 250},
-      {type = "item", name = "processing-unit", amount = 75},
+      {type = "item", name = "advanced-circuit", amount = 25},
     },
     results = {{type="item", name="dps-turret_apfsds-cannon", amount=1}},
 

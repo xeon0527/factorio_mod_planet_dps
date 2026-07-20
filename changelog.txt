@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.8
+Date: 20. 7. 2026
+  Balancing:
+    - Increased the DPS Credit enhancement cost for the APFSDS Shell.
+    - Adjusted recipes within the Planet DPS Mod that used Processing Units, replacing them with Advanced Circuits as the required ingredient.
+    - Reduced the crafting time and material cost of the APFSDS Cannon.
+    - Reverted the DPS Scrap recycling item yields to match the vanilla values.
+    - Reduced the mining time and recycling time of DPS Scrap by 50%.
+    - Increased the research costs for APFSDS Shell technologies.
+
+  Changes:
+    - Improved item ordering.
+    - Updated the impact sound effect for the APFSDS Shell.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.7
 Date: 20. 7. 2026
   Changes:

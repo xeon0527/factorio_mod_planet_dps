@@ -4,6 +4,8 @@ local _tint_color = { 1.0, 1.0, 0.0 }
 
 resource_autoplace.initialize_patch_set("dps-resource_dps-scrap", true)
 
+local _scrap = table.deepcopy(data.raw.resource["scrap"])
+
 local _resource = table.deepcopy(data.raw.resource["iron-ore"])
 _resource.name = "dps-resource_dps-scrap"
 _resource.icon = nil
@@ -13,6 +15,8 @@ _resource.icons = {
     tint = _tint_color,
   }
 }
+_resource.minable = _scrap.minable
+_resource.minable.mining_time = 0.25
 _resource.minable.result = "dps-resource_dps-scrap"
 _resource.map_color = { 1.0, 1.0, 0}
 _resource.stages.sheet.filename = "__space-age__/graphics/entity/scrap/scrap.png"
@@ -25,8 +29,8 @@ _resource.autoplace = resource_autoplace.resource_autoplace_settings {
   regular_rq_factor_multiplier = 1,
   starting_rq_factor_multiplier = 2.0,
   candidate_spot_count = 22,
-
 }
+_resource.factoriopedia_simulation = _scrap.factoriopedia_simulation
 
 data:extend { _resource,
   {
@@ -53,7 +57,7 @@ data:extend { _resource,
     drop_sound = item_sounds.resource_inventory_move,
     stack_size = 50,
     default_import_location = "dps-planet_dps",
-    weight = 2*kg,
+    weight = 1000*tons,
     auto_recycle = false,
   },
 
@@ -77,19 +81,29 @@ data:extend { _resource,
     subgroup = "dps-item-subgroup_item",
     enabled = false,
     auto_recycle = false,
-    energy_required = 0.2,
+    energy_required = 0.1,
     ingredients = {{type = "item", name = "dps-resource_dps-scrap", amount = 1}},
     results =
     {
-      {type = "item", name = "iron-plate",            amount = 1, shared_probability = { min = 0.00, max = 0.40 }, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "solid-fuel",            amount = 1, shared_probability = { min = 0.40, max = 0.54 }, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "concrete",              amount = 1, shared_probability = { min = 0.54, max = 0.66 }, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "copper-plate",          amount = 1, shared_probability = { min = 0.66, max = 0.76 }, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "stone",                 amount = 1, shared_probability = { min = 0.76, max = 0.84 }, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "advanced-circuit",      amount = 1, shared_probability = { min = 0.84, max = 0.90 }, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "processing-unit",       amount = 1, shared_probability = { min = 0.90, max = 0.94 }, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "steel-plate",           amount = 1, shared_probability = { min = 0.94, max = 0.96 }, show_details_in_recipe_tooltip = false},
-      {type = "item", name = "low-density-structure", amount = 1, shared_probability = { min = 0.96, max = 0.98 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "iron-plate",            amount = 1, shared_probability = { min = 0.00, max = 0.20 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "solid-fuel",            amount = 1, shared_probability = { min = 0.20, max = 0.27 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "concrete",              amount = 1, shared_probability = { min = 0.27, max = 0.33 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "copper-plate",          amount = 1, shared_probability = { min = 0.33, max = 0.38 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "stone",                 amount = 1, shared_probability = { min = 0.38, max = 0.42 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "advanced-circuit",      amount = 1, shared_probability = { min = 0.42, max = 0.45 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "processing-unit",       amount = 1, shared_probability = { min = 0.45, max = 0.47 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "steel-plate",           amount = 1, shared_probability = { min = 0.47, max = 0.48 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "low-density-structure", amount = 1, shared_probability = { min = 0.48, max = 0.49 }, show_details_in_recipe_tooltip = false},
+
+      --{type = "item", name = "iron-plate",            amount = 1, shared_probability = { min = 0.00, max = 0.40 }, show_details_in_recipe_tooltip = false},
+      --{type = "item", name = "solid-fuel",            amount = 1, shared_probability = { min = 0.40, max = 0.54 }, show_details_in_recipe_tooltip = false},
+      --{type = "item", name = "concrete",              amount = 1, shared_probability = { min = 0.54, max = 0.66 }, show_details_in_recipe_tooltip = false},
+      --{type = "item", name = "copper-plate",          amount = 1, shared_probability = { min = 0.66, max = 0.76 }, show_details_in_recipe_tooltip = false},
+      --{type = "item", name = "stone",                 amount = 1, shared_probability = { min = 0.76, max = 0.84 }, show_details_in_recipe_tooltip = false},
+      --{type = "item", name = "advanced-circuit",      amount = 1, shared_probability = { min = 0.84, max = 0.90 }, show_details_in_recipe_tooltip = false},
+      --{type = "item", name = "processing-unit",       amount = 1, shared_probability = { min = 0.90, max = 0.94 }, show_details_in_recipe_tooltip = false},
+      --{type = "item", name = "steel-plate",           amount = 1, shared_probability = { min = 0.94, max = 0.96 }, show_details_in_recipe_tooltip = false},
+      --{type = "item", name = "low-density-structure", amount = 1, shared_probability = { min = 0.96, max = 0.98 }, show_details_in_recipe_tooltip = false},
     }
   },
 }
