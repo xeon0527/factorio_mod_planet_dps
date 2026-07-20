@@ -35,15 +35,13 @@ data:extend {
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
-      count_formula = "500",
+      count = 500,
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
       },
       time = 10
     },
-    max_level = 5,
-    upgrade = true,
   },
 
   {
@@ -161,14 +159,14 @@ data:extend {
     prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
-      count_formula = "2^((L-1) * 0.5)*250",
+      count_formula = "2^((L-1) * 0.5)*200",
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
       },
       time = 10
     },
-    max_level = 18,
+    max_level = 9,
     upgrade = true,
 
     effects =
@@ -176,7 +174,7 @@ data:extend {
       {
         type = "gun-speed",
         ammo_category = "supersonic-grenade",
-        modifier = 0.5
+        modifier = 1.0
       }
     },
   },

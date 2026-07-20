@@ -39,7 +39,7 @@ data:extend {
     --collision_box = {{-0.3, -1.1}, {0.3, 1.1}},
     acceleration = 0,
     --direction_only = true,
-    --force_condition = "enemy",
+    ---force_condition = "enemy",
     action =
     {
       type = "direct",
@@ -55,14 +55,15 @@ data:extend {
           },
           {
             type = "damage",
-            damage = {amount = 350 , type = "physical"}
+            damage = {amount = 200 , type = "physical"}
           },
           {
             type = "nested-result",
             action =
             {
               type = "area",
-              radius = 4.75,
+              radius = 6.5,
+              force = "enemy",
               action_delivery =
               {
                 type = "instant",
@@ -70,7 +71,7 @@ data:extend {
                 {
                   {
                     type = "damage",
-                    damage = {amount = 350 , type = "explosion"}
+                    damage = {amount = 200 , type = "explosion"}
                   },
                   {
                     type = "create-entity",
@@ -81,10 +82,6 @@ data:extend {
               }
             }
           },
-          --{
-          --  type = "damage",
-          --  damage = {amount = 1 , type = "dps-damage-type_dps"}
-          --},
           {
             type = "destroy-decoratives",
             from_render_layer = "decorative",

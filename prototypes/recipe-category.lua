@@ -8,4 +8,9 @@ data:extend {
     type = "recipe-category",
     name = "dps-recipe-category_dps-equipment-enhancer"
   },
+
+  {
+    type = "recipe-category",
+    name = "dps-recipe-category_armory"
+  },
 }

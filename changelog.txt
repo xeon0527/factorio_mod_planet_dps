@@ -1,4 +1,27 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.9
+Date: 21. 7. 2026
+  Major Features:
+    - Added the Armory to the D.O.R.A.X Component technology tree.
+
+  Balancing:
+    - Reduced the power consumption of the Supersonic Grenade Launcher by 50%.
+    - Reduced the range of the Supersonic Grenade Launcher from 36 to 30.
+    - Removed the minimum range restriction from the Supersonic Grenade Launcher.
+    - The Supersonic Grenade Launcher no longer deals damage to friendly units.
+    - Increased the Supersonic Grenade Launcher's explosion radius from 4.75 to 6.5.
+    - The Supersonic Grenade Launcher can now only be crafted on Planet DPS.
+    - The APFSDS Cannon now requires 10 MW of power to fire.
+    - Reduced the research costs for APFSDS Shell technologies.
+    - Reduced the maximum level of the Supersonic Grenade Launcher firing speed research to 9, while doubling its effect per level.
+    - Basic DPS Engineering has been changed to a one-time research.
+
+  Changes:
+    - Changed the APFSDS Shell effect color to yellow.
+
+  Bugfixes:
+    - Fixed an issue where the Supersonic Grenade Launcher displayed an incorrect power consumption value.
+---------------------------------------------------------------------------------------------------
 Version: 0.3.8
 Date: 20. 7. 2026
   Balancing:

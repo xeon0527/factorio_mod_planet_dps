@@ -77,7 +77,7 @@ local function _create_ammo(level, damage, tint)
         width = 3,
         height = 50,
         priority = "high",
-        tint = { 0.0, 1.0, 1.0 },
+        tint = { 1.0, 1.0, 0.0 },
         scale = 3,
       }
     }

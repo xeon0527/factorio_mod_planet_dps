@@ -73,7 +73,7 @@ local turret = {
   flags = {"placeable-player", "player-creation"},
   minable = {mining_time = 0.5, result = "dps-turret_supersonic-grenade-launcher"},
   fast_replaceable_group = "ammo-turret",
-  max_health = 500,
+  max_health = 1500,
   corpse = "gun-turret-remnants",
   dying_explosion = "gun-turret-explosion",
   collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
@@ -81,11 +81,10 @@ local turret = {
   energy_source =
   {
     type = "electric",
-    buffer_capacity = "1MJ",
-    input_flow_limit = "1MW",
+    buffer_capacity = "250kJ",
     usage_priority = "primary-input"
   },
-  energy_per_shot = "500kJ",
+  energy_per_shot = "250kJ",
 
   drawing_box_vertical_extension = 0.2,
   damaged_trigger_effect = hit_effects.entity(),
@@ -166,8 +165,7 @@ local turret = {
     cooldown = 300,
     projectile_creation_distance = 0.0,
     projectile_center = {0, 0}, -- same as gun_turret_attack shift
-    range = 36,
-    min_range = 8,
+    range = 30,
     sound = {
       filename = __PATH__.."/sound/supersonic-grenade-launcher/attack.ogg",
       aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
@@ -206,6 +204,7 @@ data:extend { turret,
     name = "dps-turret_supersonic-grenade-launcher",
     enabled = false,
     energy_required = 15,
+    surface_conditions = __PLANET_CONDITIONS__,
     ingredients =
     {
       {type = "item", name = "steel-plate", amount = 25},

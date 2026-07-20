@@ -63,14 +63,21 @@ data:extend {
       },
     },
     flags = {"placeable-player", "player-creation"},
-    minable = {mining_time = 3, result = "dps-turret_apfsds-cannon"},
+    minable = {mining_time = 1, result = "dps-turret_apfsds-cannon"},
     max_health = 500,
     corpse = "rocket-turret-remnants",
     dying_explosion = "rocket-turret-explosion",
     collision_box = {{-1.2, -1.2 }, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5 }, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
-    heating_energy = "50kW",
+
+    energy_source =
+  {
+    type = "electric",
+    buffer_capacity = "10MJ",
+    usage_priority = "primary-input"
+  },
+  energy_per_shot = "10MJ",
 
     rotation_speed = 0.002,
     preparing_speed = 0.08,
