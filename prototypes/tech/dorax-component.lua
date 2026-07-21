@@ -8,12 +8,12 @@ data:extend {
     prerequisites = { "dps-tech_advanced-dps-engineering" ,"automation-3"},
     unit =
     {
-      count = 100,
+      count = 500,
       ingredients =
       {
         {"dps-item_dorax-component", 1},
       },
-      time = 5,
+      time = 1,
     },
     effects =
     {

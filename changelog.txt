@@ -1,12 +1,38 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.11
+Date: 21. 7. 2026
+  Major Features:
+    - The damage calculations for the DPS Subcore and D.O.R.A.X are now performed every tick.
+
+  Balancing:
+    - Reduced the Armory crafting speed from 5 to 4
+    - Slightly reduced the research costs for APFSDS Shell technologies.
+    - Significantly increased the crafting cost of the APFSDS Cannon.
+    - Restored the Supersonic Grenade Launcher's range to 36.
+    - Reduced the crafting time of the DPS Data Pack from 5 seconds to 3 seconds.
+    - Increased the Armory research cost from 100 to 500
+
+  Changes:
+    - Enabled the generation of planet environment decoratives.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.10
+Date: 21. 7. 2026
+  Bugfixes:
+    - Fixed an issue where the Armory could not produce Flamethrower Ammo.
+    - Added missing changelog entries from the previous version.
+    - Eliminated a potential bug in the Armory recipe parser logic.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.9
 Date: 21. 7. 2026
   Major Features:
     - Added the Armory to the D.O.R.A.X Component technology tree.
 
   Balancing:
-    - Reduced the power consumption of the Supersonic Grenade Launcher by 50%.
+    - Reduced the base damage of the Supersonic Grenade Launcher from 350 to 200.
     - Reduced the range of the Supersonic Grenade Launcher from 36 to 30.
+    - Reduced the power consumption of the Supersonic Grenade Launcher by 50%.
     - Removed the minimum range restriction from the Supersonic Grenade Launcher.
     - The Supersonic Grenade Launcher no longer deals damage to friendly units.
     - Increased the Supersonic Grenade Launcher's explosion radius from 4.75 to 6.5.

@@ -1,4 +1,6 @@
 local sf = game.get_surface("dps-planet_dps")
+local lib = require("lib/_hdr")
+
 local str = DRV_STORAGE_get("DORAX_PLACEMENT", {})
 
 if sf then
@@ -6,7 +8,7 @@ if sf then
   if #lorax > 0 then
     local container = sf.find_entities_filtered{ name = "dps-building_dps-subcore-container" }
     if #container == 0 then
-      local c = UTIL_ensure_entity(sf, { name = "dps-special_dorax-container",
+      local c = lib.entity.ensure(sf, { name = "dps-special_dorax-container",
                                           position = lorax[1].position, hidden = true})
       if not c then return end
 

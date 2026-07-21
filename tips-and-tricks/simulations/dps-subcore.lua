@@ -1,6 +1,7 @@
 require("__core__/lualib/story")
 require("__planet-dps__/global/_hdr")
 require("__planet-dps__/scripts/util/_hdr")
+__LIB__ = require("__planet-dps__/lib/_hdr")
 
 game.simulation.camera_position = {0.5, 0.5}
 
@@ -10,7 +11,7 @@ surface.create_global_electric_network()
 
 surface.create_entity{name = "electric-energy-interface", force = "player", position = {-10,-10}}
 surface.create_entity{name = "dps-building_dps-subcore", force = "enemy", position = {0,0}}
-UTIL_ensure_entity(surface, { name = "dps-building_dps-subcore-container", position = {0,0}, hidden = true})
+__LIB__.entity.ensure(surface, { name = "dps-building_dps-subcore-container", position = {0,0}, hidden = true})
 
 
 local belt_pos = {

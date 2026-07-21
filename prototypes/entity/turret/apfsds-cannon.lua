@@ -213,14 +213,14 @@ data:extend {
     type = "recipe",
     name = "dps-turret_apfsds-cannon",
     enabled = false,
-    energy_required = 15,
+    energy_required = 60,
     surface_conditions = __PLANET_CONDITIONS__,
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit-k", amount = 25},
-      {type = "item", name = "concrete", amount = 250},
-      {type = "item", name = "steel-plate", amount = 250},
-      {type = "item", name = "advanced-circuit", amount = 25},
+      {type = "item", name = "dps-item_dps-credit-k", amount = 50},
+      {type = "item", name = "concrete", amount = 1000},
+      {type = "item", name = "steel-plate", amount = 1000},
+      {type = "item", name = "processing-unit", amount = 200},
     },
     results = {{type="item", name="dps-turret_apfsds-cannon", amount=1}},
 

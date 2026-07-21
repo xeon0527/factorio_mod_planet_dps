@@ -86,7 +86,7 @@ local function __on_built_entity(event)
       if event_data.set_cancel_message then
         player.print(event_data.set_cancel_message)
       end
-      UTIL_insert_item(player, items)
+      __LIB__.entity.insert_item(player, items)
     else
       for _, item in ipairs(items) do
         entity.surface.spill_item_stack {

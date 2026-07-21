@@ -1,5 +1,5 @@
 require("global/_hdr")
-
+lib = require("lib/_hdr")
 
 local function _setup_supersonic_grenade_damage_modifier()
   for _, v in pairs(data.raw["technology"]) do
@@ -75,16 +75,22 @@ local function _setup_armory_recipe()
     end
   end
 
-  for _, v in pairs(ammo_names) do
-    for _, r in pairs(data.raw["recipe"]) do
-      if r.categories == nil then
-        for _, rst in pairs(r.results) do
+  for _, r in pairs(data.raw["recipe"]) do
+    if r.categories == nil or (#r.categories == 1 and (r.categories[1] == "crafting" or r.categories[1] == "crafting-with-fluid" or r.categories[1] == "chemistry")) then
+      for _, rst in pairs(r.results) do
+        for _, v in pairs(ammo_names) do
           if rst.type == "item" and rst.name == v then
-            r.categories = { "crafting", "dps-recipe-category_armory" }
+            if r.categories == nil then
+              r.categories = { "crafting", "dps-recipe-category_armory" }
+            else
+              table.insert(r.categories, "dps-recipe-category_armory")
+            end
+            goto break_jump
           end
         end
       end
     end
+    ::break_jump::
   end
 end
 

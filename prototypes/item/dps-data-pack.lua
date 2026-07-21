@@ -46,7 +46,7 @@ data:extend {
       {type = "item", name = "firearm-magazine", amount = 2},
       {type = "item", name = "piercing-rounds-magazine", amount = 1},
     },
-    energy_required = 5,
+    energy_required = 3,
     results = {{type="item", name="dps-item_dps-data-pack", amount=1}},
     allow_productivity = true
   }

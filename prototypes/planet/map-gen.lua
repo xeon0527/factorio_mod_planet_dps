@@ -63,37 +63,35 @@ local map_gen = {
 }
 
 
---if not mods["alien-biomes"] then
---  map_gen.autoplace_settings["decorative"] = {
---    settings =
---    {
---      ["brown-hairy-grass"] = {},
---      ["brown-carpet-grass"] = {},
---      ["brown-asterisk-mini"] = {},
---      ["green-asterisk-mini"] = {},
---      ["brown-asterisk"] = {},
---      ["red-asterisk"] = {},
---      ["dark-mud-decal"] = {},
---      ["light-mud-decal"] = {},
---      ["cracked-mud-decal"] = {},
---      ["red-desert-decal"] = {},
---      ["sand-decal"] = {},
---      ["sand-dune-decal"] = {},
---      ["red-pita"] = {},
---      ["red-croton"] = {},
---      ["brown-fluff"] = {},
---      ["brown-fluff-dry"] = {},
---      ["red-desert-bush"] = {},
---      ["white-desert-bush"] = {},
---      ["garballo-mini-dry"] = {},
---      ["garballo"] = {},
---      ["medium-rock"] = {},
---      ["small-rock"] = {},
---      ["tiny-rock"] = {},
---      ["medium-sand-rock"] = {},
---      ["small-sand-rock"] = {},
---    }
---  }
---end
+if not mods["alien-biomes"] then
+  map_gen.autoplace_settings["decorative"] = {
+    settings =
+    {
+      ["brown-asterisk-mini"] = {},
+      ["green-asterisk-mini"] = {},
+      ["brown-asterisk"] = {},
+      ["red-asterisk"] = {},
+      ["dark-mud-decal"] = {},
+      ["light-mud-decal"] = {},
+      ["cracked-mud-decal"] = {},
+      ["red-desert-decal"] = {},
+      ["sand-decal"] = {},
+      ["sand-dune-decal"] = {},
+      ["red-pita"] = {},
+      ["red-croton"] = {},
+      ["brown-fluff"] = {},
+      ["brown-fluff-dry"] = {},
+      ["red-desert-bush"] = {},
+      ["white-desert-bush"] = {},
+      ["garballo-mini-dry"] = {},
+      ["garballo"] = {},
+      ["medium-rock"] = {},
+      ["small-rock"] = {},
+      ["tiny-rock"] = {},
+      ["medium-sand-rock"] = {},
+      ["small-sand-rock"] = {},
+    }
+  }
+end
 
 return map_gen

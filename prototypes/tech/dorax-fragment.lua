@@ -75,10 +75,10 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.3)",
+      count_formula = "100 * (L ^ 1.15)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1
@@ -115,10 +115,10 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "200 * (L ^ 1.3)",
+      count_formula = "200 * (L ^ 1.15)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1
@@ -152,10 +152,10 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.3)",
+      count_formula = "100 * (L ^ 1.15)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1
@@ -189,10 +189,10 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.3)",
+      count_formula = "100 * (L ^ 1.15)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1

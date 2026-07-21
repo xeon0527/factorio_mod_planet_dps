@@ -165,7 +165,7 @@ local turret = {
     cooldown = 300,
     projectile_creation_distance = 0.0,
     projectile_center = {0, 0}, -- same as gun_turret_attack shift
-    range = 30,
+    range = 36,
     sound = {
       filename = __PATH__.."/sound/supersonic-grenade-launcher/attack.ogg",
       aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}

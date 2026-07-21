@@ -9,7 +9,7 @@ PlanetsLib:extend {
     icon_size = 64,
     starmap_icon = __PATH__.."/graphics/planet/512.png",
     starmap_icon_size = 512,
-    gravity_pull = 8,
+    gravity_pull = 14,
 
     orbit = {
       parent = { type = "space-location", name = "star" },

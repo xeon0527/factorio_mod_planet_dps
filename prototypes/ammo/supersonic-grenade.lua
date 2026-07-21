@@ -90,7 +90,7 @@ data:extend {
             include_decals = false,
             invoke_decorative_trigger = true,
             decoratives_with_trigger_only = false, -- if true, destroys only decoratives that have trigger_effect set
-            radius = 4.75 -- large radius for demostrative purposes
+            radius = 6.5 -- large radius for demostrative purposes
           },
         }
       }
@@ -101,7 +101,8 @@ data:extend {
       draw_as_glow = true,
       width = 3,
       height = 50,
-      priority = "high"
+      priority = "high",
+      scale = 2,
     }
   },
 

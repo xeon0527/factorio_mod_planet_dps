@@ -7,13 +7,13 @@ local function __generate()
   if __DRV_STORAGE_LIST__ then 
     for _, v in pairs(__DRV_STORAGE_LIST__) do
       if v.value == nil then
-        UTIL_ensure_object(storage, v.path)
+        __LIB__.table.ensure(storage, v.path)
       else
         local objs = util.split(v.path, ".")
         local val_name = objs[#objs]
         local path = string.sub(v.path, 1, -(string.len(val_name) + 2))
 
-        local target = UTIL_ensure_object(storage, path)
+        local target = __LIB__.table.ensure(storage, path)
         if not target[val_name] then
           target[val_name] = v.value
         end

@@ -1,9 +1,10 @@
-local function _entity_created(entity)
-  local entities = DRV_STORAGE_get("dps-subcore", {})
+local _STOR_NAME = "dps-subcore-list"
 
-  table.insert(entities, entity)
-  local c = UTIL_ensure_entity(entity.surface, { name = "dps-building_dps-subcore-container", position = entity.position, hidden = true})
-  if not c then return end
+local function _entity_created(entity)
+  local c = __LIB__.entity.ensure(entity.surface, { name = "dps-building_dps-subcore-container", position = entity.position, hidden = true})
+  if not c then
+    error("dps-building_dps-subcore-container create error")
+  end
 
   entity.proxy_target_entity = c
   entity.proxy_target_inventory = defines.inventory.chest
@@ -17,7 +18,28 @@ local function _entity_created(entity)
     inv.set_filter(i + 80,  {name = "dps-item_dps-credit-t"})
   end
   
-  DRV_STORAGE_set("dps-subcore", entities)
+  local entities = DRV_STORAGE_get(_STOR_NAME, {})
+
+  if entities[entity.unit_number] then
+    if entity ~= entities[entity.unit_number].entity then
+      error("dps-building_dps-subcore-container dup error")
+    end
+  end
+
+  entities[entity.unit_number] = {
+    entity = entity,
+    container = c,
+    dps_enable = false,
+    dps_queue = {},
+    dps_queue_idx = 1,
+    display_tick = 0,
+  }
+
+  for i = 1, 60, 1 do
+    entities[entity.unit_number].dps_queue[i] = 0
+  end
+
+  DRV_STORAGE_set(_STOR_NAME, entities)
 end
 
 DRV_EVENT_register_built_entity_handler(function(event)
@@ -30,16 +52,14 @@ end)
 
 DRV_EVENT_register_destroy_entity_handler(function(event)
   if event.entity.name == "dps-building_dps-subcore" and event.entity.surface.name == "dps-planet_dps" then
-    local entities = DRV_STORAGE_get("dps-subcore", event.entity.position)
-
-    UTIL_table_remove(entities, event.entity)
-
-    local container = event.entity.surface.find_entity("dps-building_dps-subcore-container", event.entity.position)
-    if container then
-      container.destroy()
+    local entities = DRV_STORAGE_get(_STOR_NAME, event.entity.position)
+    
+    if entities[event.entity.unit_number] then
+      entities[event.entity.unit_number].container.destroy()
+      entities[event.entity.unit_number] = nil
     end
 
-    DRV_STORAGE_set("dps-subcore", entities)
+    DRV_STORAGE_set(_STOR_NAME, entities)
   end
 end)
 
@@ -51,27 +71,39 @@ DRV_EVENT_register_handler(defines.events.on_chunk_generated, function(event)
   end
 end)
 
-DRV_TIMER_install_1s_timer(function()
-  local dps_credit_translator_research_trigger = false
-  local dps_credit_exchange_research_trigger = false
-  local dps_data_pack_trigger = false
+DRV_TIMER_create_static_tick_handler(function()
+  for _, item in pairs(DRV_STORAGE_get(_STOR_NAME, {})) do
+    local entity = item.entity
+    if entity.valid then
+      local damage = entity.max_health - entity.health
+      if damage >= 1 then
+        item.dps_enable = true
+        entity.health = entity.max_health
+      end
 
-  for _, entity in pairs(DRV_STORAGE_get("dps-subcore", {})) do
-    if entity.valid and entity.max_health > entity.health then
-      local container = entity.surface.find_entity("dps-building_dps-subcore-container", entity.position)
-      if container then
-        local damage = entity.max_health - entity.health
-        if damage >= 1 then
-          dps_credit_translator_research_trigger = true
-          if damage >= 1000 then
-            dps_credit_exchange_research_trigger = true
-            if damage >= 5000 then
-              dps_data_pack_trigger = true
-            end
+      if item.dps_enable then
+        item.dps_queue[item.dps_queue_idx] = damage
+        item.dps_queue_idx = item.dps_queue_idx + 1
+        if item.dps_queue_idx > 60 then
+          item.dps_queue_idx = 1
+        end
+
+        item.display_tick = item.display_tick - 1
+        if item.display_tick <= 0 then
+          local average = 0
+          for i = 1 , 60, 1 do
+            average = average + item.dps_queue[i]
+          end
+
+          if average >= 1 then
+            item.display_tick = 60
+          else
+            item.dps_enable = false
+            item.display_tick = 0
           end
 
           rendering.draw_text {
-            text = math.floor(damage),
+            text = math.floor(average),
             surface = entity.surface,
             target = { type = "entity", entity = entity },
             color = { 1.0, 0.66, 0.66,},
@@ -83,36 +115,36 @@ DRV_TIMER_install_1s_timer(function()
             vertical_alignment = "middle",
           }
 
-          if damage >= 1000000000 then
-            container.insert { name = "dps-item_dps-credit-g", count = damage / 1000000000 }
-            damage = damage % 1000000000
+
+
+          game.forces["player"].script_trigger_research("dps-tech_dps-credit-translator")
+          if average >= 1000 then
+            game.forces["player"].script_trigger_research("dps-tech_dps-credit-exchange")
+            if average >= 5000 then
+              game.forces["player"].script_trigger_research("dps-tech_dps-data-pack")
+            end
           end
 
-          if damage >= 1000000 then
-            container.insert { name = "dps-item_dps-credit-m", count = damage / 1000000 }
-            damage = damage % 1000000
-          end
-
-          if damage >= 1000 then
-            container.insert { name = "dps-item_dps-credit-k", count = damage / 1000 }
-            damage = damage % 1000
+          local container = item.container
+          if average >= 1000000000 then
+            container.insert { name = "dps-item_dps-credit-g", count = average / 1000000000 }
+            average = average % 1000000000
           end
           
-          if damage >= 1 then
-            container.insert { name = "dps-item_dps-credit-n", count = damage }
+          if average >= 1000000 then
+            container.insert { name = "dps-item_dps-credit-m", count = average / 1000000 }
+            average = average % 1000000
+          end
+          
+          if average >= 1000 then
+            container.insert { name = "dps-item_dps-credit-k", count = average / 1000 }
+            average = average % 1000
+          end
+          
+          if average >= 1 then
+            container.insert { name = "dps-item_dps-credit-n", count = average }
           end
         end
-      end
-      entity.health = entity.max_health
-    end
-  end
-
-  if dps_credit_translator_research_trigger then
-    game.forces["player"].script_trigger_research("dps-tech_dps-credit-translator")
-    if dps_credit_exchange_research_trigger then
-      game.forces["player"].script_trigger_research("dps-tech_dps-credit-exchange")
-      if dps_data_pack_trigger then
-        game.forces["player"].script_trigger_research("dps-tech_dps-data-pack")
       end
     end
   end

@@ -1,5 +1,5 @@
 require("global/_hdr")
-require("scripts/util/_hdr");
+__LIB__ = require("lib/_hdr")
 
 require("scripts/drv/_hdr");
 --require("scripts/svc/_svc");

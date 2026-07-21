@@ -56,6 +56,7 @@ data:extend {
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = require("__base__.prototypes.entity.assembler-pictures").circuit_connector,
     alert_icon_shift = util.by_pixel(0, -12),
+    fast_replaceable_group = "assembling-machine",
     resistances =
     {
       {
@@ -221,7 +222,7 @@ data:extend {
       }
     },
 
-    crafting_speed = 5,
+    crafting_speed = 4,
     crafting_categories = {"dps-recipe-category_armory"},
 
     energy_source =
