@@ -61,7 +61,7 @@ function DRV_STORAGE_get(key, default_value)
   end)
 
   if not success or result == nil then
-    result = DRV_STORAGE_set(key, default_value)
+    result = DRV_STORAGE_set(key, table.deepcopy(default_value))
   end
   return result
 end

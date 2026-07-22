@@ -1,15 +1,19 @@
+local _STOR_NAME = "dps-dorax-appers"
+
 DRV_EVENT_register_built_entity_handler(function(event)
   if not event.is_ghost and event.entity_name == "cargo-landing-pad" and
       event.entity.surface.name == "dps-planet_dps" then
 
-    local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
-    if dorax_placement.position == nil then
-      DRV_STORAGE_set("DORAX_PLACEMENT", {
-        position  = event.entity.position,
-        landed    = false,
-      })
+    local appers = DRV_STORAGE_get(_STOR_NAME, {})
+    if not appers.position then
+      local tid = DRV_TIMER_create_single_timer(1800, "story_dorax_start")
 
-      DRV_TIMER_create_single_timer(1800, "story_dorax_start")
+      DRV_STORAGE_set(_STOR_NAME, {
+        position      = event.entity.position,
+        surface_index = event.entity.surface.index,
+        landed        = false,
+        tid           = tid,
+      })
     end
   end
 end)
@@ -21,15 +25,16 @@ DRV_TIMER_register_action("story_dorax_start", function()
   game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-1-3"}}
   game.play_sound{ path = "dps-sound_siren" }
 
-  DRV_TIMER_create_tick_timer(3600, "story_dorax_approach")
+  DRV_STORAGE_get(_STOR_NAME, {}).tid = DRV_TIMER_create_tick_timer(3600, "story_dorax_approach")
+
 end)
 
 DRV_TIMER_register_action("story_dorax_approach", function(tick)
-  local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
+  local appers = DRV_STORAGE_get(_STOR_NAME, {})
 
   if tick == 3300 then
     game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t3300-1"}}
-    game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t3300-2"}, " : [gps="..dorax_placement.position.x..","..dorax_placement.position.y..",".."dps-planet_dps".."]"}
+    game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t3300-2"}, " : [gps="..appers.position.x..","..appers.position.y..",".."dps-planet_dps".."]"}
     game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t3300-3"}}
   elseif tick == 1800 then  game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t1800-1"}}
   elseif tick == 1200 then  game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t1200-1"}}
@@ -40,20 +45,20 @@ DRV_TIMER_register_action("story_dorax_approach", function(tick)
   elseif tick == 120 then   game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t120-1"}}
   elseif tick == 60 then    game.print{"", {"system-message.dorax-appers-prefix"}, {"system-message.dorax-appers-t60-1"}}
   elseif tick == 0 then
-    dorax_placement.landed = true
+    appers.landed = true
     local sf = game.get_surface("dps-planet_dps")
     if sf == nil then
-      DRV_STORAGE_set("DORAX_PLACEMENT", {})
+      DRV_STORAGE_set(_STOR_NAME, {})
       return
     end
 
 
     local entities = sf.find_entities_filtered { area = {
-      { dorax_placement.position.x - 4, dorax_placement.position.y - 4 },
-      { dorax_placement.position.x + 4, dorax_placement.position.y + 4 }
+      { appers.position.x - 4, appers.position.y - 4 },
+      { appers.position.x + 4, appers.position.y + 4 }
     }}
 
-    for k, v in pairs(entities) do
+    for _, v in pairs(entities) do
       if v.valid then
         if v.type == "character" then
           v.damage(1000000000, "enemy")
@@ -65,26 +70,25 @@ DRV_TIMER_register_action("story_dorax_approach", function(tick)
 
     sf.create_entity {
       name = "atomic-rocket",
-      position = dorax_placement.position,
-      target = dorax_placement.position,
+      position = appers.position,
+      target = appers.position,
     }
 
-    dorax_placement.entity = sf.create_entity {
+    appers.entity = sf.create_entity {
       name = "dps-special_dorax",
-      position = dorax_placement.position,
+      position = appers.position,
       raise_built = true,
     }
-    dorax_placement.landed = true
-    DRV_STORAGE_set("DORAX_PLACEMENT", dorax_placement)
+    appers.landed = true
 
-    DRV_TIMER_create_tick_timer(1600, "story_dorax_end")
+    appers.tid = DRV_TIMER_create_tick_timer(1600, "story_dorax_end")
   end
 end)
 
 DRV_TIMER_register_action("story_dorax_end", function(t)
   if t == 1200 then
-    local dorax_placement = DRV_STORAGE_get("DORAX_PLACEMENT", {})
-    game.print("[gps="..dorax_placement.position.x..","..dorax_placement.position.y..",".."dps-planet_dps".."]")
+    local appers = DRV_STORAGE_get(_STOR_NAME, {})
+    game.print("[gps="..appers.position.x..","..appers.position.y..",".."dps-planet_dps".."]")
     game.print{"system-message.dorax-appers-2-1"}
   elseif t == 800 then
     game.print{"system-message.dorax-appers-2-2"}

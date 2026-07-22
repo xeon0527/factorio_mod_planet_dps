@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.15
+Date: 22. 7. 2026
+  Minor Features:
+    - Added a mod reset feature. Deleting the Planet DPS surface in Editor Mode will now reset all mod progression.
+
+  Bugfixes:
+    - Fixed an issue where DPS calculations could be inaccurate due to damage calculation timing.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.14
 Date: 21. 7. 2026
   Bugfixes:

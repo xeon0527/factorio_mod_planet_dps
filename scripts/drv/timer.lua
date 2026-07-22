@@ -1,17 +1,23 @@
+local _default = { tick_timer = {}, single_timer = {}, uuid_index = 1 }
+
 __DRV_TIMER_OBJECTS__ = {
-  --on_1s = {},
   on_static_tick = {},
   actions = {},
 }
 
---script.on_nth_tick(60, function()
---  for _, hdrs in pairs(__DRV_TIMER_OBJECTS__.on_1s) do
---    hdrs()
---  end
---end)
+local function _get_uuid()
+  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", _default)
+  if tim_obj.uuid_index == nil then
+    tim_obj.uuid_index = 1
+  end
+
+  local uuid = tim_obj.uuid_index
+  tim_obj.uuid_index = tim_obj.uuid_index + 1
+  return uuid
+end
 
 script.on_nth_tick(1, function()
-  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", { tick_timer = {}, single_timer = {} })
+  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", _default)
 
   for _, tim in pairs(tim_obj.tick_timer) do
     tim.tick = tim.tick - 1
@@ -46,17 +52,42 @@ function DRV_TIMER_create_static_tick_handler(handler)
 end
 
 
+function DRV_TIMER_cancel_timer(uuid)
+  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", _default)
+  for _, t in pairs(tim_obj.tick_timer) do
+    if t.uuid == uuid then
+      __LIB__.table.remove(tim_obj.tick_timer, t)
+      return true
+    end
+  end
+
+  for _, t in pairs(tim_obj.single_timer) do
+    if t.uuid == uuid then
+      __LIB__.table.remove(tim_obj.single_timer, t)
+      return true
+    end
+  end
+
+  return false
+end
+
+
 function DRV_TIMER_create_tick_timer(max_tick, action_name)
   local _max_tick = max_tick
   if _max_tick <= 0 then
     _max_tick = 1
   end
 
-  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", { tick_timer = {}, single_timer = {} })
+  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", _default)
+  local uuid = _get_uuid()
+
   table.insert(tim_obj.tick_timer, {
     tick = _max_tick,
     action_name = action_name,
+    uuid = uuid
   })
+
+  return uuid
 end
 
 function DRV_TIMER_create_single_timer(tick, action_name)
@@ -65,11 +96,16 @@ function DRV_TIMER_create_single_timer(tick, action_name)
     _max_tick = 1
   end
 
-  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", { tick_timer = {}, single_timer = {} })
+  local tim_obj = DRV_STORAGE_get("DRV_TIMER_OBJECT", _default)
+  local uuid = _get_uuid()
+
   table.insert(tim_obj.single_timer, {
     tick = _max_tick,
     action_name = action_name,
+    uuid = uuid,
   })
+
+  return uuid
 end
 
 --function DRV_TIMER_install_1s_timer(handler)
