@@ -68,18 +68,20 @@ DRV_EVENT_register_destroy_entity_handler(function(event)
 end)
 
 script.on_event(defines.events.on_entity_damaged, function(_event)
-  _event.entity.health = 0.0000000000000000000001
+  if _event.entity.health == 0 then
+    _event.entity.health = 0.0000000000000000000001
+  end
 end, {
 {
   filter = "name",
   name = "dps-special_dorax",
-  mode = "and",
+  --mode = "and",
 },
-{
-  filter = "final-health",
-  comparison = "≤",
-  value = 0,
-}
+--{
+--  filter = "final-health",
+--  comparison = "≤",
+--  value = 0,
+--}
 })
 
 DRV_TIMER_create_static_tick_handler(function()
