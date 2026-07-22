@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.13
+Date: 21. 7. 2026
+  Changes:
+    - Optimized the destruction prevention logic for the DPS Subcore and D.O.R.A.X.
+
+  Balancing:
+    - Reduced the bonus Artillery Shell damage granted by DPS Engineering research.
+    - The DPS Credit Translator and DPS Credits can no longer be loaded into rockets.
+
+  Bugfixes:
+    - Closed all known methods of obtaining high-quality DPS Credits.
+    - Adjusted the quality settings for various items to prevent unintended quality interactions.
+
+---------------------------------------------------------------------------------------------------
+Version: 0.3.12
+Date: 21. 7. 2026
+  Changes:
+    - DPS Subcores and D.O.R.A.X can no longer be destroyed by a high-damage hit. Damage processed each tick is now capped at their maximum health.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.11
 Date: 21. 7. 2026
   Major Features:

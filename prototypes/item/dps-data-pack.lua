@@ -40,6 +40,7 @@ data:extend {
     categories = {"advanced-crafting", "electromagnetics"},
     surface_conditions = __PLANET_CONDITIONS__,
     enabled = false,
+    auto_recycle = false,
     ingredients =
     {
       {type = "item", name = "dps-item_dps-credit-k", amount = 5},

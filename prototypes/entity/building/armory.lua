@@ -258,6 +258,7 @@ data:extend {
     name = "dps-building_armory",
     energy_required = 5,
     enabled = false,
+    auto_recycle = false,
     ingredients =
     {
       {type = "item", name = "assembling-machine-3", amount = 2},

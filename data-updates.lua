@@ -22,11 +22,19 @@ local function _create_dps_engineering(tech_name, modifier)
 
   for _, v in pairs(data.raw["ammo-category"]) do
     if not v.hidden and v.name ~= "apfsds-shell" then
-      table.insert(ammo_damage_table, {
-        type = "ammo-damage",
-        ammo_category = v.name,
-        modifier = modifier,
-      })
+      if v.name == "artillery-shell" then
+          table.insert(ammo_damage_table, {
+            type = "ammo-damage",
+            ammo_category = v.name,
+            modifier = modifier * 0.2,
+          })
+        else
+        table.insert(ammo_damage_table, {
+          type = "ammo-damage",
+          ammo_category = v.name,
+          modifier = modifier,
+        })
+      end
     end
   end
 

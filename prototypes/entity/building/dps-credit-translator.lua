@@ -172,7 +172,7 @@ data:extend {
     icon = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-icon.png",
     icon_size = 64,
     stack_size = 5,
-    weight = 200 * kg,
+    weight = 1000 * tons,
     place_result = "dps-building_dps-credit-translator",
     subgroup = "dps-item-subgroup_item",
     inventory_move_sound = item_sounds.electric_large_inventory_move,
@@ -187,6 +187,7 @@ data:extend {
     name = "dps-building_dps-credit-translator",
     energy_required = 5,
     enabled = false,
+    auto_recycle = false,
     ingredients =
     {
       {type = "item", name = "iron-gear-wheel", amount = 40},

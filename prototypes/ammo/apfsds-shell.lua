@@ -42,7 +42,8 @@ local function _create_ammo(level, damage, tint)
       drop_sound = item_sounds.ammo_large_inventory_move,
       stack_size = 10,
       --stack_size = 1000,
-      weight = 1000*tons
+      weight = 1000*tons,
+      auto_recycle = false,
     },
   
     {

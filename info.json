@@ -3,7 +3,7 @@
   "title": "Planet DPS",
   "description": "This planet was once being terraformed by humanity for habitation, but after some unknown incident, the terraforming was halted and it was abandoned for a very long time. In the end, it became a strange world—one with an excellent climate and environment, yet completely devoid of any traces of life. However, it seems that the people who were carrying out the terraforming had some purpose for this planet beyond simply making it habitable...",
   "author": "Xeon257",
-  "version": "0.3.11",
+  "version": "0.3.13",
   "homepage": "https://github.com/xeon0527/factorio_mod_planet_dps",
   "factorio_version": "2.1",
   "dependencies": [

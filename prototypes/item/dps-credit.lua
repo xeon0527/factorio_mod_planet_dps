@@ -13,7 +13,7 @@ local function _create_credit(name, order, icon_path)
       drop_sound = item_sounds.resource_inventory_move,
       stack_size = 1000,
       default_import_location = "dps-planet_dps",
-      weight = 1*kg,
+      weight = 1000 * tons,
       auto_recycle = false,
       order = order,
     }

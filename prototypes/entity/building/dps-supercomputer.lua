@@ -149,6 +149,7 @@ data:extend {
     name = "dps-building_dps-supercomputer",
     energy_required = 3,
     enabled = false,
+    auto_recycle = false,
     ingredients =
     {
       {type = "item", name = "electronic-circuit", amount = 25},

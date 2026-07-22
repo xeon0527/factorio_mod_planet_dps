@@ -141,6 +141,7 @@ data:extend {
     name = "dps-building_dps-equipment-enhancer",
     energy_required = 10,
     enabled = false,
+    auto_recycle = false,
     ingredients =
     {
       {type = "item", name = "iron-gear-wheel", amount = 40},

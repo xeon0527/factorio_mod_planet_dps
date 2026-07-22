@@ -2,8 +2,8 @@
 -- + event handler 시스템이 return 값을 허용하지 않아서 관련 기능 추가.
 
 __DRV_EVENT_HANDLERS__ = {
-  ["linox-internel-event_on-build-entity"] = {},
-  ["linox-internel-event_on-destroy-entity"] = {},
+  ["on-build-entity"] = {},
+  ["on-destroy-entity"] = {},
 }
 
 function DRV_EVENT_register_handler(event, handler)
@@ -27,11 +27,11 @@ function DRV_EVENT_register_handler(event, handler)
 end
 
 function DRV_EVENT_register_built_entity_handler(handler)
-  table.insert(__DRV_EVENT_HANDLERS__["linox-internel-event_on-build-entity"], handler);
+  table.insert(__DRV_EVENT_HANDLERS__["on-build-entity"], handler);
 end
 
 function DRV_EVENT_register_destroy_entity_handler(handler)
-  table.insert(__DRV_EVENT_HANDLERS__["linox-internel-event_on-destroy-entity"], handler);
+  table.insert(__DRV_EVENT_HANDLERS__["on-destroy-entity"], handler);
 end
 
 local function __on_built_entity(event)
@@ -67,7 +67,7 @@ local function __on_built_entity(event)
   }
 
   local cancel = false
-  for _, proc in pairs(__DRV_EVENT_HANDLERS__["linox-internel-event_on-build-entity"]) do
+  for _, proc in pairs(__DRV_EVENT_HANDLERS__["on-build-entity"]) do
     event_data.set_cancel_message = nil
     if proc(event_data) == false then
       cancel = true
@@ -134,7 +134,7 @@ local function __on_destroy_entity(event)
     entity = entity,
   }
 
-  for _, proc in pairs(__DRV_EVENT_HANDLERS__["linox-internel-event_on-destroy-entity"]) do
+  for _, proc in pairs(__DRV_EVENT_HANDLERS__["on-destroy-entity"]) do
     proc(event_data)
   end
 end

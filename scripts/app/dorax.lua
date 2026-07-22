@@ -56,7 +56,7 @@ end)
 
 DRV_EVENT_register_destroy_entity_handler(function(event)
   if event.entity.name == "dps-special_dorax" and event.entity.surface.name == "dps-planet_dps" then
-    local entities = DRV_STORAGE_get(_STOR_NAME, event.entity.position)
+    local entities = DRV_STORAGE_get(_STOR_NAME, {})
     
     if entities[event.entity.unit_number] then
       entities[event.entity.unit_number].container.destroy()
@@ -66,6 +66,21 @@ DRV_EVENT_register_destroy_entity_handler(function(event)
     DRV_STORAGE_set(_STOR_NAME, entities)
   end
 end)
+
+script.on_event(defines.events.on_entity_damaged, function(_event)
+  _event.entity.health = 0.0000000000000000000001
+end, {
+{
+  filter = "name",
+  name = "dps-special_dorax",
+  mode = "and",
+},
+{
+  filter = "final-health",
+  comparison = "≤",
+  value = 0,
+}
+})
 
 DRV_TIMER_create_static_tick_handler(function()
   for _, item in pairs(DRV_STORAGE_get(_STOR_NAME, {})) do
