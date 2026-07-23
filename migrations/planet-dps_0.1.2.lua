@@ -7,11 +7,11 @@ if sf then
     inv.clear()
     inv.set_bar(nil)
     for i = 1, 20 do
-      inv.set_filter(i,       {name = "dps-item_dps-credit-n"})
-      inv.set_filter(i + 20,  {name = "dps-item_dps-credit-k"})
-      inv.set_filter(i + 40,  {name = "dps-item_dps-credit-m"})
-      inv.set_filter(i + 60,  {name = "dps-item_dps-credit-g"})
-      inv.set_filter(i + 80,  {name = "dps-item_dps-credit-t"})
+      inv.set_filter(i,       {name = "dps-item_dps-credit_n"})
+      inv.set_filter(i + 20,  {name = "dps-item_dps-credit_k"})
+      inv.set_filter(i + 40,  {name = "dps-item_dps-credit_m"})
+      inv.set_filter(i + 60,  {name = "dps-item_dps-credit_g"})
+      inv.set_filter(i + 80,  {name = "dps-item_dps-credit_t"})
     end
   end
 end

@@ -12,7 +12,7 @@ __MODULE__.data_final_fixes = function()
       }
 
       data.raw["recipe"]["dps-item_dps-data-pack"].ingredients = {
-        {type = "item", name = "dps-item_dps-credit-k", amount = 5},
+        {type = "item", name = "dps-item_dps-credit_k", amount = 5},
         {type = "item", name = "kr-rifle-magazine", amount = 2},
         {type = "item", name = "kr-armor-piercing-rifle-magazine", amount = 1},
       }

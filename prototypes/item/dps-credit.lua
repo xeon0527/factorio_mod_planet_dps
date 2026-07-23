@@ -1,10 +1,10 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
-local function _create_credit(name, order, icon_path)
+local function _create_credit(endfix, order, icon_path)
   data:extend {
     {
       type = "item",
-      name = name,
+      name = "dps-item_dps-credit_"..endfix,
       icon = icon_path,
       icon_size = 64,
       subgroup = "dps-item-subgroup_item",
@@ -21,8 +21,9 @@ local function _create_credit(name, order, icon_path)
 end
 
 
-_create_credit("dps-item_dps-credit-n", "a", "__space-exploration-graphics__/graphics/icons/observation-frame-radio.png")
-_create_credit("dps-item_dps-credit-k", "b", "__space-exploration-graphics__/graphics/icons/observation-frame-microwave.png")
-_create_credit("dps-item_dps-credit-m", "c", "__space-exploration-graphics__/graphics/icons/observation-frame-infrared.png")
-_create_credit("dps-item_dps-credit-g", "d", "__space-exploration-graphics__/graphics/icons/observation-frame-visible.png")
-_create_credit("dps-item_dps-credit-t", "e", "__space-exploration-graphics__/graphics/icons/observation-frame-xray.png")
+_create_credit("n", "a", "__space-exploration-graphics__/graphics/icons/observation-frame-radio.png")
+_create_credit("k", "b", "__space-exploration-graphics__/graphics/icons/observation-frame-microwave.png")
+_create_credit("m", "c", "__space-exploration-graphics__/graphics/icons/observation-frame-infrared.png")
+_create_credit("g", "d", "__space-exploration-graphics__/graphics/icons/observation-frame-visible.png")
+_create_credit("t", "e", "__space-exploration-graphics__/graphics/icons/observation-frame-xray.png")
+_create_credit("p", "f", "__space-exploration-graphics__/graphics/icons/observation-frame-gammaray.png")

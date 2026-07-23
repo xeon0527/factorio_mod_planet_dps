@@ -1,0 +1,39 @@
+{
+  "item":[
+    ["dps-item_dps-credit-n", "dps-item_dps-credit_n"],
+    ["dps-item_dps-credit-k", "dps-item_dps-credit_k"],
+    ["dps-item_dps-credit-m", "dps-item_dps-credit_m"],
+    ["dps-item_dps-credit-g", "dps-item_dps-credit_g"],
+    ["dps-item_dps-credit-t", "dps-item_dps-credit_t"],
+
+    ["dps-ammo_apfsds-shell-1", "dps-ammo_apfsds-shell_1"],
+    ["dps-ammo_apfsds-shell-2", "dps-ammo_apfsds-shell_2"],
+    ["dps-ammo_apfsds-shell-3", "dps-ammo_apfsds-shell_3"],
+    ["dps-ammo_apfsds-shell-4", "dps-ammo_apfsds-shell_4"],
+    ["dps-ammo_apfsds-shell-5", "dps-ammo_apfsds-shell_5"]
+  ],
+
+  "recipe":[
+    ["dps-item_dps-credit-n", "dps-item_dps-credit_n"],
+    ["dps-item_dps-credit-k", "dps-item_dps-credit_k"],
+    ["dps-item_dps-credit-m", "dps-item_dps-credit_m"],
+    ["dps-item_dps-credit-g", "dps-item_dps-credit_g"],
+    ["dps-item_dps-credit-t", "dps-item_dps-credit_t"],
+
+    ["dps-recipe_dps-credit-exchange-n2k", "dps-recipe_dps-credit-exchange_n2k"],
+    ["dps-recipe_dps-credit-exchange-k2m", "dps-recipe_dps-credit-exchange_k2m"],
+    ["dps-recipe_dps-credit-exchange-m2g", "dps-recipe_dps-credit-exchange_m2g"],
+    ["dps-recipe_dps-credit-exchange-g2t", "dps-recipe_dps-credit-exchange_g2t"],
+    
+    ["dps-recipe_dps-credit-exchange-k2n", "dps-recipe_dps-credit-exchange_k2n"],
+    ["dps-recipe_dps-credit-exchange-m2k", "dps-recipe_dps-credit-exchange_m2k"],
+    ["dps-recipe_dps-credit-exchange-g2m", "dps-recipe_dps-credit-exchange_g2m"],
+    ["dps-recipe_dps-credit-exchange-t2g", "dps-recipe_dps-credit-exchange_t2g"],
+
+    ["dps-ammo_apfsds-shell-1", "dps-ammo_apfsds-shell_1"],
+    ["dps-ammo_apfsds-shell-2", "dps-ammo_apfsds-shell_2"],
+    ["dps-ammo_apfsds-shell-3", "dps-ammo_apfsds-shell_3"],
+    ["dps-ammo_apfsds-shell-4", "dps-ammo_apfsds-shell_4"],
+    ["dps-ammo_apfsds-shell-5", "dps-ammo_apfsds-shell_5"]
+  ]
+}

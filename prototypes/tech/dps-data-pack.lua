@@ -32,6 +32,7 @@ data:extend {
       },
     },
     
+    allows_productivity = false,
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
@@ -75,6 +76,7 @@ data:extend {
         floating = true
       }
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
@@ -115,6 +117,7 @@ data:extend {
         floating = true,
       },
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
@@ -156,6 +159,7 @@ data:extend {
         floating = true
       }
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
@@ -206,7 +210,7 @@ data:extend {
     effects =
     {
       { type = "unlock-recipe", recipe = "dps-turret_apfsds-cannon" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell-1" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_1" },
     },
   },
 }

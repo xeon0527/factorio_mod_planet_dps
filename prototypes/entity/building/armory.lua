@@ -262,7 +262,7 @@ data:extend {
     ingredients =
     {
       {type = "item", name = "assembling-machine-3", amount = 2},
-      {type = "item", name = "dps-item_dps-credit-k", amount = 50},
+      {type = "item", name = "dps-item_dps-credit_k", amount = 50},
       {type = "item", name = "dps-item_dorax-component", amount = 1},
     },
     surface_conditions = __PLANET_CONDITIONS__,

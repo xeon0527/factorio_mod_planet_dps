@@ -45,7 +45,7 @@ data:extend {
       update = [[
         local surface = game.surfaces[1]
         local c = surface.find_entity("dps-building_dps-subcore-container", {0,0})
-        if c then c.insert{name = "dps-item_dps-credit-n", count = 100} end
+        if c then c.insert{name = "dps-item_dps-credit_n", count = 100} end
       ]]
     },
     trigger =

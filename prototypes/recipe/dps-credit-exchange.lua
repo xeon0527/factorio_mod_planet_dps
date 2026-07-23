@@ -28,14 +28,14 @@ local _recipe = {
 }
 
 local function _generate_recipe(a, b, order)
-  local a_name = "dps-item_dps-credit-"..string.lower(a)
-  local b_name = "dps-item_dps-credit-"..string.lower(b)
+  local a_name = "dps-item_dps-credit_"..string.lower(a)
+  local b_name = "dps-item_dps-credit_"..string.lower(b)
 
   local a_icon = data.raw["item"][a_name].icon
   local b_icon = data.raw["item"][b_name].icon
 
   local a2b = table.deepcopy(_recipe)
-  a2b.name = a2b.name.."-"..string.lower(a).."2"..string.lower(b)
+  a2b.name = a2b.name.."_"..string.lower(a).."2"..string.lower(b)
 
 
   a2b.icons[2].icon = a_icon
@@ -44,14 +44,14 @@ local function _generate_recipe(a, b, order)
   a2b.results = {{ type = "item", name = b_name, amount = 1}}
 
   local b2a = table.deepcopy(_recipe)
-  b2a.name = b2a.name.."-"..string.lower(b).."2"..string.lower(a)
+  b2a.name = b2a.name.."_"..string.lower(b).."2"..string.lower(a)
   b2a.icons[2].icon = b_icon
   b2a.icons[3].icon = a_icon
   b2a.ingredients = {{ type = "item", name = b_name, amount = 1 }}
   b2a.results = {{ type = "item", name = a_name, amount = 1000 }}
 
-  a2b.order = tostring(order)
-  b2a.order = tostring(order + 4)
+  a2b.order = "1"..order
+  b2a.order = "2"..order
 
   data:extend { a2b, b2a, }
 end
@@ -60,3 +60,4 @@ _generate_recipe("N", "K", 1)
 _generate_recipe("K", "M", 2)
 _generate_recipe("M", "G", 3)
 _generate_recipe("G", "T", 4)
+_generate_recipe("T", "P", 5)

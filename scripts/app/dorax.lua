@@ -11,10 +11,11 @@ local function _entity_created(entity)
   entity.proxy_target_inventory = defines.inventory.chest
 
   local inv = c.get_inventory(defines.inventory.chest)
-  inv.set_bar(41)
+  inv.set_bar(61)
   for i = 1, 20 do
     inv.set_filter(i, {name = "dps-item_dorax-fragment"})
     inv.set_filter(i + 20,  {name = "dps-item_dorax-component"})
+    inv.set_filter(i + 40,  {name = "dps-item_dorax-armor-plate"})
   end
   
   local entities = DRV_STORAGE_get(_STOR_NAME, {})
@@ -120,14 +121,14 @@ DRV_TIMER_create_static_tick_handler(function()
 
           local container = item.container
           --if average >= 1000000000 then
-          --  container.insert { name = "dps-item_dps-credit-g", count = average / 1000000000 }
+          --  container.insert { name = "dps-item_dps-credit_g", count = average / 1000000000 }
           --  average = average % 1000000000
           --end
           --
-          --if average >= 1000000 then
-          --  container.insert { name = "dps-item_dps-credit-m", count = average / 1000000 }
-          --  average = average % 1000000
-          --end
+          if average >= 1000000 then
+            container.insert { name = "dps-item_dorax-armor-plate", count = average / 1000000 }
+            average = average % 1000000
+          end
           
           if average >= 1000 then
             container.insert { name = "dps-item_dorax-component", count = average / 1000 }

@@ -193,7 +193,7 @@ data:extend {
       {type = "item", name = "iron-gear-wheel", amount = 40},
       {type = "item", name = "steel-plate", amount = 20},
       {type = "item", name = "advanced-circuit", amount = 10},
-      {type = "item", name = "dps-item_dps-credit-n", amount = 500},
+      {type = "item", name = "dps-item_dps-credit_n", amount = 500},
     },
     surface_conditions = __PLANET_CONDITIONS__,
     results = {{type="item", name="dps-building_dps-credit-translator", amount=1}}

@@ -77,6 +77,7 @@ data:extend {
       { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-translator_mineral", },
       { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-translator_carbon", },
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_planet-discovery-dps"},
     research_trigger = {
       type = "scripted",
@@ -102,15 +103,17 @@ data:extend {
     },
     effects =
     {
-      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-n2k", },
-      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-k2m", },
-      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-m2g", },
-      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-g2t", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_n2k", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_k2m", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_m2g", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_g2t", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_t2p", },
 
-      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-k2n", },
-      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-m2k", },
-      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-g2m", },
-      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange-t2g", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_k2n", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_m2k", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_g2m", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_t2g", },
+      { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-exchange_p2t", },
     },
     prerequisites = { "dps-tech_dps-credit-translator"},
     research_trigger = {

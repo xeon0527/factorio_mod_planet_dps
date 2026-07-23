@@ -29,7 +29,7 @@ data:extend {
     categories = {"dps-recipe-category_dps-credit-translator"},
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit-n", amount = 5},
+      {type = "item", name = "dps-item_dps-credit_n", amount = 5},
     },
     results = {
       { type="item", name="iron-ore",   amount = 5, shared_probability = { min = 0.00, max = 0.333333 }, show_details_in_recipe_tooltip = false },
@@ -67,7 +67,7 @@ data:extend {
     categories = {"dps-recipe-category_dps-credit-translator"},
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit-n", amount = 5},
+      {type = "item", name = "dps-item_dps-credit_n", amount = 5},
     },
     results = {
       { type="item", name="coal",       amount = 5, shared_probability = { min = 0.00, max = 0.333333 }, show_details_in_recipe_tooltip = false },

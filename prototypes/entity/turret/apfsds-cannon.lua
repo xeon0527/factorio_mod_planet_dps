@@ -100,7 +100,7 @@ data:extend {
     ammo_stack_limit = 15,
     automated_ammo_count = 10,
     attacking_speed = 0.5,
-    alert_when_attacking = true,
+    alert_when_attacking = false,
     circuit_connector = circuit_connector_definitions["rocket-turret"],
     circuit_wire_max_distance = default_circuit_wire_max_distance,
     open_sound = sounds.turret_open,
@@ -217,7 +217,7 @@ data:extend {
     surface_conditions = __PLANET_CONDITIONS__,
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit-k", amount = 50},
+      {type = "item", name = "dps-item_dps-credit_k", amount = 50},
       {type = "item", name = "concrete", amount = 1000},
       {type = "item", name = "steel-plate", amount = 1000},
       {type = "item", name = "processing-unit", amount = 200},

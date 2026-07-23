@@ -43,7 +43,7 @@ data:extend {
     auto_recycle = false,
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit-k", amount = 5},
+      {type = "item", name = "dps-item_dps-credit_k", amount = 5},
       {type = "item", name = "firearm-magazine", amount = 2},
       {type = "item", name = "piercing-rounds-magazine", amount = 1},
     },

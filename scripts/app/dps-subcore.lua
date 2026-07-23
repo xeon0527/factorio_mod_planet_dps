@@ -11,11 +11,11 @@ local function _entity_created(entity)
 
   local inv = c.get_inventory(defines.inventory.chest)
   for i = 1, 20 do
-    inv.set_filter(i,       {name = "dps-item_dps-credit-n"})
-    inv.set_filter(i + 20,  {name = "dps-item_dps-credit-k"})
-    inv.set_filter(i + 40,  {name = "dps-item_dps-credit-m"})
-    inv.set_filter(i + 60,  {name = "dps-item_dps-credit-g"})
-    inv.set_filter(i + 80,  {name = "dps-item_dps-credit-t"})
+    inv.set_filter(i,       {name = "dps-item_dps-credit_n"})
+    inv.set_filter(i + 20,  {name = "dps-item_dps-credit_k"})
+    inv.set_filter(i + 40,  {name = "dps-item_dps-credit_m"})
+    inv.set_filter(i + 60,  {name = "dps-item_dps-credit_g"})
+    inv.set_filter(i + 80,  {name = "dps-item_dps-credit_t"})
   end
   
   local entities = DRV_STORAGE_get(_STOR_NAME, {})
@@ -128,22 +128,22 @@ DRV_TIMER_create_static_tick_handler(function()
 
           local container = item.container
           if average >= 1000000000 then
-            container.insert { name = "dps-item_dps-credit-g", count = average / 1000000000 }
+            container.insert { name = "dps-item_dps-credit_g", count = average / 1000000000 }
             average = average % 1000000000
           end
           
           if average >= 1000000 then
-            container.insert { name = "dps-item_dps-credit-m", count = average / 1000000 }
+            container.insert { name = "dps-item_dps-credit_m", count = average / 1000000 }
             average = average % 1000000
           end
           
           if average >= 1000 then
-            container.insert { name = "dps-item_dps-credit-k", count = average / 1000 }
+            container.insert { name = "dps-item_dps-credit_k", count = average / 1000 }
             average = average % 1000
           end
           
           if average >= 1 then
-            container.insert { name = "dps-item_dps-credit-n", count = average }
+            container.insert { name = "dps-item_dps-credit_n", count = average }
           end
         end
       end

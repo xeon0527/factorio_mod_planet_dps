@@ -49,8 +49,17 @@ data:extend {
       "dps-item_dps-data-pack",
       "dps-item_dorax-fragment",
       "dps-item_dorax-component",
+      "dps-item_dorax-armor-plate",
     },
+
     module_slots = 4,
+    allowed_effects = {"consumption", "speed", "pollution"},
+    allowed_module_categories = {"efficiency", "speed"},
+
+    circuit_wire_max_distance = lab_circuit_wire_max_distance,
+    circuit_connector = circuit_connector_definitions["lab"],
+    default_technology_level_signal = {type = "virtual", name = "signal-L"},
+
     icons_positioning =
     {
 ---@diagnostic disable-next-line: assign-type-mismatch

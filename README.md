@@ -20,5 +20,8 @@ Rewards
  * DPS Engineering Technology
 >Gain a understanding of DPS to increase all types of damage.
 
+ * Supersonic grenade launcher
+>A turret that fires grenades at supersonic speeds, dealing devastating kinetic and explosive damage at the same time. This smart turret is also equipped with precision targeting, ensuring it never inflicts friendly fire.
+
  * Armory
 >A facility for efficiently producing the various items needed to support your weapon systems.

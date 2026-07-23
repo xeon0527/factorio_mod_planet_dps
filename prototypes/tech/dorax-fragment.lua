@@ -31,6 +31,7 @@ data:extend {
         floating = true
       },
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_apfsds-cannon", },
     unit =
     {
@@ -45,10 +46,10 @@ data:extend {
     effects =
     {
       { type = "unlock-recipe", recipe = "dps-building_dps-equipment-enhancer" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell-2" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell-3" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell-4" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell-5" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_2" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_3" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_4" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_5" },
 
     },
   },
@@ -72,6 +73,7 @@ data:extend {
         floating = true
       }
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
@@ -88,10 +90,10 @@ data:extend {
 
     effects =
     {
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-2", change = 0.025, },
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-3", change = 0.025, },
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-4", change = 0.025, },
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-5", change = 0.025, },
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_2", change = 0.025, },
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_3", change = 0.025, },
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_4", change = 0.025, },
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_5", change = 0.025, },
     },
   },
 
@@ -112,6 +114,7 @@ data:extend {
         floating = true
       }
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
@@ -128,7 +131,7 @@ data:extend {
 
     effects =
     {
-      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell-1", change = 0.1, },
+      { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_1", change = 0.1, },
     },
   },
 
@@ -149,6 +152,7 @@ data:extend {
         floating = true
       }
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
@@ -186,6 +190,7 @@ data:extend {
         floating = true
       }
     },
+    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
@@ -238,7 +243,8 @@ data:extend {
         floating = true
       },
     },
-    
+
+    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     research_trigger = {
       type = "scripted",
