@@ -100,41 +100,43 @@ DRV_TIMER_create_static_tick_handler(function()
         local average = item.dps_queue[1]
         item.dps_queue[1] = 0
 
-        rendering.draw_text {
-          text = math.floor(average),
-          surface = entity.surface,
-          target = { type = "entity", entity = entity },
-          color = { 1.0, 0.66, 0.66,},
-          scale = 3.0,
-          time_to_live = 60,
-          forces = nil,
-          players = nil,
-          alignment = "center",
-          vertical_alignment = "middle",
-        }
-
-        if average >= 1000 then
-          game.forces["player"].script_trigger_research("dps-tech_advanced-dps-engineering")
-        end
-
-        local container = item.container
-        --if average >= 1000000000 then
-        --  container.insert { name = "dps-item_dps-credit-g", count = average / 1000000000 }
-        --  average = average % 1000000000
-        --end
-        --
-        --if average >= 1000000 then
-        --  container.insert { name = "dps-item_dps-credit-m", count = average / 1000000 }
-        --  average = average % 1000000
-        --end
-        
-        if average >= 1000 then
-          container.insert { name = "dps-item_dorax-component", count = average / 1000 }
-          average = average % 1000
-        end
-
         if average >= 1 then
-          container.insert { name = "dps-item_dorax-fragment", count = average }
+          rendering.draw_text {
+            text = math.floor(average),
+            surface = entity.surface,
+            target = { type = "entity", entity = entity },
+            color = { 1.0, 0.66, 0.66,},
+            scale = 3.0,
+            time_to_live = 60,
+            forces = nil,
+            players = nil,
+            alignment = "center",
+            vertical_alignment = "middle",
+          }
+
+          if average >= 1000 then
+            game.forces["player"].script_trigger_research("dps-tech_advanced-dps-engineering")
+          end
+
+          local container = item.container
+          --if average >= 1000000000 then
+          --  container.insert { name = "dps-item_dps-credit-g", count = average / 1000000000 }
+          --  average = average % 1000000000
+          --end
+          --
+          --if average >= 1000000 then
+          --  container.insert { name = "dps-item_dps-credit-m", count = average / 1000000 }
+          --  average = average % 1000000
+          --end
+          
+          if average >= 1000 then
+            container.insert { name = "dps-item_dorax-component", count = average / 1000 }
+            average = average % 1000
+          end
+
+          if average >= 1 then
+            container.insert { name = "dps-item_dorax-fragment", count = average }
+          end
         end
       end
     end

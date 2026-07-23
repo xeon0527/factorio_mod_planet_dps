@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.3.16
+Date: 23. 7. 2026
+  Changes:
+    - Adjusted the DPS Data Pack icon to use a slightly lighter color.
+
+  Bugfixes:
+    - Fixed an issue where some Tips and Tricks entries would produce errors.
+    - Fixed an issue where 0 damage was displayed for DPS Subcores and D.O.R.A.X when no damage was being dealt.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.3.15
 Date: 22. 7. 2026
   Minor Features:

@@ -1,6 +1,5 @@
 require("__core__/lualib/story")
 require("__planet-dps__/global/_hdr")
-require("__planet-dps__/scripts/util/_hdr")
 __LIB__ = require("__planet-dps__/lib/_hdr")
 
 game.simulation.camera_position = {0.5, 0.5}

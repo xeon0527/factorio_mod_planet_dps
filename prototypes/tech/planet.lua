@@ -132,7 +132,7 @@ data:extend {
       {
         icon = "__space-exploration-graphics__/graphics/technology/catalogue/mask-catalogue-2.png",
         icon_size = 128,
-        tint = {1, 0, 0}
+        tint = {1, 0.25, 0.25}
       }
     },
 
