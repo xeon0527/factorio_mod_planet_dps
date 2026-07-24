@@ -116,7 +116,10 @@ DRV_TIMER_create_static_tick_handler(function()
           }
 
           if average >= 1000 then
-            game.forces["player"].script_trigger_research("dps-tech_advanced-dps-engineering")
+            game.forces["player"].script_trigger_research("dps-tech_supersonic-grenade-launcher")
+            if average >= 1000000 then
+              game.forces["player"].script_trigger_research("dps-tech_advanced-dps-engineering")
+            end
           end
 
           local container = item.container

@@ -102,6 +102,7 @@ data:extend {
       animation = {
         layers = {
           {
+            animation_speed = 0.5,
             filename = "__space-exploration-graphics__/graphics/entity/assembling-machine/assembling-machine.png",
             frame_count = 32,
             repeat_count = 2,
@@ -113,6 +114,7 @@ data:extend {
             width = 214
           },
           {
+            animation_speed = 0.5,
             draw_as_shadow = true,
             filename = "__space-exploration-graphics__/graphics/entity/assembling-machine/assembling-machine-shadow.png",
             frame_count = 32,
@@ -125,6 +127,7 @@ data:extend {
             width = 260
           },
           {
+            animation_speed = 0.5,
             width = 132,
             height = 130,
             frame_count = 64,
@@ -155,6 +158,7 @@ data:extend {
             scale = 0.5
           },
           {
+            animation_speed = 0.5,
             flags = {"mask"},
             --line_length = 1,
             width = 58,
@@ -188,6 +192,7 @@ data:extend {
             scale = 0.5
           },
           {
+            animation_speed = 0.5,
             width = 250,
             height = 124,
             frame_count = 64,
@@ -262,8 +267,8 @@ data:extend {
     ingredients =
     {
       {type = "item", name = "assembling-machine-3", amount = 2},
-      {type = "item", name = "dps-item_dps-credit_k", amount = 50},
-      {type = "item", name = "dps-item_dorax-component", amount = 1},
+      {type = "item", name = "dps-item_dps-credit_m", amount = 1},
+      {type = "item", name = "dps-item_dorax-armor-plate", amount = 1},
     },
     surface_conditions = __PLANET_CONDITIONS__,
     results = {{type="item", name="dps-building_armory", amount=1}}

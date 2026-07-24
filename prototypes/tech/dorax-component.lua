@@ -12,8 +12,8 @@ data:extend {
       count = 500,
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
-        {"dps-item_dorax-component", 1},
+        {"dps-item_dps-data-pack", 10},
+        {"dps-item_dorax-armor-plate", 1},
       },
       time = 1,
     },
@@ -36,10 +36,10 @@ data:extend {
       },
     },
     allows_productivity = false,
-    prerequisites = { "dps-tech_advanced-dps-engineering" },
+    prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
-      count = 1000,
+      count = 500,
       ingredients =
       {
         {"dps-item_dps-data-pack",  5},
@@ -70,10 +70,10 @@ data:extend {
       },
     },
     allows_productivity = false,
-    prerequisites = { "dps-tech_advanced-dps-engineering" },
+    prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
-      count = 1000,
+      count = 500,
       ingredients =
       {
         {"dps-item_dps-data-pack",  5},
@@ -285,6 +285,48 @@ data:extend {
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_apfsds-machine-gun-destruction-protection_effects"}, },
+    },
+  },
+
+
+  {
+    type = "technology",
+    name = "dps-tech_advanced-dps-engineering",
+    order = "dps",
+    icons = {
+      {
+        icon = "__base__/graphics/technology/physical-projectile-damage-1.png",
+        icon_size = 256,
+        tint = { 1.0, 0.66, 0.0 },
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {-40, 40},
+        floating = true
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {10, 50},
+        floating = true
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-damage.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {55, 40},
+        floating = true
+      },
+    },
+
+    allows_productivity = false,
+    prerequisites = { "dps-tech_advanced-apfsds-shell", "dps-tech_apfsds-machine-gun" },
+    research_trigger = {
+      type = "scripted",
+      trigger_description = {"technology-description.dps-tech_advanced-dps-engineering-trigger"}
     },
   },
 }

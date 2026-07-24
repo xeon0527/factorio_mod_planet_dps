@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.2
+Date: 24. 7. 2026
+  Minor Features:
+    - The tech tree has been reorganized. The Supersonic Grenade Launcher has been moved up one tech tier, and the Armory has been moved to the final tech tier.
+
+  Changes:
+    - The Armory's animation speed has been reduced by 50%.
+
+  Balancing:
+    - The production cost of the Armory has been increased.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.1
 Date: 24. 7. 2026
   Bugfixes:
