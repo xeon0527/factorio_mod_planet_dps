@@ -4,13 +4,13 @@ local item_sounds = require("__base__.prototypes.item_sounds")
 
 
 local function _create_recipe(level, icons, credit_k, probability, order)
-  for pt = 0, 85, 5 do
-  local pt_prob = (1 - probability) * (pt/100)
+  --for pt = 0, 85, 5 do
+  --local pt_prob = (1 - probability) * (pt/100)
 
   data:extend {
     {
       type = "recipe",
-      name = "dps-turret_apfsds-machine-gun_"..level.."_"..pt,
+      name = "dps-turret_apfsds-machine-gun_"..level,--.."_"..pt,
       icons = icons,
       hidden = false,
       hidden_in_factoriopedia = true,
@@ -31,7 +31,7 @@ local function _create_recipe(level, icons, credit_k, probability, order)
       main_product = "dps-turret_apfsds-machine-gun_"..level,
       results = {
         { type="item", name="dps-turret_apfsds-machine-gun_"..level, amount = 1,      shared_probability = { min = 0.0, max = probability } },
-        { type="item", name="dps-turret_apfsds-machine-gun_"..(level-1), amount = 1,  shared_probability = { min = probability, max = probability + pt_prob } }
+        --{ type="item", name="dps-turret_apfsds-machine-gun_"..(level-1), amount = 1,  shared_probability = { min = probability, max = probability + pt_prob } }
       },
 
       maximum_productivity = 100,
@@ -40,7 +40,7 @@ local function _create_recipe(level, icons, credit_k, probability, order)
       can_set_quality = false,
     },
   }
-  end
+  --end
 end
 
 local function _generate(level, tint, order, credit_k, probability)

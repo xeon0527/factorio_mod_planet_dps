@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.1
+Date: 24. 7. 2026
+  Bugfixes:
+    - Fixed an issue where the destruction protection chance for Advanced APFSDS Shells and APFSDS Machine Guns was calculated incorrectly during enhancement, allowing items to be duplicated. The enhancement calculation has been reworked to assume that failed items are automatically re-attempted until a final outcome is reached. As a result, failed items are no longer generated.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.0
 Date: 23. 7. 2026
   Major Features:

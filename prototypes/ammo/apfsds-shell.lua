@@ -110,13 +110,14 @@ local function _create_basic_recipe(level, credit)
 end
 
 local function _create_adv_recipe(level, tint, credit_k, probability, order)
-  for pt = 0, 85, 5 do
-    local pt_prob = (1 - probability) * (pt/100)
+  --for pt = 0, 85, 5 do
+  --  local pt_prob = (1 - probability) * (pt/100)
 
     data:extend {
       {
         type = "recipe",
-        name = "dps-ammo_apfsds-shell_"..level.."_"..pt,
+        --name = "dps-ammo_apfsds-shell_"..level.."_"..pt,
+        name = "dps-ammo_apfsds-shell_"..level,
         icons = {
           {
             icon = __PATH__.."/graphics/icons/apfsds-shell.png",
@@ -144,7 +145,9 @@ local function _create_adv_recipe(level, tint, credit_k, probability, order)
         main_product = "dps-ammo_apfsds-shell_"..level,
         results = {
           { type="item", name="dps-ammo_apfsds-shell_"..level, amount = 1,      shared_probability = { min = 0.0, max = probability } },
-          { type="item", name="dps-ammo_apfsds-shell_"..(level-1), amount = 1,  shared_probability = { min = probability, max = probability + pt_prob } }
+          --{ type="item", name="dps-ammo_apfsds-shell_"..(level-1), amount = 1,  shared_probability = { min = probability, max = probability + pt_prob },
+          --  ignored_by_stats = 1, ignored_by_productivity = 1,
+          --}
         },
   
         maximum_productivity = 100,
@@ -153,7 +156,7 @@ local function _create_adv_recipe(level, tint, credit_k, probability, order)
         can_set_quality = false,
       },
     }
-  end
+  --end
 end
 
 _create_ammo(1, 1, {1,0,0}, "a")

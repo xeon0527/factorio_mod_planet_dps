@@ -50,10 +50,10 @@ data:extend {
     effects =
     {
       { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_1" },
-      { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_2_0" },
-      { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_3_0" },
-      { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_4_0" },
-      { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_5_0" },
+      { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_2" },
+      { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_3" },
+      { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_4" },
+      { type = "unlock-recipe", recipe = "dps-turret_apfsds-machine-gun_5" },
     },
   },
 
@@ -83,11 +83,11 @@ data:extend {
     },
     effects =
     {
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_6_0" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_7_0" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_8_0" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_9_0" },
-      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_10_0" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_6" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_7" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_8" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_9" },
+      { type = "unlock-recipe", recipe = "dps-ammo_apfsds-shell_10" },
     },
   },
 
