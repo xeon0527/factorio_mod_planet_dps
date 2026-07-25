@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.5
+Date: 25. 7. 2026
+  Bugfixes:
+    - Fixed an issue where D.O.R.A.X-related items were not displayed correctly in various item lists.
+    - Fixed missing English localization for the DPS Credit exchange recipes.
+
+  Balancing:
+    - Changed the prerequisite for the APFSDS Cannon research to DPS Data Pack.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.4
 Date: 25. 7. 2026
   Compatibility:

@@ -115,7 +115,7 @@ data:extend {
       },
     },
     allows_productivity = false,
-    prerequisites = { "dps-tech_discovery-of-dorax", "dps-tech_basic-dps-engineering"},
+    prerequisites = { "dps-tech_discovery-of-dorax", "dps-tech_dps-data-pack"},
     unit =
     {
       count = 1000,

@@ -15,6 +15,9 @@ data:extend {
     weight = 1000*tons,
 
     order = "b",
+    flags = {
+      "always-show",
+    },
 
     durability = 1,
     durability_description_key = "description.science-pack-remaining-amount-key",

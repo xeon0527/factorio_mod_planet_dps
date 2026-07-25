@@ -139,11 +139,11 @@ data:extend {
     {
       {
         type = "unlock-recipe",
-        recipe = "dps-item_dps-data-pack",
+        recipe = "dps-building_dps-supercomputer",
       },
       {
         type = "unlock-recipe",
-        recipe = "dps-building_dps-supercomputer",
+        recipe = "dps-item_dps-data-pack",
       },
     },
     prerequisites = { "dps-tech_dps-credit-exchange", "dps-tech_dps-scrap-recycling"},
