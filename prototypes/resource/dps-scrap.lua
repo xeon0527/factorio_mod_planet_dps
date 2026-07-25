@@ -88,7 +88,7 @@ data:extend { _resource,
     ingredients = {{type = "item", name = "dps-resource_dps-scrap", amount = 1}},
     results =
     {
-      {type = "item", name = "iron-plate",            amount = 1, shared_probability = { min = 0.00, max = 0.20 }, show_details_in_recipe_tooltip = false},
+      {type = "item", name = "iron-plate",            amount = 2, shared_probability = { min = 0.00, max = 0.20 }, show_details_in_recipe_tooltip = false},
       {type = "item", name = "solid-fuel",            amount = 1, shared_probability = { min = 0.20, max = 0.27 }, show_details_in_recipe_tooltip = false},
       {type = "item", name = "concrete",              amount = 1, shared_probability = { min = 0.27, max = 0.33 }, show_details_in_recipe_tooltip = false},
       {type = "item", name = "copper-plate",          amount = 1, shared_probability = { min = 0.33, max = 0.38 }, show_details_in_recipe_tooltip = false},

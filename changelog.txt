@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.4
+Date: 25. 7. 2026
+  Compatibility:
+    - Added compatibility with Any Planet Start.
+
+  Balancing:
+    - DPS Scrap now yields 2 Iron Plates instead of 1.
+    - Reduced the crafting cost of the DPS Credit Translator.
+
+  Changes:
+    - The DPS Scrap Recycling research no longer unlocks the Recycler recipe.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.3
 Date: 25. 7. 2026
   Changes:

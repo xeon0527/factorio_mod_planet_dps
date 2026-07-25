@@ -47,10 +47,6 @@ data:extend {
         type = "unlock-recipe",
         recipe = "dps-recipe_dps-scrap-recycling",
       },
-      {
-        type = "unlock-recipe",
-        recipe = "recycler"
-      },
     },
     prerequisites = { "dps-tech_planet-discovery-dps"},
     research_trigger = {

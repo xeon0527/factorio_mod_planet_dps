@@ -17,6 +17,7 @@
     "default_circuit_wire_max_distance",
     "assembling_machine_circuit_wire_max_distance",
     "pipecoverspictures",
+    "APS"
   ],
   "Lua.diagnostics.disable": [
     "undefined-field",
