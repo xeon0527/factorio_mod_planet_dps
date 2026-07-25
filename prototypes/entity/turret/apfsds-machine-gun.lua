@@ -107,10 +107,10 @@ local function _generate(level, tint, order, credit_k, probability)
       energy_source =
       {
         type = "electric",
-        buffer_capacity = "10MJ",
+        buffer_capacity = "5MJ",
         usage_priority = "primary-input"
       },
-      energy_per_shot = "10MJ",
+      energy_per_shot = "5MJ",
 
       rotation_speed = 0.002,
       preparing_speed = 0.08,
@@ -179,12 +179,12 @@ local function _generate(level, tint, order, credit_k, probability)
       {
         type = "projectile",
         ammo_category = "apfsds-shell",
-        cooldown = 150,
+        cooldown = 150 - ((level - 1) * 15),
         movement_slow_down_factor = 0,
         projectile_creation_distance = 1.6,
         projectile_center = util.by_pixel(0, -27),
         range = 64,
-        damage_modifier = 1 + (level * 2),
+        damage_modifier = 1 + (level * 3),
         sound =
         {
           filename = __PATH__.."/sound/apfsds-machine-gun.ogg",
@@ -238,10 +238,10 @@ data:extend {
     ingredients =
     {
       {type = "item", name = "dps-item_dps-credit_m", amount = 1},
-      {type = "item", name = "concrete", amount = 350},
-      {type = "item", name = "steel-plate", amount = 250},
-      {type = "item", name = "processing-unit", amount = 100},
-      {type = "item", name = "uranium-235", amount = 50},
+      {type = "item", name = "concrete", amount = 250},
+      {type = "item", name = "steel-plate", amount = 125},
+      {type = "item", name = "processing-unit", amount = 50},
+      {type = "item", name = "uranium-235", amount = 5},
     },
     results = {{type="item", name="dps-turret_apfsds-machine-gun_1", amount = 1}},
 

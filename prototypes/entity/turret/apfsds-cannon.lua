@@ -74,10 +74,10 @@ data:extend {
     energy_source =
   {
     type = "electric",
-    buffer_capacity = "10MJ",
+    buffer_capacity = "5MJ",
     usage_priority = "primary-input"
   },
-  energy_per_shot = "10MJ",
+  energy_per_shot = "5MJ",
 
     rotation_speed = 0.002,
     preparing_speed = 0.08,
@@ -218,9 +218,9 @@ data:extend {
     ingredients =
     {
       {type = "item", name = "dps-item_dps-credit_k", amount = 50},
-      {type = "item", name = "concrete", amount = 1000},
-      {type = "item", name = "steel-plate", amount = 1000},
-      {type = "item", name = "processing-unit", amount = 200},
+      {type = "item", name = "concrete", amount = 500},
+      {type = "item", name = "steel-plate", amount = 250},
+      {type = "item", name = "advanced-circuit", amount = 50},
     },
     results = {{type="item", name="dps-turret_apfsds-cannon", amount=1}},
 

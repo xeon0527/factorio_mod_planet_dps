@@ -194,7 +194,7 @@ data:extend {
     surface_conditions = __PLANET_CONDITIONS__,
     ingredients = {
       {type = "item", name = "dps-item_dps-credit_n", amount = 50},
-      {type = "item", name = "steel-plate", amount = 25},
+      {type = "item", name = "steel-plate", amount = 20},
       {type = "item", name = "copper-cable", amount = 25},
     },
     results = {{type="item", name="dps-ammo_apfsds-shell_1", amount=1}},

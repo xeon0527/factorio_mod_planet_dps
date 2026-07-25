@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.6
+Date: 26. 7. 2026
+  Balancing:
+    - Reduced the power consumption of the APFSDS Cannon and APFSDS Machine Gun by 50%.
+    - Slightly reduced the crafting cost of APFSDS Shells.
+    - Significantly reduced the crafting cost of the APFSDS Cannon.
+    - Significantly reduced the crafting cost of the APFSDS Machine Gun.
+    - The APFSDS Machine Gun now gains increased firing speed as its enhancement level increases.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.5
 Date: 25. 7. 2026
   Bugfixes:
