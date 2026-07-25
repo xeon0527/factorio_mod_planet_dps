@@ -8,13 +8,13 @@ data:extend {
   },
   {
     type = "item-subgroup",
-    name = "dps-item-subgroup_item",
+    name = "dps-item-subgroup_resource",
     group = "dps-item-group_dps",
     order = "a"
   },
   {
     type = "item-subgroup",
-    name = "dps-item-subgroup_ammo",
+    name = "dps-item-subgroup_resource-translation",
     group = "dps-item-group_dps",
     order = "b"
   },
@@ -26,20 +26,49 @@ data:extend {
   },
   {
     type = "item-subgroup",
-    name = "dps-item-subgroup_recipe",
+    name = "dps-item-subgroup_credit_exchange_up",
     group = "dps-item-group_dps",
     order = "d"
   },
   {
     type = "item-subgroup",
-    name = "dps-item-subgroup_science",
+    name = "dps-item-subgroup_credit_exchange_down",
     group = "dps-item-group_dps",
     order = "e"
   },
+
+  {
+    type = "item-subgroup",
+    name = "dps-item-subgroup_building",
+    group = "dps-item-group_dps",
+    order = "f"
+  },
+
+  {
+    type = "item-subgroup",
+    name = "dps-item-subgroup_science",
+    group = "dps-item-group_dps",
+    order = "g"
+  },
+
   {
     type = "item-subgroup",
     name = "dps-item-subgroup_turret",
     group = "dps-item-group_dps",
-    order = "f"
+    order = "h"
+  },
+
+  {
+    type = "item-subgroup",
+    name = "dps-item-subgroup_ammo",
+    group = "dps-item-group_dps",
+    order = "i"
+  },
+
+  {
+    type = "item-subgroup",
+    name = "dps-item-subgroup_apfsds-shell",
+    group = "dps-item-group_dps",
+    order = "j"
   },
 }

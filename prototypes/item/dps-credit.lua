@@ -7,7 +7,7 @@ local function _create_credit(endfix, order, icon_path)
       name = "dps-item_dps-credit_"..endfix,
       icon = icon_path,
       icon_size = 64,
-      subgroup = "dps-item-subgroup_item",
+      subgroup = "dps-item-subgroup_credit",
       inventory_move_sound = item_sounds.resource_inventory_move,
       pick_sound = item_sounds.resource_inventory_pickup,
       drop_sound = item_sounds.resource_inventory_move,

@@ -144,7 +144,8 @@ data:extend {
     name = "dps-building_dps-supercomputer",
     icon = "__space-exploration-graphics__/graphics/icons/supercomputer-2.png",
     icon_size = 64,
-    subgroup = "dps-item-subgroup_science",
+    subgroup = "dps-item-subgroup_building",
+    order = "2",
     --order = "z[lab]-a",
     stack_size = 10,
     weight = 1000 * tons,
@@ -166,24 +167,7 @@ data:extend {
       {type = "item", name = "processing-unit", amount = 25},
       {type = "item", name = "dps-item_dps-data-pack", amount = 5},
     },
-    surface_conditions =
-    {
-      {
-        property = "pressure",
-        min = __PLANET__.pressure,
-        max = __PLANET__.pressure
-      },
-      {
-        property = "magnetic-field",
-        min = __PLANET__.magnetic_field,
-        max = __PLANET__.magnetic_field
-      },
-      {
-        property = "gravity",
-        min = __PLANET__.gravity,
-        max = __PLANET__.gravity
-      },
-    },
+    surface_conditions = __PLANET_CONDITIONS__,
     results = {{type="item", name="dps-building_dps-supercomputer", amount=1}},
   }
 }

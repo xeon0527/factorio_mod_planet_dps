@@ -36,7 +36,7 @@ local function _create_ammo(level, damage, tint, order)
         }
       },
   
-      subgroup = "dps-item-subgroup_ammo",
+      subgroup = "dps-item-subgroup_apfsds-shell",
       --order = "d[cannon-shell]-a[basic]",
       inventory_move_sound = item_sounds.ammo_large_inventory_move,
       pick_sound = item_sounds.ammo_large_inventory_pickup,
@@ -131,7 +131,7 @@ local function _create_adv_recipe(level, tint, credit_k, probability, order)
 
         localised_name = {"item-name.".."dps-ammo_apfsds-shell_"..level},
         localised_description = {"item-description.".."dps-ammo_apfsds-shell_"..level},
-        subgroup = "dps-item-subgroup_ammo",
+        subgroup = "dps-item-subgroup_apfsds-shell",
         order = order,
 
         enabled = false,

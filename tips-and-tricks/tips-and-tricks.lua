@@ -24,18 +24,33 @@ data:extend {
       type = "research",
       technology = "dps-tech_planet-discovery-dps"
     },
-    skip_trigger =
+  },
+
+  {
+    type = "tips-and-tricks-item",
+    name = "dps-tat_dps-scrap",
+    tag = "[item=dps-resource_dps-scrap]",
+    category = "dps-tat_category",
+    order = "dps-b",
+    indent = 1,
+    simulation = {
+      planet = "dps-planet_dps",
+      checkboard = true,
+      init_file = __SIM_PATH.."dps-scrap.lua",
+    },
+    trigger =
     {
-      type = "change-surface",
-      surface = "dps-planet_dps"
+      type = "research",
+      technology = "dps-tech_dps-scrap-recycling"
     },
   },
+
   {
     type = "tips-and-tricks-item",
     name = "dps-tat_dps-subcore",
     tag = "[item=gun-turret]",
     category = "dps-tat_category",
-    order = "dps-b",
+    order = "dps-c",
     indent = 1,
     simulation = {
       init_update_count = 600,
@@ -53,21 +68,6 @@ data:extend {
       type = "change-surface",
       surface = "dps-planet_dps"
     },
-    skip_trigger =
-    {
-      type = "sequence",
-      triggers =
-      {
-        {
-          type = "change-surface",
-          surface = "dps-planet_dps"
-        },
-        {
-          type = "time-elapsed",
-          ticks = 5 * minute
-        }
-      }
-    },
   },
 
 
@@ -77,7 +77,7 @@ data:extend {
     name = "dps-tat_dorax",
     tag = "[virtual-signal=signal-red]",
     category = "dps-tat_category",
-    order = "dps-c",
+    order = "dps-d",
     indent = 1,
     simulation = {
       init_update_count = 600,
@@ -90,49 +90,5 @@ data:extend {
       type = "research",
       technology = "dps-tech_discovery-of-dorax"
     },
-    skip_trigger =
-    {
-      type = "sequence",
-      triggers =
-      {
-        {
-          type = "research",
-          technology = "dps-tech_discovery-of-dorax"
-        },
-        {
-          type = "time-elapsed",
-          ticks = 5 * minute
-        }
-      }
-    },
   },
-  --{
-  --  type = "tips-and-tricks-item",
-  --  name = "dps-tat_dorax-item-graph",
-  --  tag = "[virtual-signal=signal-info]",
-  --  category = "dps-tat_category",
-  --  order = "dps-cc",
-  --  indent = 2,
-  --  image = "__planet-dps__/graphics/tips-and-tricks/dorax-item-graph.png",
-  --  trigger =
-  --  {
-  --    type = "research",
-  --    technology = "dps-tech_discovery-of-dorax"
-  --  },
-  --  skip_trigger =
-  --  {
-  --    type = "sequence",
-  --    triggers =
-  --    {
-  --      {
-  --        type = "research",
-  --        technology = "dps-tech_discovery-of-dorax"
-  --      },
-  --      {
-  --        type = "time-elapsed",
-  --        ticks = 5 * minute
-  --      }
-  --    }
-  --  },
-  --},
 }

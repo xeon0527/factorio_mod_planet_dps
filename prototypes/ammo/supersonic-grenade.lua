@@ -21,8 +21,8 @@ data:extend {
         }
       }
     },
-
     subgroup = "dps-item-subgroup_ammo",
+    order = "c",
     --order = "d[cannon-shell]-a[basic]",
     inventory_move_sound = item_sounds.ammo_large_inventory_move,
     pick_sound = item_sounds.ammo_large_inventory_pickup,

@@ -25,7 +25,8 @@ data:extend {
     energy_required = 0.1,
     enabled = false,
     auto_recycle = false,
-    subgroup = "dps-item-subgroup_recipe",
+    subgroup = "dps-item-subgroup_resource-translation",
+    order = "1",
     categories = {"dps-recipe-category_dps-credit-translator"},
     ingredients =
     {
@@ -63,7 +64,8 @@ data:extend {
     energy_required = 0.1,
     enabled = false,
     auto_recycle = false,
-    subgroup = "dps-item-subgroup_recipe",
+    subgroup = "dps-item-subgroup_resource-translation",
+    order = "2",
     categories = {"dps-recipe-category_dps-credit-translator"},
     ingredients =
     {

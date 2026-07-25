@@ -30,7 +30,10 @@ _resource.autoplace = resource_autoplace.resource_autoplace_settings {
   starting_rq_factor_multiplier = 2.0,
   candidate_spot_count = 22,
 }
-_resource.factoriopedia_simulation = _scrap.factoriopedia_simulation
+
+_resource.factoriopedia_simulation = {
+  init_file = "__planet-dps__/prototypes/resource/dps-scrap-simulation.lua"
+}
 
 data:extend { _resource,
   {
@@ -51,7 +54,7 @@ data:extend { _resource,
       { size = 64, filename = "__space-age__/graphics/icons/scrap-4.png", scale = 0.5, mipmap_count = 4, tint = _tint_color },
       { size = 64, filename = "__space-age__/graphics/icons/scrap-5.png", scale = 0.5, mipmap_count = 4, tint = _tint_color }
     },
-    subgroup = "dps-item-subgroup_item",
+    subgroup = "dps-item-subgroup_resource",
     inventory_move_sound = item_sounds.resource_inventory_move,
     pick_sound = item_sounds.resource_inventory_pickup,
     drop_sound = item_sounds.resource_inventory_move,
@@ -78,7 +81,7 @@ data:extend { _resource,
       }
     },
     categories = {"recycling", "hand-crafting"},
-    subgroup = "dps-item-subgroup_item",
+    subgroup = "dps-item-subgroup_resource",
     enabled = false,
     auto_recycle = false,
     energy_required = 0.1,
