@@ -19,7 +19,7 @@ local function _research_update(e)
     local addition_probability = lv_ec * 0.01
     local protection_probability = lv_dp * 0.05
 
-    for i = 6, 10, 1 do
+    for i = 1, 5, 1 do
       local ptyp = recipes["dps-turret_apfsds-machine-gun_"..i].prototype
       local probability = ptyp.main_product.shared_probability.max + addition_probability
       local total_probability = probability / (1 - (1 - probability) * protection_probability)

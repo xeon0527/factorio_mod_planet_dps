@@ -1,3 +1,4 @@
+---@diagnostic disable: need-check-nil
 local asteroid_util = require("__space-age__/prototypes/planet/asteroid-spawn-definitions")
 local _nauvis = data.raw["planet"]["nauvis"]
 
@@ -67,3 +68,12 @@ data:extend {
     asteroid_spawn_definitions = asteroid_util.spawn_definitions(asteroid_util.gleba_fulgora)
   },
 }
+
+local rp = util.table.deepcopy(data.raw.planet["nauvis"].platform_surface_render_parameters)
+rp.platform_backdrop.atmosphere_color = {0.1, 0.1, 0.04, 0.1}
+rp.platform_backdrop.planet_surface = {
+  filename = __PATH__.."/graphics/planet/render.png",
+  width = 1774,
+  height = 887
+}
+data.raw.planet["dps-planet_dps"].platform_surface_render_parameters = rp

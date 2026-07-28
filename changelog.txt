@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.7
+Date: 28. 7. 2026
+  Minor Features:
+    - Added planet rendering.
+
+  Bugfixes:
+    - Fixed a crash that occurred when researching APFSDS Cannon upgrade technologies.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.6
 Date: 26. 7. 2026
   Balancing:
