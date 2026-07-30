@@ -115,10 +115,10 @@ data:extend {
     prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
-      count_formula = "200 * (L ^ 1.15)",
+      count_formula = "200 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 3},
+        {"dps-item_dps-data-pack", 1},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1
@@ -144,7 +144,7 @@ data:extend {
     order = "dps",
     icons = {
       {
-        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
         icon_size = 256,
       },
       {
@@ -159,10 +159,10 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.15)",
+      count_formula = "100 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 3},
+        {"dps-item_dps-data-pack", 1},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1
@@ -185,7 +185,7 @@ data:extend {
     order = "dps",
     icons = {
       {
-        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
         icon_size = 256,
       },
       {
@@ -200,10 +200,10 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "200 * (L ^ 1.15)",
+      count_formula = "200 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 3},
+        {"dps-item_dps-data-pack", 1},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1
@@ -223,7 +223,7 @@ data:extend {
     order = "dps",
     icons = {
       {
-        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
         icon_size = 256,
       },
       {
@@ -238,10 +238,10 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.15)",
+      count_formula = "100 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 3},
+        {"dps-item_dps-data-pack", 1},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1
@@ -261,7 +261,7 @@ data:extend {
     order = "dps",
     icons = {
       {
-        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
         icon_size = 256,
       },
       {
@@ -276,10 +276,10 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.15)",
+      count_formula = "100 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 3},
+        {"dps-item_dps-data-pack", 1},
         {"dps-item_dorax-fragment", 1},
       },
       time = 1

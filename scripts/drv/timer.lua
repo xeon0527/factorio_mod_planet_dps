@@ -2,6 +2,7 @@ local _default = { tick_timer = {}, single_timer = {}, uuid_index = 1 }
 
 __DRV_TIMER_OBJECTS__ = {
   on_static_tick = {},
+  on_static_tick_60 = {},
   actions = {},
 }
 
@@ -40,6 +41,14 @@ script.on_nth_tick(1, function()
   end
 end)
 
+script.on_nth_tick(60, function()
+  for _, st in pairs(__DRV_TIMER_OBJECTS__.on_static_tick_60) do
+    st.handler()
+  end
+end)
+
+
+
 function DRV_TIMER_register_action(name, action)
   __DRV_TIMER_OBJECTS__.actions[name] = action
 end
@@ -47,6 +56,12 @@ end
 
 function DRV_TIMER_create_static_tick_handler(handler)
   table.insert(__DRV_TIMER_OBJECTS__.on_static_tick, {
+    handler = handler,
+  })
+end
+
+function DRV_TIMER_create_static_tick_60_handler(handler)
+  table.insert(__DRV_TIMER_OBJECTS__.on_static_tick_60, {
     handler = handler,
   })
 end

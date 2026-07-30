@@ -153,7 +153,7 @@ local function _generate(level, tint, order, credit_k, probability)
             layers =
             {
               {
-                filename = __PATH__.."/graphics/entity/apfsds-machine-gun/base.png",
+                filename = __PATH__.."graphics/entity/apfsds-machine-gun/base.png",
                 priority = "high",
                 width = 150,
                 height = 118,
@@ -161,7 +161,7 @@ local function _generate(level, tint, order, credit_k, probability)
                 scale = 0.5
               },
               {
-                filename = __PATH__.."/graphics/entity/apfsds-machine-gun/base-mask.png",
+                filename = __PATH__.."graphics/entity/apfsds-machine-gun/base-mask.png",
                 flags = {"mask", "low-object"},
                 line_length = 1,
                 width = 122,
@@ -187,9 +187,10 @@ local function _generate(level, tint, order, credit_k, probability)
         damage_modifier = 1 + (level * 3),
         sound =
         {
-          filename = __PATH__.."/sound/apfsds-machine-gun.ogg",
+          filename = __PATH__.."sound/apfsds-machine-gun.ogg",
           volume = 0.7,
-          modifiers = volume_multiplier("main-menu", 0.9)
+          modifiers = volume_multiplier("main-menu", 0.9),
+          aggregation = {max_count = 16, remove = true, count_already_playing = true, priority = "newest"}
         },
       },
 
@@ -212,7 +213,7 @@ local function _generate(level, tint, order, credit_k, probability)
       drop_sound = item_sounds.artillery_large_inventory_move,
       place_result = "dps-turret_apfsds-machine-gun_"..level,
       default_import_location = "dps-planet_dps",
-      stack_size = 5,
+      stack_size = 10,
       weight = 1000*tons
     },
   }
@@ -223,9 +224,9 @@ local function _generate(level, tint, order, credit_k, probability)
 end
 
 _generate(1, {1,0.25,0.25}, "ca", 0, 0)
-_generate(2, {1,0.66,0},    "cb", 100, 0.01)
-_generate(3, {1,1,0},       "cc", 200, 0.01)
-_generate(4, {0,1,0},       "cd", 300, 0.01)
+_generate(2, {1,0.66,0},    "cb", 100, 0.10)
+_generate(3, {1,1,0},       "cc", 200, 0.07)
+_generate(4, {0,1,0},       "cd", 300, 0.04)
 _generate(5, {0.25,0.25,1}, "ce", 400, 0.01)
 
 data:extend {
@@ -233,14 +234,14 @@ data:extend {
     type = "recipe",
     name = "dps-turret_apfsds-machine-gun_1",
     enabled = false,
-    energy_required = 60,
+    energy_required = 30,
     surface_conditions = __PLANET_CONDITIONS__,
     ingredients =
     {
       {type = "item", name = "dps-item_dps-credit_m", amount = 1},
-      {type = "item", name = "concrete", amount = 250},
       {type = "item", name = "steel-plate", amount = 125},
-      {type = "item", name = "processing-unit", amount = 50},
+      {type = "item", name = "low-density-structure", amount = 25},
+      {type = "item", name = "processing-unit", amount = 25},
       {type = "item", name = "uranium-235", amount = 5},
     },
     results = {{type="item", name="dps-turret_apfsds-machine-gun_1", amount = 1}},

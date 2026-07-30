@@ -43,7 +43,7 @@ data:extend {
     smoke_count = 2,
     smoke_slow_down_factor = 1,
     sound = {
-      filename = __PATH__.."/sound/apfsds-shell_explosion.ogg",
+      filename = __PATH__.."sound/apfsds-shell_explosion.ogg",
       aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
     }
   },

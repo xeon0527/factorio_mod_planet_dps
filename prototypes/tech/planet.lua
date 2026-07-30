@@ -3,7 +3,7 @@ data:extend {
     type = "technology",
     name = "dps-tech_planet-discovery-dps",
     order = "dps",
-    icons = PlanetsLib.technology_icon_constant_planet(__PATH__.."/graphics/planet/512.png", 512),
+    icons = PlanetsLib.technology_icon_constant_planet(__PATH__.."graphics/planet/512.png", 512),
     essential = true,
     effects =
     {
@@ -62,7 +62,7 @@ data:extend {
     order = "dps",
     icons = {
       {
-        icon = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-icon-big.png",
+        icon = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-icon-big.png",
         icon_size = 640,
         tint = { 1.0, 1.0, 0.0 },
       },

@@ -8,11 +8,11 @@ data:extend {
   --{
   --  type = "sound",
   --  name = "dps-sound_supersonic-grenade-launcher-attack",
-  --  filename = __PATH__.."/sound/supersonic-grenade-launcher/attack.ogg"
+  --  filename = __PATH__.."sound/supersonic-grenade-launcher/attack.ogg"
   --},
   --{
   --  type = "sound",
   --  name = "dps-sound_supersonic-grenade-launcher-damage",
-  --  filename = __PATH__.."/sound/supersonic-grenade-launcher/damage.ogg"
+  --  filename = __PATH__.."sound/supersonic-grenade-launcher/damage.ogg"
   --},
 }

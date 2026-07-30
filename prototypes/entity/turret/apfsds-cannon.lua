@@ -177,7 +177,8 @@ data:extend {
       {
         filename = "__base__/sound/fight/artillery-shoots-1.ogg",
         volume = 0.7,
-        modifiers = volume_multiplier("main-menu", 0.9)
+        modifiers = volume_multiplier("main-menu", 0.9),
+        aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
       },
     },
 

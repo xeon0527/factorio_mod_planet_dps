@@ -10,7 +10,7 @@ data:extend {
   {
     type = "ammo-category",
     name = "apfsds-shell",
-    icon = __PATH__.."/graphics/icons/apfsds-shell.png",
+    icon = __PATH__.."graphics/icons/apfsds-shell.png",
     icon_size = 64,
     subgroup = "ammo-category",
   },

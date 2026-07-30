@@ -1,11 +1,30 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.8
+Date: 30. 7. 2026
+  Minor Features:
+    - Added a Status Indicator. Level and Experience are not yet implemented and are still under development.
+
+  Changes:
+    - Changed the D.O.R.A.X DPS calculation method. DPS is now calculated by summing the total damage dealt over a 3-second period.
+
+  Balancing:
+    - Reduced the Equipment Enhancer crafting speed from 10 to 5
+    - Simplified the crafting recipe for the APFSDS Machine Gun by reducing its material requirements.
+    - Increased the enhancement success rate of the APFSDS Machine Gun.
+    - Reduced overall research costs and DPS Data Pack consumption.
+
+  Bugfixes:
+    - Fixed an issue where the Planet DPS icon did not appear in the icon selection window.
+    - Fixed an issue where the sound became excessively loud when many APFSDS turrets were firing simultaneously.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.7
 Date: 28. 7. 2026
   Minor Features:
     - Added planet rendering.
 
   Bugfixes:
-    - Fixed a crash that occurred when researching APFSDS Cannon upgrade technologies.
+    - Fixed a crash that occurred when researching APFSDS Machine Gun upgrade technologies.
 
 ---------------------------------------------------------------------------------------------------
 Version: 0.4.6

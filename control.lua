@@ -1,9 +1,9 @@
 require("global/_hdr")
 __LIB__ = require("lib/_hdr")
 
-require("scripts/drv/_hdr");
---require("scripts/svc/_svc");
-require("scripts/app/_hdr");
+require("scripts/drv/_hdr")
+require("scripts/svc/_hdr")
+require("scripts/app/_hdr")
 
 require("compatibility/any-planet-start").control()
 

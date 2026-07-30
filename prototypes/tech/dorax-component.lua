@@ -64,7 +64,7 @@ data:extend {
     essential = true,
     icons = {
       {
-        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
         icon_size = 256,
         tint = {1.0, 1.0, 0.5}
       },
@@ -97,7 +97,7 @@ data:extend {
     order = "dps",
     icons = {
       {
-        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
         icon_size = 256,
         tint = {1.0, 1.0, 0.5}
       },
@@ -113,10 +113,10 @@ data:extend {
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.15)",
+      count_formula = "100 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-component", 1},
       },
       time = 1
@@ -136,7 +136,7 @@ data:extend {
     order = "dps",
     icons = {
       {
-        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
         icon_size = 256,
         tint = {1.0, 1.0, 0.5}
       },
@@ -152,10 +152,10 @@ data:extend {
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     unit =
     {
-      count_formula = "100 * (L ^ 1.15)",
+      count_formula = "100 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-component", 1},
       },
       time = 1
@@ -175,7 +175,7 @@ data:extend {
     order = "dps",
     icons = {
       {
-        icon = __PATH__.."/graphics/icons/apfsds-shell-256.png",
+        icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
         icon_size = 256,
         tint = {1.0, 1.0, 0.5}
       },
@@ -191,10 +191,10 @@ data:extend {
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     unit =
     {
-      count_formula = "200 * (L ^ 1.15)",
+      count_formula = "200 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-component", 1},
       },
       time = 1
@@ -232,10 +232,10 @@ data:extend {
     prerequisites = { "dps-tech_apfsds-machine-gun" },
     unit =
     {
-      count_formula = "300 * (L ^ 1.15)",
+      count_formula = "300 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-component", 1},
       },
       time = 1
@@ -271,10 +271,10 @@ data:extend {
     prerequisites = { "dps-tech_apfsds-machine-gun" },
     unit =
     {
-      count_formula = "500 * (L ^ 1.15)",
+      count_formula = "500 * (L ^ 1.1)",
       ingredients =
       {
-        {"dps-item_dps-data-pack", 5},
+        {"dps-item_dps-data-pack", 3},
         {"dps-item_dorax-component", 1},
       },
       time = 1

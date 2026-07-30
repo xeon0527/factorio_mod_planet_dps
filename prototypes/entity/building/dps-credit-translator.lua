@@ -24,7 +24,7 @@ data:extend {
     corpse = "electromagnetic-plant-remnants",
     dying_explosion = "electromagnetic-plant-explosion",
 
-    icon = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-icon.png",
+    icon = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-icon.png",
     icon_size = 64,
 
     collision_box = {{-2.8, -2.8}, {2.8, 2.8}},
@@ -100,7 +100,7 @@ data:extend {
         layers =
         {
           {
-            filename = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-animation.png",
+            filename = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-animation.png",
             width = 400,
             height = 480,
             line_length = 10,
@@ -111,7 +111,7 @@ data:extend {
           },
 
           {
-            filename = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-color1.png",
+            filename = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-color1.png",
             width = 400,
             height = 480,
             line_length = 10,
@@ -123,7 +123,7 @@ data:extend {
           },
 
           {
-            filename = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-shadow.png",
+            filename = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-shadow.png",
             animation_speed = 1,
             width = 900,
             height = 500,
@@ -135,7 +135,7 @@ data:extend {
           },
 
           {
-            filename = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-emission1.png",
+            filename = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-emission1.png",
             width = 400,
             height = 480,
             line_length = 10,
@@ -149,7 +149,7 @@ data:extend {
           },
 
           {
-            filename = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-emission2.png",
+            filename = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-emission2.png",
             width = 400,
             height = 480,
             line_length = 10,
@@ -169,7 +169,7 @@ data:extend {
   {
     type = "item",
     name = "dps-building_dps-credit-translator",
-    icon = __PATH__.."/graphics/entity/dps-credit-translator/atom-forge-icon.png",
+    icon = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-icon.png",
     icon_size = 64,
     stack_size = 10,
     weight = 1000 * tons,

@@ -2,7 +2,7 @@ data:extend {
   {
     type = "item-group",
     name = "dps-item-group_dps",
-    icon = __PATH__.."/graphics/planet/64.png",
+    icon = __PATH__.."graphics/planet/64.png",
     icon_size = 64,
     order = "zzz"
   },

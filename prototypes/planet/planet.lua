@@ -6,9 +6,11 @@ PlanetsLib:extend {
   {
     type = "planet",
     name = "dps-planet_dps",
-    icon = __PATH__.."/graphics/planet/64.png",
-    icon_size = 64,
-    starmap_icon = __PATH__.."/graphics/planet/512.png",
+    --icon = __PATH__.."graphics/planet/64.png",
+    --icon_size = 64,
+    icon = __PATH__.."graphics/planet/512.png",
+    icon_size = 512,
+    starmap_icon = __PATH__.."graphics/planet/512.png",
     starmap_icon_size = 512,
     gravity_pull = 14,
 
@@ -20,7 +22,7 @@ PlanetsLib:extend {
 
     magnitude = 1,
     label_orientation = 0.4,
-    order = "dps",
+    order = "da[fulgora]",
     subgroup = "planets",
     map_gen_settings = require("prototypes/planet/map-gen"),
     pollutant_type = nil,
@@ -72,7 +74,7 @@ data:extend {
 local rp = util.table.deepcopy(data.raw.planet["nauvis"].platform_surface_render_parameters)
 rp.platform_backdrop.atmosphere_color = {0.1, 0.1, 0.04, 0.1}
 rp.platform_backdrop.planet_surface = {
-  filename = __PATH__.."/graphics/planet/render.png",
+  filename = __PATH__.."graphics/planet/render.png",
   width = 1774,
   height = 887
 }

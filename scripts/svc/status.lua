@@ -1,9 +1,9 @@
 local function _get_status()
   local status = DRV_STORAGE_get("DPS-STATUS", {
-    level         = 0,
+    level         = 1,
     exp           = 0,
-    credit        = 0,
     current_dps   = 0,
+    stat_point    = 0,
   })
   return status
 end
@@ -18,14 +18,6 @@ end
 __MODULE__.get_exp = function()
   return _get_status().exp
 end
-
-
-
-__MODULE__.get_credit = function()
-  return _get_status().credit
-end
-
-
 
 __MODULE__.get_current_dps = function()
   return _get_status().current_dps

@@ -26,7 +26,7 @@ data:extend {
     {
       sound =
       {
-        filename = __PATH__.."/sound/dps-equipment-enhancer.ogg",
+        filename = __PATH__.."sound/dps-equipment-enhancer.ogg",
         volume = 1.0,
         modifiers = {volume_multiplier("main-menu", 2.2), volume_multiplier("tips-and-tricks", 0.8)},
         audible_distance_modifier = 0.7,
@@ -37,7 +37,7 @@ data:extend {
     impact_category = "metal-large",
 
     --fast_replaceable_group = "assembling-machine",
-    crafting_speed = 10,
+    crafting_speed = 5,
     crafting_categories = {"dps-recipe-category_dps-equipment-enhancer"},
     module_slots = 4,
 

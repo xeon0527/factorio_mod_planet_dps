@@ -8,7 +8,7 @@ local function _create_ammo(level, damage, tint, order)
       order = order,
       icons = {
         {
-          icon = __PATH__.."/graphics/icons/apfsds-shell.png",
+          icon = __PATH__.."graphics/icons/apfsds-shell.png",
           icon_size = 64,
           tint = tint
         }
@@ -120,7 +120,7 @@ local function _create_adv_recipe(level, tint, credit_k, probability, order)
         name = "dps-ammo_apfsds-shell_"..level,
         icons = {
           {
-            icon = __PATH__.."/graphics/icons/apfsds-shell.png",
+            icon = __PATH__.."graphics/icons/apfsds-shell.png",
             icon_size = 64,
             tint = tint
           }
@@ -190,7 +190,7 @@ data:extend {
     type = "recipe",
     name = "dps-ammo_apfsds-shell_1",
     enabled = false,
-    energy_required = 10,
+    energy_required = 5,
     surface_conditions = __PLANET_CONDITIONS__,
     ingredients = {
       {type = "item", name = "dps-item_dps-credit_n", amount = 50},
