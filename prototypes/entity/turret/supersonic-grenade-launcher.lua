@@ -81,8 +81,9 @@ local turret = {
   energy_source =
   {
     type = "electric",
-    buffer_capacity = "250kJ",
-    usage_priority = "primary-input"
+    buffer_capacity = "500kJ",
+    usage_priority = "primary-input",
+    input_flow_limit = "50kW"
   },
   energy_per_shot = "250kJ",
 

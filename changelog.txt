@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.9
+Date: 30. 7. 2026
+  Balancing:
+    - The power consumption of the APFSDS Machine Gun has been reduced by half.
+
+  Changes:
+    - The Supersonic Grenade Launcher now only consumes the amount of power actually required.
+
+  Bugfixes:
+    - Fixed an issue where the decimal portion of DPS was displayed in the Status Indicator.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.8
 Date: 30. 7. 2026
   Minor Features:

@@ -112,12 +112,12 @@ DRV_TIMER_create_static_tick_60_handler(function()
       for i = 1, #dorax.dps_queue, 1 do
         damage = damage + dorax.dps_queue[i]
       end
-      damage = damage / 3.0
+      damage = math.floor(damage / 3.0)
       dorax.dps = damage
 
       if damage >= 1 then
         rendering.draw_text {
-          text = math.floor(damage),
+          text = damage,
           surface = entity.surface,
           target = { type = "entity", entity = entity },
           color = { 1.0, 0.66, 0.66,},

@@ -107,10 +107,10 @@ local function _generate(level, tint, order, credit_k, probability)
       energy_source =
       {
         type = "electric",
-        buffer_capacity = "5MJ",
+        buffer_capacity = "2.5MJ",
         usage_priority = "primary-input"
       },
-      energy_per_shot = "5MJ",
+      energy_per_shot = "2.5MJ",
 
       rotation_speed = 0.002,
       preparing_speed = 0.08,
