@@ -1,4 +1,20 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.10
+Date: 31. 7. 2026
+  Balancing:
+    - Increased the enhancement success rates of the APFSDS Machine Gun across all levels.
+    - APFSDS Shells now gain increased magazine capacity as their level increases.
+    - Reduced the range of the APFSDS Cannon and APFSDS Machine Gun from 64 to 48.
+    - Fixed an issue where the APFSDS Cannon and APFSDS Machine Gun consumed an excessive amount of charging power when firing.
+
+  Bugfixes:
+    - Fixed a crash that occurred when deleting a Surface.
+    - Fixed an issue where the sound would become distorted when a large number of APFSDS Cannons and APFSDS Machine Guns were firing simultaneously.
+
+  Changes:
+    - Starting in v0.4.10, damage dealt to D.O.R.A.X is now converted into experience, allowing your level to increase as you play. However, this experience and level currently have no gameplay effect and are intended for testing only. They will be reset in the next version.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.9
 Date: 30. 7. 2026
   Balancing:
@@ -20,6 +36,7 @@ Date: 30. 7. 2026
     - Changed the D.O.R.A.X DPS calculation method. DPS is now calculated by summing the total damage dealt over a 3-second period.
 
   Balancing:
+    - Reduced the crafting time of APFSDS Shells to 5 seconds.
     - Reduced the Equipment Enhancer crafting speed from 10 to 5
     - Simplified the crafting recipe for the APFSDS Machine Gun by reducing its material requirements.
     - Increased the enhancement success rate of the APFSDS Machine Gun.

@@ -108,7 +108,8 @@ local function _generate(level, tint, order, credit_k, probability)
       {
         type = "electric",
         buffer_capacity = "2.5MJ",
-        usage_priority = "primary-input"
+        usage_priority = "primary-input",
+        input_flow_limit = "2MW",
       },
       energy_per_shot = "2.5MJ",
 
@@ -183,18 +184,18 @@ local function _generate(level, tint, order, credit_k, probability)
         movement_slow_down_factor = 0,
         projectile_creation_distance = 1.6,
         projectile_center = util.by_pixel(0, -27),
-        range = 64,
+        range = 48,
         damage_modifier = 1 + (level * 3),
         sound =
         {
           filename = __PATH__.."sound/apfsds-machine-gun.ogg",
           volume = 0.7,
           modifiers = volume_multiplier("main-menu", 0.9),
-          aggregation = {max_count = 16, remove = true, count_already_playing = true, priority = "newest"}
+          aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
         },
       },
 
-      call_for_help_radius = 64
+      call_for_help_radius = 48
     },
 
     {
@@ -224,9 +225,9 @@ local function _generate(level, tint, order, credit_k, probability)
 end
 
 _generate(1, {1,0.25,0.25}, "ca", 0, 0)
-_generate(2, {1,0.66,0},    "cb", 100, 0.10)
-_generate(3, {1,1,0},       "cc", 200, 0.07)
-_generate(4, {0,1,0},       "cd", 300, 0.04)
+_generate(2, {1,0.66,0},    "cb", 100, 0.45)
+_generate(3, {1,1,0},       "cc", 200, 0.25)
+_generate(4, {0,1,0},       "cd", 300, 0.10)
 _generate(5, {0.25,0.25,1}, "ce", 400, 0.01)
 
 data:extend {

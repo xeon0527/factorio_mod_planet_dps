@@ -1,6 +1,11 @@
 local item_sounds = require("__base__.prototypes.item_sounds")
 
 local function _create_ammo(level, damage, tint, order)
+  local size = math.floor((level + 1) / 2)
+  if level == 10 then
+    size = 8
+  end
+
   data:extend {
     {
       type = "ammo",
@@ -14,6 +19,7 @@ local function _create_ammo(level, damage, tint, order)
         }
       },
       ammo_category = "apfsds-shell",
+      magazine_size = size,
       ammo_type =
       {
         target_type = "entity",
@@ -165,11 +171,11 @@ _create_ammo(3, 3, {1,1,0}, "c")
 _create_ammo(4, 4, {0,1,0}, "d")
 _create_ammo(5, 5, {0.25,0.25,1}, "e")
 
-_create_ammo(6, 10,    {208, 112, 251}, "f")
-_create_ammo(7, 15,    {165, 42, 42}, "g")
-_create_ammo(8, 20,    {0,1,1}, "h")
-_create_ammo(9, 25,    {0.25,0.25,0.25}, "i")
-_create_ammo(10, 30,  {1,1,1}, "j")
+_create_ammo(6, 10,     {208, 112, 251}, "f")
+_create_ammo(7, 15,     {165, 42, 42}, "g")
+_create_ammo(8, 20,     {0,1,1}, "h")
+_create_ammo(9, 25,     {0.25,0.25,0.25}, "i")
+_create_ammo(10, 30,    {1,1,1}, "j")
 
 
 

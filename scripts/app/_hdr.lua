@@ -1,4 +1,5 @@
 local _path = "scripts/app/"
 
-require(_path.."gui/_hdr")
-require(_path.."story/_hdr")
+require(_path.."gui/status-indicator")
+require(_path.."story/dorax_appers")
+require(_path.."status")

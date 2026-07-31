@@ -75,7 +75,8 @@ data:extend {
   {
     type = "electric",
     buffer_capacity = "5MJ",
-    usage_priority = "primary-input"
+    usage_priority = "primary-input",
+    input_flow_limit = "1MW",
   },
   energy_per_shot = "5MJ",
 
@@ -171,8 +172,8 @@ data:extend {
       projectile_creation_distance = 1.6,
       projectile_center = {-0.15625, -0.07812},
       projectile_creation_parameters = require("__base__.prototypes.entity.artillery-cannon-muzzle-flash-shifting"),
-      min_range = 32,
-      range = 64,
+      min_range = 16,
+      range = 48,
       sound =
       {
         filename = "__base__/sound/fight/artillery-shoots-1.ogg",
@@ -182,7 +183,7 @@ data:extend {
       },
     },
 
-    call_for_help_radius = 40
+    call_for_help_radius = 48
   },
 
 

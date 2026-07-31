@@ -169,7 +169,7 @@ local turret = {
     range = 36,
     sound = {
       filename = __PATH__.."sound/supersonic-grenade-launcher/attack.ogg",
-      aggregation = {max_count = 16, remove = true, count_already_playing = true, priority = "newest"}
+      aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
     }
   },
   call_for_help_radius = 40,
