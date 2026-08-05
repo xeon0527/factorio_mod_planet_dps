@@ -2,10 +2,8 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_armory",
-    order = "dps",
     icon = "__space-exploration-graphics__/graphics/technology/space-assembling.png",
     icon_size = 128,
-    allows_productivity = false,
     prerequisites = { "dps-tech_advanced-dps-engineering" ,"automation-3"},
     unit =
     {
@@ -26,7 +24,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_apfsds-machine-gun",
-    order = "dps",
     essential = true,
     icons = {
       {
@@ -35,7 +32,6 @@ data:extend {
         tint = { 1.0, 1.0, 0.0 }
       },
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
@@ -60,7 +56,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_advanced-apfsds-shell",
-    order = "dps",
     essential = true,
     icons = {
       {
@@ -69,7 +64,6 @@ data:extend {
         tint = {1.0, 1.0, 0.5}
       },
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
@@ -94,7 +88,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_advanced-apfsds-shell-damage",
-    order = "dps",
     icons = {
       {
         icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
@@ -109,7 +102,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     unit =
     {
@@ -133,7 +125,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_advanced-apfsds-shell-enhancement-chance",
-    order = "dps",
     icons = {
       {
         icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
@@ -148,7 +139,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     unit =
     {
@@ -172,7 +162,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_advanced-apfsds-shell-destruction-protection",
-    order = "dps",
     icons = {
       {
         icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
@@ -187,7 +176,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     unit =
     {
@@ -213,7 +201,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_apfsds-machine-gun-enhancement-chance",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/artillery-speed.png",
@@ -228,7 +215,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_apfsds-machine-gun" },
     unit =
     {
@@ -252,7 +238,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_apfsds-machine-gun-destruction-protection",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/artillery-speed.png",
@@ -267,7 +252,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_apfsds-machine-gun" },
     unit =
     {
@@ -292,7 +276,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_advanced-dps-engineering",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/physical-projectile-damage-1.png",
@@ -322,7 +305,6 @@ data:extend {
       },
     },
 
-    allows_productivity = false,
     prerequisites = { "dps-tech_advanced-apfsds-shell", "dps-tech_apfsds-machine-gun" },
     research_trigger = {
       type = "scripted",

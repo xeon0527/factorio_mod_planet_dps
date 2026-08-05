@@ -2,7 +2,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_basic-dps-engineering",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/physical-projectile-damage-2.png",
@@ -32,7 +31,6 @@ data:extend {
       },
     },
     
-    allows_productivity = false,
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
@@ -41,14 +39,13 @@ data:extend {
       {
         {"dps-item_dps-data-pack", 1},
       },
-      time = 10
+      time = 1
     },
   },
 
   {
     type = "technology",
     name = "dps-tech_cheap-magazine",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/physical-projectile-damage-1.png",
@@ -76,16 +73,15 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_dps-data-pack" },
     unit =
     {
-      count = 500,
+      count = 250,
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
       },
-      time = 10
+      time = 1
     },
     effects =
     {
@@ -105,7 +101,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_apfsds-cannon",
-    order = "dps",
     essential = true,
     icons = {
       {
@@ -114,16 +109,15 @@ data:extend {
         tint = { 1.0, 1.0, 0.0 }
       },
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_discovery-of-dorax", "dps-tech_dps-data-pack"},
     unit =
     {
-      count = 1000,
+      count = 500,
       ingredients =
       {
         {"dps-item_dps-data-pack", 1},
       },
-      time = 5,
+      time = 1,
     },
     effects =
     {

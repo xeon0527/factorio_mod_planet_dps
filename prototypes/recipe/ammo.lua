@@ -21,8 +21,7 @@ data:extend {
     subgroup = "dps-item-subgroup_ammo",
     order = "a",
     ingredients = {
-      { type = "item", name = "iron-plate", amount = 2 },
-      { type = "item", name = "concrete", amount = 2 },
+      { type = "item", name = "concrete", amount = 4 },
     },
     results = {{type="item", name="firearm-magazine", amount=1}}
   },

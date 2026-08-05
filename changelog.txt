@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.4.11
+Date: 5. 8. 2026
+  Balancing:
+    - The Concrete Magazine Recipe now requires 4 Concrete as an ingredient.
+    - DPS Technologies are no longer affected by the technology cost multiplier.
+    - Unified the research time of all DPS Technologies to 1 second.
+
+  Changes:
+    - Adjusted the Order of DPS Technologies so they no longer stand out at the top of the technology tree.
+
+  Compatibility:
+    - The DPS Equipment Enhancer is no longer affected by Rigor Modules.
+    - Fixed an issue where DPS Credit Exchange Recipes could receive productivity bonuses when produced in assembling machines from other mods.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.10
 Date: 31. 7. 2026
   Balancing:

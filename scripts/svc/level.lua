@@ -1,11 +1,11 @@
 local function _get()
-  local status = DRV_STORAGE_get("DPS-STATUS", {
+  local level = DRV_STORAGE_get("DPS-LEVEL", {
     level         = 1,
     exp           = 0,
     max_exp       = 16,
     level_point   = 5,
   })
-  return status
+  return level
 end
 
 

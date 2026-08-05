@@ -2,6 +2,7 @@ local _path = "prototypes/"
 
 require(_path.."ammo/_hdr")
 require(_path.."entity/_hdr")
+require(_path.."gui/_hdr")
 require(_path.."item/_hdr")
 require(_path.."planet/_hdr")
 require(_path.."recipe/_hdr")

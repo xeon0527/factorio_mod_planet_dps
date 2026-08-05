@@ -2,7 +2,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_dps-equipment-enhancer",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/gun-turret.png",
@@ -31,7 +30,6 @@ data:extend {
         floating = true
       },
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_apfsds-cannon", },
     unit =
     {
@@ -59,7 +57,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_supersonic-grenade-launcher",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/gun-turret.png",
@@ -73,7 +70,6 @@ data:extend {
         floating = true,
       },
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     research_trigger = {
       type = "scripted",
@@ -90,7 +86,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_supersonic-grenade_shooting-speed",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/gun-turret.png",
@@ -111,7 +106,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_supersonic-grenade-launcher" },
     unit =
     {
@@ -141,7 +135,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_apfsds-shell-enhancement-chance",
-    order = "dps",
     icons = {
       {
         icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
@@ -155,7 +148,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
@@ -182,7 +174,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_apfsds-shell-productivity",
-    order = "dps",
     icons = {
       {
         icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
@@ -196,7 +187,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
@@ -220,7 +210,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_apfsds-shell-gun-speed",
-    order = "dps",
     icons = {
       {
         icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
@@ -234,7 +223,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {
@@ -258,7 +246,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_apfsds-shell-damage",
-    order = "dps",
     icons = {
       {
         icon = __PATH__.."graphics/icons/apfsds-shell-256.png",
@@ -272,7 +259,6 @@ data:extend {
         floating = true
       }
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     unit =
     {

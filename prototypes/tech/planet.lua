@@ -2,7 +2,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_planet-discovery-dps",
-    order = "dps",
     icons = PlanetsLib.technology_icon_constant_planet(__PATH__.."graphics/planet/512.png", 512),
     essential = true,
     effects =
@@ -33,7 +32,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_dps-scrap-recycling",
-    order = "dps",
     icons = {
       {
         icon = "__recycler__/graphics/technology/recycling.png",
@@ -59,7 +57,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_dps-credit-translator",
-    order = "dps",
     icons = {
       {
         icon = __PATH__.."graphics/entity/dps-credit-translator/atom-forge-icon-big.png",
@@ -73,7 +70,6 @@ data:extend {
       { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-translator_mineral", },
       { type = "unlock-recipe", recipe = "dps-recipe_dps-credit-translator_carbon", },
     },
-    allows_productivity = false,
     prerequisites = { "dps-tech_planet-discovery-dps"},
     research_trigger = {
       type = "scripted",
@@ -83,7 +79,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_dps-credit-exchange",
-    order = "dps",
     icons = {
       {
         icon = "__space-age__/graphics/technology/lithium-processing.png",
@@ -121,7 +116,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_dps-data-pack",
-    order = "dps",
     essential = true,
     icons = {
       {
@@ -155,7 +149,6 @@ data:extend {
   {
     type = "technology",
     name = "dps-tech_discovery-of-dorax",
-    order = "dps",
     icons = {
       {
         icon = "__base__/graphics/technology/atomic-bomb.png",

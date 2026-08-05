@@ -24,6 +24,9 @@ local _recipe = {
   auto_recycle = false,
   allow_quality = false,
   can_set_quality = false,
+  allow_productivity = false,
+  maximum_productivity = 1,
+  always_show_made_in = false,
 }
 
 local function _generate_recipe(a, b, order)
@@ -40,7 +43,7 @@ local function _generate_recipe(a, b, order)
   a2b.icons[2].icon = a_icon
   a2b.icons[3].icon = b_icon
   a2b.ingredients = {{ type = "item", name = a_name, amount = 1000 }}
-  a2b.results = {{ type = "item", name = b_name, amount = 1}}
+  a2b.results = {{ type = "item", name = b_name, amount = 1, ignored_by_productivity = 1}}
   a2b.subgroup = "dps-item-subgroup_credit_exchange_up"
 
   local b2a = table.deepcopy(_recipe)
@@ -48,7 +51,7 @@ local function _generate_recipe(a, b, order)
   b2a.icons[2].icon = b_icon
   b2a.icons[3].icon = a_icon
   b2a.ingredients = {{ type = "item", name = b_name, amount = 1 }}
-  b2a.results = {{ type = "item", name = a_name, amount = 1000 }}
+  b2a.results = {{ type = "item", name = a_name, amount = 1000, ignored_by_productivity = 1000 }}
   b2a.subgroup = "dps-item-subgroup_credit_exchange_down"
 
   a2b.order = "1"..order

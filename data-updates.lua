@@ -102,6 +102,15 @@ local function _setup_armory_recipe()
   end
 end
 
+local function _all_technology_setup()
+  for _, tech in pairs(data.raw["technology"]) do
+    if util.string_starts_with(tech.name, "dps-tech_") then
+      tech.allows_productivity = false
+      tech.ignore_tech_cost_multiplier = true
+      tech.order = "zzz-dps"
+    end
+  end
+end
 
 _setup_supersonic_grenade_damage_modifier()
 _create_dps_engineering("dps-tech_basic-dps-engineering", 1.0)
@@ -109,3 +118,4 @@ _create_dps_engineering("dps-tech_advanced-dps-engineering", 1.0)
 
 _setup_dorax_resistances()
 _setup_armory_recipe()
+_all_technology_setup()

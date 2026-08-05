@@ -1,10 +1,10 @@
-local status_indicator = require(__APP__.."gui/status-indicator")
+local status_indicator = require(__APP__.."gui/indicator")
 local dorax = require(__SVC__.."dorax")
-local status = require(__SVC__.."status")
+local level = require(__SVC__.."level")
 
 local function _update_status(player)
-  status_indicator.set_level(player, status.get_level())
-  status_indicator.set_exp(player, status.get_exp(), status.get_max_exp())
+  status_indicator.set_level(player, level.get_level())
+  status_indicator.set_exp(player, level.get_exp(), level.get_max_exp())
   status_indicator.set_dps(player, dorax.get_dps())
 end
 
@@ -45,7 +45,7 @@ end)
 
 dorax.add_update_dps_handler(function()
   local dps = dorax.get_dps()
-  status.add_exp(dps)
+  level.add_exp(dps)
 
   for _, p in pairs(game.players) do
     _update_status(p)

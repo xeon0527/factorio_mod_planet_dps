@@ -1,0 +1,37 @@
+{
+  "$schema": "https://raw.githubusercontent.com/EmmyLuaLs/emmylua-analyzer-rust/refs/heads/main/crates/emmylua_code_analysis/resources/schema.json",
+  "diagnostics": {
+    "disable": [
+      "undefined-global",
+      "unresolved-require",
+      "need-check-nil",
+      "param-type-mismatch",
+      "assign-type-mismatch",
+      "unnecessary-if",
+      "undefined-field",
+      "generic-constraint-mismatch",
+      "missing-fields"
+    ],
+    "globals": [
+      "PlanetsLib",
+      "data",
+      "minute",
+      "script",
+      "storage",
+      "game",
+      "circuit_connector_definitions",
+      "default_circuit_wire_max_distance",
+      "assembling_machine_circuit_wire_max_distance",
+      "pipecoverspictures",
+      "APS"
+    ]
+  },
+  "runtime": {
+    "version": "LuaLatest"
+  },
+  "workspace": {
+    "workspaceRoots": [
+      "./"
+    ]
+  }
+}

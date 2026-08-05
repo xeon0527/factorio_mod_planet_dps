@@ -1,5 +1,5 @@
 local __MODULE__ = {}
-local __PREFIX = "dps-gui_status-indicator"
+local __PREFIX = "dps-gui_indicator"
 local _status_window = require(__APP__.."gui/status-window")
 
 local function _get(player)
