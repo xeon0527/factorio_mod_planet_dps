@@ -55,7 +55,7 @@ data:extend {
           },
           {
             type = "damage",
-            damage = {amount = 200 , type = "physical"}
+            damage = {amount = 225 , type = "physical"}
           },
           {
             type = "nested-result",
@@ -71,7 +71,7 @@ data:extend {
                 {
                   {
                     type = "damage",
-                    damage = {amount = 200 , type = "explosion"}
+                    damage = {amount = 225 , type = "explosion"}
                   },
                   {
                     type = "create-entity",

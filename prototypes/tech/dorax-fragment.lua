@@ -149,19 +149,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
-    unit =
-    {
-      count_formula = "100 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 1},
-        {"dps-item_dorax-fragment", 1},
-      },
-      time = 1
-    },
     max_level = 60,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_2", change = 0.025, },
@@ -188,19 +183,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
-    unit =
-    {
-      count_formula = "200 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 1},
-        {"dps-item_dorax-fragment", 1},
-      },
-      time = 1
-    },
     max_level = 30,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_1", change = 0.1, },
@@ -224,19 +214,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
-    unit =
-    {
-      count_formula = "100 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 1},
-        {"dps-item_dorax-fragment", 1},
-      },
-      time = 1
-    },
     max_level = 40,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "gun-speed", ammo_category = "apfsds-shell", modifier = 0.1, },
@@ -260,19 +245,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
-    unit =
-    {
-      count_formula = "100 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 1},
-        {"dps-item_dorax-fragment", 1},
-      },
-      time = 1
-    },
     max_level = 50,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "ammo-damage", ammo_category = "apfsds-shell", modifier = 0.1, },

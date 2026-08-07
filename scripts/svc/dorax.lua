@@ -1,9 +1,5 @@
 --local status = require("scripts/svc/status")
 
-__SVC_DORAX__ = {
-  handler_update_dps = {}
-}
-
 local _STOR_NAME = "dps-dorax-list"
 
 local function _entity_created(entity)
@@ -105,6 +101,7 @@ DRV_TIMER_create_static_tick_handler(function()
 end)
 
 DRV_TIMER_create_static_tick_60_handler(function()
+  local last_dps = 0
   for _, dorax in pairs(DRV_STORAGE_get(_STOR_NAME, {})) do
     local entity = dorax.entity
     if entity.valid then
@@ -114,6 +111,7 @@ DRV_TIMER_create_static_tick_60_handler(function()
       end
       damage = math.floor(damage / 3.0)
       dorax.dps = damage
+      last_dps = damage
 
       if damage >= 1 then
         rendering.draw_text {
@@ -157,18 +155,12 @@ DRV_TIMER_create_static_tick_60_handler(function()
         end
       end
     end
-  end
 
-  for _, h in pairs(__SVC_DORAX__.handler_update_dps) do
-    h()
+    script.raise_event("dps-custom-event_on-update-dps", {entity = dorax.entity, dps = dorax.dps})
   end
 end)
 
 local _module = {
-  add_update_dps_handler = function(handler)
-    table.insert(__SVC_DORAX__.handler_update_dps, handler)
-  end,
-
   get_dps = function()
     for _, v in pairs(DRV_STORAGE_get(_STOR_NAME, {})) do
       return v.dps

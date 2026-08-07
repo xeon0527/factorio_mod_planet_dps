@@ -11,6 +11,7 @@ require(_path.."tech/_hdr")
 
 require(_path.."ammo-category")
 require(_path.."autoplace-control")
+require(_path.."custom-event")
 require(_path.."damage-type")
 require(_path.."explosion")
 require(_path.."item-groups")

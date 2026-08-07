@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.0
+Date: 7. 8. 2026
+  Major Features:
+    - Added the Status System. Major technologies no longer need to be researched manually and can instead be unlocked instantly by spending Level Points. Levels are earned by dealing damage to D.O.R.A.X.
+
+  Balancing:
+    - Slightly increased the damage of the Supersonic Grenade Launcher.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.4.11
 Date: 5. 8. 2026
   Balancing:

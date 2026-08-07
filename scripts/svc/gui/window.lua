@@ -14,7 +14,7 @@ local function _create_title_bar(gui_name, parent, caption)
     direction = "horizontal",
     style = "horizontal_flow",
   }
-  title_flow.style.vertical_align = "center";
+  title_flow.style.vertical_align = "center"
 
   title_flow.add {
     type = "label",
@@ -26,12 +26,12 @@ local function _create_title_bar(gui_name, parent, caption)
     type = "empty-widget",
     style = "draggable_space",
   }
-  title_drag.style.horizontally_stretchable = true;
-  title_drag.style.height = 24;
-  title_drag.drag_target = parent;
-  title_drag.style.left_margin = 10;
-  title_drag.style.right_margin = 10;
-  title_drag.style.vertical_align = "center";
+  title_drag.style.horizontally_stretchable = true
+  title_drag.style.height = 24
+  title_drag.drag_target = parent
+  title_drag.style.left_margin = 10
+  title_drag.style.right_margin = 10
+  title_drag.style.vertical_align = "center"
 
   local title_close = title_flow.add {
     type = "button",
@@ -61,11 +61,11 @@ __MODULE__.open = function(gui_id, player, caption)
     name = _get_prefix(gui_id),
     direction = "vertical",
   }
-  frame.style.width = 800;
-  frame.style.height = 600;
-  frame.style.horizontal_align = "center";
-  frame.force_auto_center();
-  player.opened = frame;
+  frame.style.width = 800
+  frame.style.height = 600
+  frame.style.horizontal_align = "center"
+  frame.force_auto_center()
+  player.opened = frame
 
   local title_bar = _create_title_bar(gui_id, frame, caption)
 
@@ -79,20 +79,20 @@ __MODULE__.open = function(gui_id, player, caption)
 end
 
 __MODULE__.is_opened = function(gui_id, player)
-  for _, gui in pairs(player.gui.screen.children) do
-    if gui.valid and gui.name == _get_prefix(gui_id) then
-      return true
+  if player then
+    local frame_id = _get_prefix(gui_id)
+    local gui = player.gui.screen[frame_id]
+    if gui and gui.valid then
+      return gui
     end
   end
-  return false
+  return nil
 end
 
 __MODULE__.destroy = function(gui_id, player)
-  if player ~= nil then
-    local gui_id = _get_prefix(gui_id)
-    if player.gui.screen[gui_id] then
-      player.gui.screen[gui_id].destroy();
-    end
+  local gui = __MODULE__.is_opened(gui_id, player)
+  if gui then
+    gui.destroy()
   end
 end
 

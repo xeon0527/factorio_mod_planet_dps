@@ -17,5 +17,7 @@ DRV_EVENT_register_handler(defines.events.on_pre_surface_deleted, function(event
         end
       end
     end
+
+    script.raise_event("dps-custom-event_on-cleaner", {})
   end
 end)

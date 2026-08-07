@@ -1,6 +1,5 @@
 local __MODULE__ = {}
 local __PREFIX = "dps-gui_indicator"
-local _status_window = require(__APP__.."gui/status-window")
 
 local function _get(player)
   return player.gui.top[__PREFIX.."-frame"]
@@ -122,11 +121,11 @@ end
 
 
 
---DRV_EVENT_register_handler(defines.events.on_gui_click, function(event)
---  if event.player_index and event.element and event.element.valid and event.element.name == __PREFIX.."_open-window" then
---    _status_window.open(game.get_player(event.player_index))
---  end
---end)
+DRV_EVENT_register_handler(defines.events.on_gui_click, function(event)
+  if event.player_index and event.element and event.element.valid and event.element.name == __PREFIX.."_open-window" then
+    script.raise_event("dps-custom-event_on-indicator-icon-click", {player = game.get_player(event.player_index)})
+  end
+end)
 
 
 

@@ -1,28 +1,6 @@
 data:extend {
   {
     type = "technology",
-    name = "dps-tech_armory",
-    icon = "__space-exploration-graphics__/graphics/technology/space-assembling.png",
-    icon_size = 128,
-    prerequisites = { "dps-tech_advanced-dps-engineering" ,"automation-3"},
-    unit =
-    {
-      count = 500,
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 10},
-        {"dps-item_dorax-armor-plate", 1},
-      },
-      time = 1,
-    },
-    effects =
-    {
-      { type = "unlock-recipe", recipe = "dps-building_armory" },
-    },
-  },
-
-  {
-    type = "technology",
     name = "dps-tech_apfsds-machine-gun",
     essential = true,
     icons = {
@@ -103,19 +81,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
-    unit =
-    {
-      count_formula = "100 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 3},
-        {"dps-item_dorax-component", 1},
-      },
-      time = 1
-    },
     max_level = 50,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "ammo-damage", ammo_category = "apfsds-shell", modifier = 0.2, },
@@ -140,19 +113,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
-    unit =
-    {
-      count_formula = "100 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 3},
-        {"dps-item_dorax-component", 1},
-      },
-      time = 1
-    },
     max_level = 50,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_advanced-apfsds-shell-enhancement-chance_effects"}, },
@@ -177,19 +145,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
-    unit =
-    {
-      count_formula = "200 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 3},
-        {"dps-item_dorax-component", 1},
-      },
-      time = 1
-    },
     max_level = 17,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_advanced-apfsds-shell-destruction-protection_effects"}, },
@@ -216,19 +179,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_apfsds-machine-gun" },
-    unit =
-    {
-      count_formula = "300 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 3},
-        {"dps-item_dorax-component", 1},
-      },
-      time = 1
-    },
     max_level = 19,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_apfsds-machine-gun-enhancement-chance_effects"}, },
@@ -253,19 +211,14 @@ data:extend {
       }
     },
     prerequisites = { "dps-tech_apfsds-machine-gun" },
-    unit =
-    {
-      count_formula = "500 * (L ^ 1.1)",
-      ingredients =
-      {
-        {"dps-item_dps-data-pack", 3},
-        {"dps-item_dorax-component", 1},
-      },
-      time = 1
-    },
     max_level = 17,
     upgrade = true,
-
+    unit =
+    {
+      count_formula = "1",
+      ingredients = {{"dps-item_status-info", 1}},
+      time = 1
+    },
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_apfsds-machine-gun-destruction-protection_effects"}, },
@@ -309,6 +262,28 @@ data:extend {
     research_trigger = {
       type = "scripted",
       trigger_description = {"technology-description.dps-tech_advanced-dps-engineering-trigger"}
+    },
+  },
+
+  {
+    type = "technology",
+    name = "dps-tech_armory",
+    icon = "__space-exploration-graphics__/graphics/technology/space-assembling.png",
+    icon_size = 128,
+    prerequisites = { "dps-tech_advanced-dps-engineering" ,"automation-3"},
+    unit =
+    {
+      count = 500,
+      ingredients =
+      {
+        {"dps-item_dps-data-pack", 10},
+        {"dps-item_dorax-armor-plate", 1},
+      },
+      time = 1,
+    },
+    effects =
+    {
+      { type = "unlock-recipe", recipe = "dps-building_armory" },
     },
   },
 }
