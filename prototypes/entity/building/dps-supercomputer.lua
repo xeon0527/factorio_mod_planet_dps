@@ -50,7 +50,6 @@ data:extend {
       "dps-item_dorax-fragment",
       "dps-item_dorax-component",
       "dps-item_dorax-armor-plate",
-      "dps-item_status-info",
     },
 
     module_slots = 4,

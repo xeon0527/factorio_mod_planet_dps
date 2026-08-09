@@ -32,6 +32,7 @@ end
 local function _create_header(frame)
   local hdr_flow = frame.add { type = "flow", name = "hdr_flow", direction = "horizontal" }
   hdr_flow.add { type = "button", name = "hdr_tier",    style = _style_prefix.."hdr-tier",    caption = "Tier",   }
+  hdr_flow.add { type = "button", name = "hdr_icon",    style = _style_prefix.."hdr-icon",    caption = "Icon",   }
   hdr_flow.add { type = "button", name = "hdr_name",    style = _style_prefix.."hdr-name",    caption = "Name",   }
   hdr_flow.add { type = "button", name = "hdr_level",   style = _style_prefix.."hdr-level",   caption = "Level",  }
   hdr_flow.add { type = "button", name = "hdr_effect",  style = _style_prefix.."hdr-effect",  caption = "Effect", }
@@ -45,6 +46,7 @@ local function _add_item(item_list, status_prototype)
   item_flow.style.margin = 0
 
   item_flow.add { type = "label",   name = "item_tier",   style = _style_prefix.."item-tier",     caption = status_prototype.tier }
+  item_flow.add { type = "sprite",  name = "item_icon",   style = _style_prefix.."item-icon",     sprite = "technology.dps-tech_"..status_prototype.name, resize_to_sprite = false }
   item_flow.add { type = "label",   name = "item_name",   style = _style_prefix.."item-name",     caption = status_prototype.status_name, tooltip = status_prototype.status_description}
   item_flow.add { type = "label",   name = "item_level",  style = _style_prefix.."item-level",    caption = "" }
   item_flow.add { type = "label",   name = "item_effect", style = _style_prefix.."item-effect",   caption = "" }

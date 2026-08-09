@@ -7,15 +7,16 @@ local _level_item_height = 30
 
 local _hdr_height = 30
 
+local _item_height = 40
+local _item_padding = 5
+
 local _tier_width = 60
+local _icon_width = _item_height
 local _level_width = 100
 local _effect_width = 100
 local _cost_width = 100
 local _invest_width = 60
-local _name_width = _window_width - _tier_width - _level_width - _effect_width - _cost_width - _invest_width - 20
-
-local _item_height = 40
-local _item_padding = 5
+local _name_width = _window_width - _tier_width - _icon_width - _level_width - _effect_width - _cost_width - _invest_width - 20
 
 
 _gui_root[_prefix.."level-hdr-level"] = {
@@ -80,6 +81,14 @@ _gui_root[_prefix.."hdr-tier"] = {
   left_margin = 4,
 }
 
+_gui_root[_prefix.."hdr-icon"] = {
+  type = "button_style",
+  parent = "button",
+  width  = _icon_width,
+  height = _hdr_height,
+  padding = 0,
+}
+
 _gui_root[_prefix.."hdr-name"] = {
   type = "button_style",
   parent = "button",
@@ -127,15 +136,24 @@ _gui_root[_prefix.."item-tier"] = {
   padding = _item_padding,
 }
 
+_gui_root[_prefix.."item-icon"] = {
+  type = "image_style",
+  parent = "image",
+  width  = _icon_width,
+  height = _item_height,
+  horizontal_align = "center",
+  vertical_align = "center",
+  padding = 0,
+}
+
 _gui_root[_prefix.."item-name"] = {
   type = "label_style",
   parent = "label",
   width  = _name_width,
   height = _item_height,
-  horizontal_align = "left",
+  horizontal_align = "center",
   vertical_align = "center",
   padding = _item_padding,
-  left_padding = 40,
 }
 
 _gui_root[_prefix.."item-level"] = {
@@ -156,7 +174,7 @@ _gui_root[_prefix.."item-effect"] = {
   horizontal_align = "center",
   vertical_align = "center",
   padding = _item_padding,
-  font = "default-large-semibold",
+  font = "default-semibold",
   font_color = {1,1,0},
 }
 

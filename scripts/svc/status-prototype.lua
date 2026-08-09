@@ -4,8 +4,6 @@ local function _add_prototype(ptyp)
   __SVC_STATUS_PROTOTYPE__[ptyp.name] = ptyp
 end
 
-
-
 local function _condition_func_tech(item_prototype)
   local player_techs = game.forces["player"].technologies
   local ptyp = prototypes.technology["dps-tech_"..item_prototype.name]

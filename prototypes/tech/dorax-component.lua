@@ -83,16 +83,12 @@ data:extend {
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     max_level = 50,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "ammo-damage", ammo_category = "apfsds-shell", modifier = 0.2, },
     },
+    hidden = true,
   },
 
   {
@@ -115,16 +111,12 @@ data:extend {
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     max_level = 50,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_advanced-apfsds-shell-enhancement-chance_effects"}, },
     },
+    hidden = true,
   },
 
   {
@@ -147,16 +139,12 @@ data:extend {
     prerequisites = { "dps-tech_advanced-apfsds-shell" },
     max_level = 17,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_advanced-apfsds-shell-destruction-protection_effects"}, },
     },
+    hidden = true,
   },
 
 
@@ -181,16 +169,12 @@ data:extend {
     prerequisites = { "dps-tech_apfsds-machine-gun" },
     max_level = 19,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_apfsds-machine-gun-enhancement-chance_effects"}, },
     },
+    hidden = true,
   },
 
   {
@@ -213,16 +197,12 @@ data:extend {
     prerequisites = { "dps-tech_apfsds-machine-gun" },
     max_level = 17,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "nothing", effect_description = {"technology-description.dps-tech_apfsds-machine-gun-destruction-protection_effects"}, },
     },
+    hidden = true,
   },
 
 

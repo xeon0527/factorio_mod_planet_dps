@@ -151,12 +151,7 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     max_level = 60,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_2", change = 0.025, },
@@ -164,6 +159,7 @@ data:extend {
       { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_4", change = 0.025, },
       { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_5", change = 0.025, },
     },
+    hidden = true,
   },
 
   {
@@ -185,16 +181,12 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     max_level = 30,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "change-recipe-productivity", recipe = "dps-ammo_apfsds-shell_1", change = 0.1, },
     },
+    hidden = true,
   },
 
   {
@@ -216,16 +208,12 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     max_level = 40,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "gun-speed", ammo_category = "apfsds-shell", modifier = 0.1, },
     },
+    hidden = true,
   },
 
   {
@@ -247,15 +235,11 @@ data:extend {
     prerequisites = { "dps-tech_dps-equipment-enhancer" },
     max_level = 50,
     upgrade = true,
-    unit =
-    {
-      count_formula = "1",
-      ingredients = {{"dps-item_status-info", 1}},
-      time = 1
-    },
+    unit = { count_formula = "0", ingredients = {}, time = 1 },
     effects =
     {
       { type = "ammo-damage", ammo_category = "apfsds-shell", modifier = 0.1, },
     },
+    hidden = true,
   },
 }

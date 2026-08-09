@@ -10,7 +10,8 @@
       "unnecessary-if",
       "undefined-field",
       "generic-constraint-mismatch",
-      "missing-fields"
+      "missing-fields",
+      "call-non-callable"
     ],
     "globals": [
       "PlanetsLib",
