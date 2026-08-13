@@ -19,6 +19,7 @@ local _recipe = {
       shift = {8, -8},
     }
   },
+  surface_conditions = __PLANET_CONDITIONS__,
   enabled = false,
   energy_required = 1.0,
   auto_recycle = false,

@@ -47,14 +47,13 @@ data:extend {
 
     inputs = {
       "dps-item_dps-data-pack",
-      "dps-item_dorax-fragment",
-      "dps-item_dorax-component",
-      "dps-item_dorax-armor-plate",
+      "dps-item_dps-data-pack2",
+      "dps-item_dps-data-pack3",
     },
 
     module_slots = 4,
-    allowed_effects = {"consumption", "speed", "pollution"},
-    allowed_module_categories = {"efficiency", "speed"},
+    --allowed_effects = {"consumption", "speed", "pollution"},
+    --allowed_module_categories = {"efficiency", "speed"},
 
     circuit_wire_max_distance = lab_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["lab"],

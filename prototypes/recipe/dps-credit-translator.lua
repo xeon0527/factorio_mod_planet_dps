@@ -22,9 +22,10 @@ data:extend {
         shift = {8, 0},
       }
     },
-    energy_required = 0.1,
+    energy_required = 0.5,
     enabled = false,
     auto_recycle = false,
+    surface_conditions = __PLANET_CONDITIONS__,
     subgroup = "dps-item-subgroup_resource-translation",
     order = "1",
     categories = {"dps-recipe-category_dps-credit-translator"},
@@ -61,20 +62,22 @@ data:extend {
         shift = {8, 0},
       },
     },
-    energy_required = 0.1,
+    energy_required = 0.5,
     enabled = false,
     auto_recycle = false,
+    surface_conditions = __PLANET_CONDITIONS__,
     subgroup = "dps-item-subgroup_resource-translation",
     order = "2",
     categories = {"dps-recipe-category_dps-credit-translator"},
     ingredients =
     {
-      {type = "item", name = "dps-item_dps-credit_n", amount = 5},
+      {type = "item", name = "dps-item_dps-credit_n", amount = 25},
     },
     results = {
-      { type="item", name="coal",       amount = 5, shared_probability = { min = 0.00, max = 0.333333 }, show_details_in_recipe_tooltip = false },
-      { type="item", name="wood",       amount = 5, shared_probability = { min = 0.333333, max = 0.666666 }, show_details_in_recipe_tooltip = false },
-      { type="fluid", name="crude-oil", amount = 50, shared_probability = { min = 0.666666, max = 1 }, show_details_in_recipe_tooltip = false },
+      { type="item", name="carbon",     amount = 5, shared_probability = { min = 0.00, max = 0.25 }, show_details_in_recipe_tooltip = false },
+      { type="item", name="coal",       amount = 5, shared_probability = { min = 0.25, max = 0.5 }, show_details_in_recipe_tooltip = false },
+      { type="item", name="wood",       amount = 5, shared_probability = { min = 0.5, max = 0.75 }, show_details_in_recipe_tooltip = false },
+      { type="fluid", name="crude-oil", amount = 50, shared_probability = { min = 0.75, max = 1 }, show_details_in_recipe_tooltip = false },
     }
   },
 }

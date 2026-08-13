@@ -49,6 +49,7 @@ data:extend {
       emissions_per_minute = { pollution = 24 }
     },
 
+    surface_conditions = __PLANET_CONDITIONS__,
     circuit_wire_max_distance = assembling_machine_circuit_wire_max_distance,
     circuit_connector = circuit_connector_definitions["biochamber"],
 

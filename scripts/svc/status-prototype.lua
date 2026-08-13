@@ -28,6 +28,11 @@ local function _next_cost_level_proportional(level)
   return level + 1
 end
 
+local function _next_cost_level_sqrt(level, add)
+  return math.floor(math.sqrt(level + 1 ) * add)
+end
+
+
 _add_prototype_from_tech {
   tier = 1,
   name = "apfsds-shell-enhancement-chance",
@@ -47,7 +52,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech{
   tier = 1,
   name = "apfsds-shell-gun-speed",
-  next_cost_func = _next_cost_level_proportional,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 5) end,
   effect_per_level_func = function(level) return level * 10 end,
   effect_unit = "%p",
 }
@@ -55,7 +60,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech{
   tier = 1,
   name = "apfsds-shell-productivity",
-  next_cost_func = _next_cost_level_proportional,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 5) end,
   effect_per_level_func = function(level) return level * 10 end,
   effect_unit = "%p",
 }
@@ -65,7 +70,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech{
   tier = 2,
   name = "advanced-apfsds-shell-enhancement-chance",
-  next_cost_func = _next_cost_level_proportional,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 5) end,
   effect_per_level_func = function(level) return level end,
   effect_unit = "%p",
 }
@@ -73,7 +78,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech{
   tier = 2,
   name = "advanced-apfsds-shell-destruction-protection",
-  next_cost_func = _next_cost_level_proportional,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 10) end,
   effect_per_level_func = function(level) return level * 5 end,
   effect_unit = "%p",
 }
@@ -81,7 +86,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech {
   tier = 2,
   name = "advanced-apfsds-shell-damage",
-  next_cost_func = _next_cost_level_proportional,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 5) end,
   effect_per_level_func = function(level) return level * 20 end,
   effect_unit = "%p",
 }
@@ -89,7 +94,7 @@ _add_prototype_from_tech {
 _add_prototype_from_tech{
   tier = 2,
   name = "apfsds-machine-gun-enhancement-chance",
-  next_cost_func = _next_cost_level_proportional,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 20) end,
   effect_per_level_func = function(level) return level end,
   effect_unit = "%p",
 }
@@ -97,7 +102,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech{
   tier = 2,
   name = "apfsds-machine-gun-destruction-protection",
-  next_cost_func = _next_cost_level_proportional,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 20) end,
   effect_per_level_func = function(level) return level * 5 end,
   effect_unit = "%p",
 }

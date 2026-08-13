@@ -81,20 +81,16 @@ DRV_TIMER_register_action("story_dorax_approach", function(tick)
     }
     appers.landed = true
 
-    appers.tid = DRV_TIMER_create_tick_timer(1600, "story_dorax_end")
+    appers.tid = DRV_TIMER_create_tick_timer(800, "story_dorax_end")
   end
 end)
 
 DRV_TIMER_register_action("story_dorax_end", function(t)
-  if t == 1200 then
+  if t == 400 then
     local appers = DRV_STORAGE_get(_STOR_NAME, {})
     game.print("[gps="..appers.position.x..","..appers.position.y..",".."dps-planet_dps".."]")
     game.print{"system-message.dorax-appers-2-1"}
-  elseif t == 800 then
-    game.print{"system-message.dorax-appers-2-2"}
-  elseif t == 400 then
-    game.print{"system-message.dorax-appers-2-3"}
   elseif t == 0 then
-    game.print{"system-message.dorax-appers-2-4"}
+    game.print{"system-message.dorax-appers-2-2"}
   end
 end)

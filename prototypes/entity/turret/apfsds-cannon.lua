@@ -70,6 +70,7 @@ data:extend {
     collision_box = {{-1.2, -1.2 }, {1.2, 1.2}},
     selection_box = {{-1.5, -1.5 }, {1.5, 1.5}},
     damaged_trigger_effect = hit_effects.entity(),
+    surface_conditions = __PLANET_CONDITIONS__,
 
     energy_source =
   {

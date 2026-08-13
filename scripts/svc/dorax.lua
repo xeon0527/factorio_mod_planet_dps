@@ -127,10 +127,11 @@ DRV_TIMER_create_static_tick_60_handler(function()
           vertical_alignment = "middle",
         }
 
+        local pf = game.forces["player"]
         if damage >= 1000 then
-          game.forces["player"].script_trigger_research("dps-tech_supersonic-grenade-launcher")
+          pf.script_trigger_research("dps-tech_dps-data-pack2")
           if damage >= 1000000 then
-            game.forces["player"].script_trigger_research("dps-tech_advanced-dps-engineering")
+            pf.script_trigger_research("dps-tech_dps-data-pack3")
           end
         end
 
@@ -141,18 +142,18 @@ DRV_TIMER_create_static_tick_60_handler(function()
         --end
         --
         if damage >= 1000000 then
-          container.insert { name = "dps-item_dorax-armor-plate", count = damage / 1000000 }
+          container.insert { name = "dps-item_dorax-component", count = damage / 1000000 }
           damage = damage % 1000000
         end
         
         if damage >= 1000 then
-          container.insert { name = "dps-item_dorax-component", count = damage / 1000 }
-          damage = damage % 1000
+          container.insert { name = "dps-item_dorax-fragment", count = damage / 1000 }
+          --damage = damage % 1000
         end
 
-        if damage >= 1 then
-          container.insert { name = "dps-item_dorax-fragment", count = damage }
-        end
+        --if damage >= 1 then
+        --  container.insert { name = "dps-item_dorax-fragment", count = damage }
+        --end
       end
     end
 

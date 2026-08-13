@@ -118,11 +118,12 @@ DRV_TIMER_create_static_tick_handler(function()
             vertical_alignment = "middle",
           }
 
-          game.forces["player"].script_trigger_research("dps-tech_dps-credit-translator")
+          local pf = game.forces["player"]
+          pf.script_trigger_research("dps-tech_dps-credit-translator")
           if average >= 1000 then
-            game.forces["player"].script_trigger_research("dps-tech_dps-credit-exchange")
+            pf.script_trigger_research("dps-tech_dps-credit-exchange")
             if average >= 5000 then
-              game.forces["player"].script_trigger_research("dps-tech_dps-data-pack")
+              pf.script_trigger_research("dps-tech_dps-data-pack")
             end
           end
 

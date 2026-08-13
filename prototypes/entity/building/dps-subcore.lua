@@ -7,8 +7,9 @@ data:extend {
     name = "dps-building_dps-subcore",
     icons = {
       {
-        icon = "__base__/graphics/icons/lab.png",
-        tint = { 1.0, 0.5, 0.5 },
+        icon = "__space-exploration-graphics__/graphics/icons/rocket-landing-pad.png",
+        icon_size = 64,
+        tint = { 1, 0.5, 0.5 },
       }
     },
     flags = {
@@ -107,29 +108,22 @@ data:extend {
     picture = {
       layers = {
         {
+          filename = "__space-exploration-graphics-5__/graphics/entity/rocket-landing-pad/rocket-landing-pad.png",
+          width = 704,
+          height = 768,
+          shift = util.by_pixel(0, 0),
+          scale = 0.15,
+          --tint = { 1, 0.5, 0.5 },
+        },
+        {
           filename = "__base__/graphics/entity/lab/lab.png",
           width = 194,
           height = 174,
-          shift = util.by_pixel(0, 1.5),
-          scale = 0.5,
+          shift = util.by_pixel(0, -9),
+          scale = 0.25,
           tint = { 1, 0.8, 0.8 },
         },
-        {
-          filename = "__base__/graphics/entity/lab/lab-integration.png",
-          width = 242,
-          height = 162,
-          shift = util.by_pixel(0, 15.5),
-          scale = 0.5
-        },
-        {
-          filename = "__base__/graphics/entity/lab/lab-shadow.png",
-          width = 242,
-          height = 136,
-          shift = util.by_pixel(13, 11),
-          scale = 0.5,
-          draw_as_shadow = true
-        }
-      }
+      },
     },
 
     stateless_visualisation = {
@@ -147,14 +141,14 @@ data:extend {
               frame_count = 33,
               line_length = 11,
               animation_speed = 1,
-              shift = util.by_pixel(0, 0),
+              shift = util.by_pixel(0, -9),
               scale = 0.5,
               tint = { 1.0, 0.0, 0.0 },
             }
           }
         }
       }
-    }
+    },
   },
 
   {

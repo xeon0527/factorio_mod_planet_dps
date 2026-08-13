@@ -10,6 +10,26 @@ local function _update_indicator(player)
   indicator.set_dps   (player, dorax.get_dps())
 end
 
+local function _update_technology(e)
+  if e.research.name == "dps-tech_status-system" then
+    if e.research.researched then
+      for _, p in pairs(game.players) do
+        if p.surface.name == "dps-planet_dps" then
+          indicator.show(p, true)
+        end
+      end
+    else
+      for _, p in pairs(game.players) do
+        indicator.show(p, flase)
+        status_window.close(p)
+      end
+    end
+  end
+end
+
+DRV_EVENT_register_handler(defines.events.on_research_finished, _update_technology)
+DRV_EVENT_register_handler(defines.events.on_research_reversed, _update_technology)
+
 DRV_EVENT_register_handler(defines.events.on_player_joined_game, function(e)
   local p = game.get_player(e.player_index)
   if p then
@@ -26,21 +46,23 @@ end)
 --end)
 
 DRV_EVENT_register_handler(defines.events.on_player_changed_surface, function(e)
-  local p = game.get_player(e.player_index)
-  if p then
-    local surface_old_name = ""
-    if e.surface_index then
-      local surface_old = game.get_surface(e.surface_index)
-      if surface_old then
-        surface_old_name = surface_old.name
+  if game.forces["player"].technologies["dps-tech_status-system"].researched then
+    local p = game.get_player(e.player_index)
+    if p then
+      local surface_old_name = ""
+      if e.surface_index then
+        local surface_old = game.get_surface(e.surface_index)
+        if surface_old then
+          surface_old_name = surface_old.name
+        end
       end
-    end
-    
-    local surface_new_name = p.surface.name
-    local show = surface_old_name ~= "dps-planet_dps" and surface_new_name == "dps-planet_dps"
-    indicator.show(p, show)
-    if show then
-      _update_indicator(p)
+      
+      local surface_new_name = p.surface.name
+      local show = surface_old_name ~= "dps-planet_dps" and surface_new_name == "dps-planet_dps"
+      indicator.show(p, show)
+      if show then
+        _update_indicator(p)
+      end
     end
   end
 end)

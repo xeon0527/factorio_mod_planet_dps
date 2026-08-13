@@ -81,6 +81,10 @@ __MODULE__.open = function(player)
   end
 end
 
+__MODULE__.close = function(player)
+  _window.destroy(_gui_id, player)
+end
+
 __MODULE__.update = function(player, item_instance)
   local gui = _window.is_opened(_gui_id, player)
   if gui and item_instance then

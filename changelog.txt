@@ -1,4 +1,36 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.2
+Date: 13. 8. 2026
+  Minor Features:
+    - DPS Data Packs 2 and 3 have been added.
+    - Added detailed information about D.O.R.A.X to Tips and Tricks.
+    - Adjusted the overall Tech Tree layout and research costs.
+    - The Status Menu and DPS Indicator are now only displayed after their respective technologies have been researched.
+    - Items obtained from D.O.R.A.X no longer function as Science Packs.
+    - - D.O.R.A.X items are now generated starting from 1,000 DPS.
+
+  Changes:
+    - Various Technology icons have been changed and added.
+    - Slightly changed D.O.R.A.X's dialogue when it appears.
+    - Changed the appearance of the DPS Subcore.
+    - Added surface conditions for entity placement and recipe production.
+    - Changed the icons and appearance of the DPS Data Packs.
+    - Revised the detailed information text in the Status system to be more descriptive.
+
+  Balancing:
+    - Reduced the capacity of APFSDS Shell Lv. 10 from 8 to 5.
+    - Reduced the crafting speed of the Armory from 4 to 2.
+    - Planet DPS Technologies can now receive productivity bonuses and are also affected by the research cost multiplier.
+    - The DPS Supercomputer can now use productivity modules.
+    - Doubled the power consumption of the DPS Machine Gun.
+    - Significantly reduced the output of the DPS Credit Carbon Conversion recipes.
+    - Increased the crafting time of DPS Credit Translator Recipes from 0.1 to 0.5 seconds.
+    - Adjusted the Cost of Status Items.
+
+  Bugfixes:
+    - Fixed an issue where enhancement effects for APFSDS Shells and APFSDS Cannons were not applied correctly by adding a migration.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.5.1
 Date: 9. 8. 2026
   Minor Features:

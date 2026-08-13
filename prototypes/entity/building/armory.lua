@@ -227,14 +227,15 @@ data:extend {
       }
     },
 
-    crafting_speed = 4,
+    crafting_speed = 2,
     crafting_categories = {"dps-recipe-category_armory"},
 
     energy_source =
     {
       type = "electric",
       usage_priority = "secondary-input",
-      emissions_per_minute = { pollution = 2 }
+      emissions_per_minute = { pollution = 4 },
+      drain = "125kW",
     },
     energy_usage = "375kW",
     module_slots = 4,
@@ -269,7 +270,7 @@ data:extend {
     {
       {type = "item", name = "assembling-machine-3", amount = 2},
       {type = "item", name = "dps-item_dps-credit_m", amount = 1},
-      {type = "item", name = "dps-item_dorax-armor-plate", amount = 1},
+      {type = "item", name = "dps-item_dorax-component", amount = 1},
     },
     surface_conditions = __PLANET_CONDITIONS__,
     results = {{type="item", name="dps-building_armory", amount=1}}

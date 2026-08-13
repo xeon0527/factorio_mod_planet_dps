@@ -103,15 +103,17 @@ local function _generate(level, tint, order, credit_k, probability)
       collision_box = {{-0.7, -0.7 }, {0.7, 0.7}},
       selection_box = {{-1, -1 }, {1, 1}},
       damaged_trigger_effect = hit_effects.entity(),
+      fast_replaceable_group = "dps-turret_apfsds-machine-gun",
+      surface_conditions = __PLANET_CONDITIONS__,
 
       energy_source =
       {
         type = "electric",
-        buffer_capacity = "2.5MJ",
+        buffer_capacity = "5MJ",
         usage_priority = "primary-input",
-        input_flow_limit = "2MW",
+        input_flow_limit = "4MW",
       },
-      energy_per_shot = "2.5MJ",
+      energy_per_shot = "5MJ",
 
       rotation_speed = 0.002,
       preparing_speed = 0.08,

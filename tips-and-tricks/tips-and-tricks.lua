@@ -77,7 +77,7 @@ data:extend {
     name = "dps-tat_dorax",
     tag = "[virtual-signal=signal-red]",
     category = "dps-tat_category",
-    order = "dps-d",
+    order = "dps-da",
     indent = 1,
     simulation = {
       init_update_count = 600,
@@ -91,4 +91,17 @@ data:extend {
       technology = "dps-tech_discovery-of-dorax"
     },
   },
+    {
+      type = "tips-and-tricks-item",
+      name = "dps-tat_dorax-analysis",
+      tag = "[virtual-signal=signal-question-mark]",
+      category = "dps-tat_category",
+      order = "dps-db",
+      indent = 2,
+      trigger =
+      {
+        type = "research",
+        technology = "dps-tech_dorax-analysis"
+      },
+    },
 }

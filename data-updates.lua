@@ -105,8 +105,8 @@ end
 local function _all_technology_setup()
   for _, tech in pairs(data.raw["technology"]) do
     if util.string_starts_with(tech.name, "dps-tech_") then
-      tech.allows_productivity = false
-      tech.ignore_tech_cost_multiplier = true
+      tech.allows_productivity = true
+      tech.ignore_tech_cost_multiplier = false
       tech.order = "zzz-dps"
     end
   end

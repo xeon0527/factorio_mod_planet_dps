@@ -119,13 +119,13 @@ data:extend {
     essential = true,
     icons = {
       {
-        icon = "__space-exploration-graphics__/graphics/technology/catalogue/material-catalogue-2.png",
+        icon = "__space-exploration-graphics__/graphics/technology/catalogue/deep-2.png",
         icon_size = 128,
       },
       {
-        icon = "__space-exploration-graphics__/graphics/technology/catalogue/mask-catalogue-2.png",
+        icon = "__space-exploration-graphics__/graphics/technology/catalogue/mask-2.png",
         icon_size = 128,
-        tint = {1, 0.25, 0.25}
+        tint = {1, 1, 0}
       }
     },
 
@@ -140,7 +140,7 @@ data:extend {
         recipe = "dps-item_dps-data-pack",
       },
     },
-    prerequisites = { "dps-tech_dps-credit-exchange", "dps-tech_dps-scrap-recycling"},
+    prerequisites = { "dps-tech_dps-credit-exchange" },
     research_trigger = {
       type = "scripted",
       trigger_description = {"technology-description.dps-tech_dps-data-pack-trigger"}
@@ -153,7 +153,7 @@ data:extend {
       {
         icon = "__base__/graphics/technology/atomic-bomb.png",
         icon_size = 256,
-        tint = { 1.0, 0.0, 0,0 },
+        tint = { 1.0, 0.5, 0.5 },
       },
     },
     prerequisites = { "dps-tech_planet-discovery-dps" },

@@ -2,9 +2,6 @@ local item_sounds = require("__base__.prototypes.item_sounds")
 
 local function _create_ammo(level, damage, tint, order)
   local size = math.floor((level + 1) / 2)
-  if level == 10 then
-    size = 8
-  end
 
   data:extend {
     {
@@ -132,11 +129,11 @@ local function _create_adv_recipe(level, tint, credit_k, probability, order)
           }
         },
 
-        hidden = false,
-        hidden_in_factoriopedia = true,
+        --hidden = false,
+        --hidden_in_factoriopedia = true,
 
-        localised_name = {"item-name.".."dps-ammo_apfsds-shell_"..level},
-        localised_description = {"item-description.".."dps-ammo_apfsds-shell_"..level},
+        --localised_name = {"item-name.".."dps-ammo_apfsds-shell_"..level},
+        --localised_description = {"item-description.".."dps-ammo_apfsds-shell_"..level},
         subgroup = "dps-item-subgroup_apfsds-shell",
         order = order,
 

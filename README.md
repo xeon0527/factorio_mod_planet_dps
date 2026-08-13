@@ -20,8 +20,13 @@ Rewards
  * DPS Engineering Technology
 >Gain a understanding of DPS to increase all types of damage.
 
- * Supersonic grenade launcher
+ * Supersonic Grenade Launcher
 >A turret that fires grenades at supersonic speeds, dealing devastating kinetic and explosive damage at the same time. This smart turret is also equipped with precision targeting, ensuring it never inflicts friendly fire.
 
  * Armory
 >A facility for efficiently producing the various items needed to support your weapon systems.
+- - -
+Special Thanks
+================
+ * Earendel - Thank you for providing the Space Exploration assets. (https://www.patreon.com/earendel, https://discord.gg/ymjUVMv)
+ * Hurricane046 - Thank you for providing high-quality Factorio-style graphics.
