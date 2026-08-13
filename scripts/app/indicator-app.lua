@@ -67,7 +67,13 @@ DRV_EVENT_register_handler(defines.events.on_player_changed_surface, function(e)
   end
 end)
 
-DRV_EVENT_register_handler("dps-custom-event_on-update-level", function(e)
+--DRV_EVENT_register_handler("dps-custom-event_on-update-level", function(e)
+--  for _, p in pairs(game.players) do
+--    _update_indicator(p)
+--  end
+--end)
+
+DRV_EVENT_register_handler("dps-custom-event_on-update-dps", function(e)
   for _, p in pairs(game.players) do
     _update_indicator(p)
   end

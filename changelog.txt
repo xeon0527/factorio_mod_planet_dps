@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.3
+Date: 13. 8. 2026
+  Bugfixes:
+    - Fixed an issue where a crash occurred when D.O.R.A.X was newly spawned.
+    - Fixed an issue where the GUI stopped updating when the DPS dealt to D.O.R.A.X reached 0.
+    - Added the missing Changelog entries.
+
+---------------------------------------------------------------------------------------------------
 Version: 0.5.2
 Date: 13. 8. 2026
   Minor Features:
@@ -7,7 +15,7 @@ Date: 13. 8. 2026
     - Adjusted the overall Tech Tree layout and research costs.
     - The Status Menu and DPS Indicator are now only displayed after their respective technologies have been researched.
     - Items obtained from D.O.R.A.X no longer function as Science Packs.
-    - - D.O.R.A.X items are now generated starting from 1,000 DPS.
+    - D.O.R.A.X items are now generated starting from 1,000 DPS.
 
   Changes:
     - Various Technology icons have been changed and added.
@@ -26,6 +34,7 @@ Date: 13. 8. 2026
     - Significantly reduced the output of the DPS Credit Carbon Conversion recipes.
     - Increased the crafting time of DPS Credit Translator Recipes from 0.1 to 0.5 seconds.
     - Adjusted the Cost of Status Items.
+    - The research time for all Planet DPS Technologies has been set to 60 seconds.
 
   Bugfixes:
     - Fixed an issue where enhancement effects for APFSDS Shells and APFSDS Cannons were not applied correctly by adding a migration.

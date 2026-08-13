@@ -12,11 +12,10 @@ local function _entity_created(entity)
   entity.proxy_target_inventory = defines.inventory.chest
 
   local inv = c.get_inventory(defines.inventory.chest)
-  inv.set_bar(61)
+  inv.set_bar(41)
   for i = 1, 20 do
     inv.set_filter(i, {name = "dps-item_dorax-fragment"})
     inv.set_filter(i + 20,  {name = "dps-item_dorax-component"})
-    inv.set_filter(i + 40,  {name = "dps-item_dorax-armor-plate"})
   end
   
   local entities = DRV_STORAGE_get(_STOR_NAME, {})
@@ -155,9 +154,9 @@ DRV_TIMER_create_static_tick_60_handler(function()
         --  container.insert { name = "dps-item_dorax-fragment", count = damage }
         --end
       end
-    end
 
-    script.raise_event("dps-custom-event_on-update-dps", {entity = dorax.entity, dps = dorax.dps})
+      script.raise_event("dps-custom-event_on-update-dps", {entity = dorax.entity, dps = dorax.dps})
+    end
   end
 end)
 

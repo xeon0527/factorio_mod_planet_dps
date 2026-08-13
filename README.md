@@ -6,25 +6,20 @@ Game balance is still very rough. I'd greatly appreciate any feedback after play
 
 - - -
 Welcome to Planet DPS
-==================================================
+===
 This planet was once being terraformed by humanity for habitation, but after some unknown incident, the terraforming was halted and it was abandoned for a very long time. In the end, it became a strange world—one with an excellent climate and environment, yet completely devoid of any traces of life. However, it seems that the people who were carrying out the terraforming had some purpose for this planet beyond simply making it habitable...
 - - -
 Damage Per Second
-==================================================
+===
 Have you ever wondered just how many problems can be solved with enough firepower?
 
 On this desolate planet, countless mysterious machines exist to put your firepower to the test. Greater firepower promises greater rewards. And with those rewards... you'll be able to build even greater firepower, won't you?
 - - -
 Rewards
-==================================================
- * DPS Engineering Technology
->Gain a understanding of DPS to increase all types of damage.
-
- * Supersonic Grenade Launcher
->A turret that fires grenades at supersonic speeds, dealing devastating kinetic and explosive damage at the same time. This smart turret is also equipped with precision targeting, ensuring it never inflicts friendly fire.
-
- * Armory
->A facility for efficiently producing the various items needed to support your weapon systems.
+===
+ * **DPS Engineering Technology**
+ * **Supersonic Grenade Launcher**
+ * **Armory**
 - - -
 Special Thanks
 ================
