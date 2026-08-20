@@ -31,12 +31,14 @@ DRV_EVENT_register_handler(defines.events.on_research_finished, _update_technolo
 DRV_EVENT_register_handler(defines.events.on_research_reversed, _update_technology)
 
 DRV_EVENT_register_handler(defines.events.on_player_joined_game, function(e)
-  local p = game.get_player(e.player_index)
-  if p then
-    local show = p.surface.name == "dps-planet_dps"
-    indicator.show(p, show)
-    if show then
-      _update_indicator(p)
+  if game.forces["player"].technologies["dps-tech_status-system"].researched then
+    local p = game.get_player(e.player_index)
+    if p then
+      local show = p.surface.name == "dps-planet_dps"
+      indicator.show(p, show)
+      if show then
+        _update_indicator(p)
+      end
     end
   end
 end)

@@ -84,7 +84,7 @@ local function _setup_armory_recipe()
   end
 
   for _, r in pairs(data.raw["recipe"]) do
-    if r.categories == nil or (#r.categories == 1 and (r.categories[1] == "crafting" or r.categories[1] == "crafting-with-fluid" or r.categories[1] == "chemistry")) then
+    if r.categories == nil or (#r.categories >= 1 and (r.categories[1] == "crafting" or r.categories[1] == "crafting-with-fluid" or r.categories[1] == "chemistry")) then
       for _, rst in pairs(r.results) do
         for _, v in pairs(ammo_names) do
           if rst.type == "item" and rst.name == v then

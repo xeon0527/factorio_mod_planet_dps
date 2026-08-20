@@ -33,6 +33,9 @@ end
 
 DRV_EVENT_register_handler(defines.events.on_research_finished, _research_update)
 DRV_EVENT_register_handler(defines.events.on_research_reversed, _research_update)
+DRV_BOOTSTRAP_create_configuration_changed_handler(function()
+  _research_update{ research = { name = "dps-tech_apfsds-machine-gun-enhancement-chance" }}
+end)
 
 return {
   force_update = function()
