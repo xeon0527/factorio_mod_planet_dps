@@ -78,7 +78,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech{
   tier = 2,
   name = "advanced-apfsds-shell-destruction-protection",
-  next_cost_func = function(level) return _next_cost_level_sqrt(level, 10) end,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 20) end,
   effect_per_level_func = function(level) return level * 5 end,
   effect_unit = "%p",
 }
@@ -86,7 +86,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech {
   tier = 2,
   name = "advanced-apfsds-shell-damage",
-  next_cost_func = function(level) return _next_cost_level_sqrt(level, 5) end,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 10) end,
   effect_per_level_func = function(level) return level * 20 end,
   effect_unit = "%p",
 }
@@ -94,7 +94,7 @@ _add_prototype_from_tech {
 _add_prototype_from_tech{
   tier = 2,
   name = "apfsds-machine-gun-enhancement-chance",
-  next_cost_func = function(level) return _next_cost_level_sqrt(level, 20) end,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 50) end,
   effect_per_level_func = function(level) return level end,
   effect_unit = "%p",
 }
@@ -102,7 +102,7 @@ _add_prototype_from_tech{
 _add_prototype_from_tech{
   tier = 2,
   name = "apfsds-machine-gun-destruction-protection",
-  next_cost_func = function(level) return _next_cost_level_sqrt(level, 20) end,
+  next_cost_func = function(level) return _next_cost_level_sqrt(level, 50) end,
   effect_per_level_func = function(level) return level * 5 end,
   effect_unit = "%p",
 }

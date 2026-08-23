@@ -19,14 +19,15 @@ local function _update_status_effect(name, level)
 end
 
 DRV_EVENT_register_handler("dps-custom-event_on-update-level", function(e)
-  for _, p in pairs(game.players) do
-    status_window.update_level(p, level.get_level(), level.get_exp(), level.get_max_exp(), level.get_level_point())
+  local ld = level.get()
+  for _, p in pairs(game.connected_players) do
+    status_window.update_level(p, ld.level, ld.exp, ld.max_exp, ld.level_point)
   end
 end)
 
 
 local function _update_technology(e)
-  for _, p in pairs(game.players) do
+  for _, p in pairs(game.connected_players) do
     for _, inst in pairs(status_instance.get_all()) do
       status_window.update(p, inst)
     end

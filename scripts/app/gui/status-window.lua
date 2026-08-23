@@ -121,10 +121,11 @@ end
 __MODULE__.update_level = function(player, level, exp, max_exp, level_point)
   local gui = _window.is_opened(_gui_id, player)
   if gui and gui["level_item_flow"] then
-    gui["level_item_flow"]["level_item_level"].caption = level
-    gui["level_item_flow"]["level_item_exp"].caption = exp.." / "..max_exp
-    gui["level_item_flow"]["level_item_exp"].value = exp / max_exp
-    gui["level_item_flow"]["level_item_point"].caption = level_point
+    local item_flow = gui["level_item_flow"]
+    item_flow["level_item_level"].caption = level
+    item_flow["level_item_exp"].caption = exp.." / "..max_exp
+    item_flow["level_item_exp"].value = exp / max_exp
+    item_flow["level_item_point"].caption = level_point
   end
 end
 

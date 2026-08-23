@@ -88,6 +88,10 @@ end, {
 })
 
 DRV_TIMER_create_static_tick_handler(function()
+  local _trigger_dps_credit_translator = false
+  local _trigger_dps_credit_exchange = false
+  local _trigger_dps_data_pack = false
+
   for _, item in pairs(DRV_STORAGE_get(_STOR_NAME, {})) do
     local entity = item.entity
     if entity.valid then
@@ -118,12 +122,11 @@ DRV_TIMER_create_static_tick_handler(function()
             vertical_alignment = "middle",
           }
 
-          local pf = game.forces["player"]
-          pf.script_trigger_research("dps-tech_dps-credit-translator")
+          _trigger_dps_credit_translator = true
           if average >= 1000 then
-            pf.script_trigger_research("dps-tech_dps-credit-exchange")
+            _trigger_dps_credit_exchange = true
             if average >= 5000 then
-              pf.script_trigger_research("dps-tech_dps-data-pack")
+              _trigger_dps_data_pack = true
             end
           end
 
@@ -148,6 +151,19 @@ DRV_TIMER_create_static_tick_handler(function()
           end
         end
       end
+    end
+  end
+
+  if _trigger_dps_credit_translator then
+    local pf = game.forces["player"]
+    pf.script_trigger_research("dps-tech_dps-credit-translator")
+
+    if _trigger_dps_credit_exchange then
+      pf.script_trigger_research("dps-tech_dps-credit-exchange")
+    end
+
+    if _trigger_dps_data_pack then
+      pf.script_trigger_research("dps-tech_dps-data-pack")
     end
   end
 end)

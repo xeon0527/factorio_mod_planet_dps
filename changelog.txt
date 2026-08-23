@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 0.5.5
+Date: 23. 8. 2026
+  Changes:
+    - Optimized the mod's overall performance.
+
+  Balancing:
+    - Increased the Level Point requirements for mid- and late-game Status Items
+
+---------------------------------------------------------------------------------------------------
 Version: 0.5.4
 Date: 21. 8. 2026
   Compatibility:

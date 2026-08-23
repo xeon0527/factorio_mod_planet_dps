@@ -5,21 +5,22 @@ local dorax = require(__SVC__.."dorax")
 local level = require(__SVC__.."level")
 
 local function _update_indicator(player)
-  indicator.set_level (player, level.get_level())
-  indicator.set_exp   (player, level.get_exp(), level.get_max_exp())
+  local ld = level.get()
+  indicator.set_level (player, ld.level)
+  indicator.set_exp   (player, ld.exp, ld.max_exp)
   indicator.set_dps   (player, dorax.get_dps())
 end
 
 local function _update_technology(e)
   if e.research.name == "dps-tech_status-system" then
     if e.research.researched then
-      for _, p in pairs(game.players) do
+      for _, p in pairs(game.connected_players) do
         if p.surface.name == "dps-planet_dps" then
           indicator.show(p, true)
         end
       end
     else
-      for _, p in pairs(game.players) do
+      for _, p in pairs(game.connected_players) do
         indicator.show(p, flase)
         status_window.close(p)
       end
@@ -76,7 +77,7 @@ end)
 --end)
 
 DRV_EVENT_register_handler("dps-custom-event_on-update-dps", function(e)
-  for _, p in pairs(game.players) do
+  for _, p in pairs(game.connected_players) do
     _update_indicator(p)
   end
 end)
@@ -85,7 +86,9 @@ DRV_EVENT_register_handler("dps-custom-event_on-indicator-icon-click", function(
   if not status_window.is_opened(e.player) then
     status_instance.update_all()
     status_window.open(e.player)
-    status_window.update_level(e.player, level.get_level(), level.get_exp(), level.get_max_exp(), level.get_level_point())
+
+    local ld = level.get()
+    status_window.update_level(e.player, ld.level, ld.exp, ld.max_exp, ld.level_point)
     for _, v in pairs(status_instance.get_all()) do
       status_window.update(e.player, v)
     end

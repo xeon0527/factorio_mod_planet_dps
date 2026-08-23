@@ -12,20 +12,14 @@ end
 
 local __MODULE__ = {}
 
-__MODULE__.get_level = function()
-  return _get().level
-end
-
-__MODULE__.get_exp = function()
-  return _get().exp
-end
-
-__MODULE__.get_max_exp = function()
-  return _get().max_exp
-end
-
-__MODULE__.get_level_point = function()
-  return _get().level_point
+__MODULE__.get = function()
+  local stor = _get()
+  return {
+    level = stor.level,
+    exp = stor.exp,
+    max_exp = stor.max_exp,
+    level_point = stor.level_point,
+  }
 end
 
 __MODULE__.sub_level_point = function(point)
