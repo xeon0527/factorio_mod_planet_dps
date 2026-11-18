@@ -4,57 +4,63 @@ local hit_effects = require ("__base__.prototypes.entity.hit-effects")
 
 local ftt = data.raw["fluid-turret"]["flamethrower-turret"]
 
-local function _turret_extension(opts)
-  local m_line_length = 5
-  local m_frame_count = 15
+local function _turret_head()
   return {
     layers = {
-      -- diffuse
       {
-        filename = "__base__/graphics/entity/flamethrower-turret/flamethrower-turret-gun-extension.png",
-        priority = "medium",
-        frame_count = opts and opts.frame_count or m_frame_count,
-        line_length = opts and opts.line_length or m_line_length,
-        run_mode = opts and opts.run_mode or "forward",
-        width = 152,
-        height = 128,
+        filename = __PATH__.."graphics/entity/supersonic-grenade-launcher/turret.png",
+        frame_count = 16,
+        line_length = 8,
+        width = 256,
+        height = 256,
         direction_count = 4,
-        shift = util.by_pixel(0, -26),
+        shift = util.by_pixel(0, -10),
         scale = 0.5,
-        counterclockwise = true,
       },
-      -- mask
       {
-        filename = "__base__/graphics/entity/flamethrower-turret/flamethrower-turret-gun-extension-mask.png",
-        flags = { "mask" },
-        frame_count = opts and opts.frame_count or m_frame_count,
-        line_length = opts and opts.line_length or m_line_length,
-        run_mode = opts and opts.run_mode or "forward",
-        width = 144,
-        height = 120,
+        filename = __PATH__.."graphics/entity/supersonic-grenade-launcher/mask.png",
+        frame_count = 16,
+        line_length = 8,
+        width = 256,
+        height = 256,
         direction_count = 4,
-        shift = util.by_pixel(0, -26),
-        apply_runtime_tint = true,
+        shift = util.by_pixel(0, -10),
         scale = 0.5,
-        counterclockwise = true,
+        tint = {1,1,0},
       },
-      -- shadow
-      {
-        filename = "__base__/graphics/entity/flamethrower-turret/flamethrower-turret-gun-extension-shadow.png",
-        frame_count = opts and opts.frame_count or m_frame_count,
-        line_length = opts and opts.line_length or m_line_length,
-        run_mode = opts and opts.run_mode or "forward",
-        width = 180,
-        height = 114,
-        direction_count = 4,
-        shift = util.by_pixel(33, -1),
-        draw_as_shadow = true,
-        scale = 0.5,
-        counterclockwise = true,
-      }
     }
   }
 end
+
+local function _turret_head2()
+  return {
+    layers = {
+      {
+        filename = __PATH__.."graphics/entity/supersonic-grenade-launcher/turret.png",
+        frame_count = 1,
+        line_length = 8,
+        width = 256,
+        height = 256,
+        direction_count = 64,
+        shift = util.by_pixel(0, -10),
+        scale = 0.5,
+      },
+      {
+        filename = __PATH__.."graphics/entity/supersonic-grenade-launcher/mask.png",
+        frame_count = 1,
+        line_length = 8,
+        width = 256,
+        height = 256,
+        direction_count = 64,
+        shift = util.by_pixel(0, -10),
+        scale = 0.5,
+        tint = {1,1,0},
+      },
+    }
+  }
+end
+
+
 
 local turret = {
   type = "ammo-turret",
@@ -108,23 +114,30 @@ local turret = {
     {inventory_index = defines.inventory.turret_ammo, shift = {0, -0.25}}
   },
 
+  folded_animation = _turret_head(),
+  preparing_animation = _turret_head2(),
+  prepared_animation = _turret_head2(),
+  attacking_animation = _turret_head2(),
+  ending_attack_animation = _turret_head2(),
+  folding_animation = _turret_head2(),
+
   -- 접혀 있음
-  folded_animation        = _turret_extension{ frame_count = 3, line_length = 1 },
+  --folded_animation        = _turret_head(),--_turret_extension{ frame_count = 3, line_length = 1 },
   
   -- 공격 준비
-  preparing_animation     = _turret_extension{},
+  --preparing_animation     = _turret_extension{},
 
   -- 공격 준비 됨
-  prepared_animation      = ftt.prepared_animation,
+  --prepared_animation      = ftt.prepared_animation,
 
   -- 공격
-  attacking_animation     = ftt.attacking_animation,
+  --attacking_animation     = ftt.attacking_animation,
 
   -- 공격 종료
-  ending_attack_animation = ftt.ending_attack_animation,
+  --ending_attack_animation = ftt.ending_attack_animation,
 
   -- 접히는 중
-  folding_animation       = _turret_extension { run_mode = "backward" },
+  --folding_animation       = _turret_extension { run_mode = "backward" },
 
   gun_animation_render_layer = "object",
   gun_animation_secondary_draw_order = 1,
@@ -152,7 +165,7 @@ local turret = {
             height = 102,
             shift = util.by_pixel(0, -4.5),
             apply_runtime_tint = true,
-            scale = 0.5
+            scale = 0.5,
           }
         }
       }
@@ -164,12 +177,12 @@ local turret = {
     ammo_category = "supersonic-grenade",
     --health_penalty = 1,
     cooldown = 300,
-    projectile_creation_distance = 0.0,
-    projectile_center = {0, 0}, -- same as gun_turret_attack shift
+    projectile_creation_distance = 2.0,
+    projectile_center = util.by_pixel(0, 1),
     range = 36,
     sound = {
       filename = __PATH__.."sound/supersonic-grenade-launcher/attack.ogg",
-      aggregation = {max_count = 8, remove = true, count_already_playing = true, priority = "newest"}
+      aggregation = {max_count = 16, remove = true, count_already_playing = true, priority = "newest"}
     }
   },
   call_for_help_radius = 40,

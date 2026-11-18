@@ -38,6 +38,8 @@ local function _create_recipe(level, icons, credit_k, probability, order)
       auto_recycle = false,
       allow_quality = false,
       can_set_quality = false,
+
+      castra_prime_ignore = true,
     },
   }
   --end

@@ -108,6 +108,8 @@ local function _create_basic_recipe(level, credit)
       auto_recycle = false,
       allow_quality = false,
       can_set_quality = false,
+
+      castra_prime_ignore = true,
     },
   }
 end
@@ -157,6 +159,8 @@ local function _create_adv_recipe(level, tint, credit_k, probability, order)
         auto_recycle = false,
         allow_quality = false,
         can_set_quality = false,
+
+        castra_prime_ignore = true,
       },
     }
   --end
